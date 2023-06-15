@@ -6,6 +6,22 @@
 
 > adb shell 'pm list packages' | sed 's/.*://g'
 
+### Get Screen state and locked state
+
+> adb shell service call trust 7
+
+### Input text
+
+> adb shell input text S3cr37 && adb shell input keyevent 66
+
+## Reboot device
+
+> adb reboot
+
+### Swipe Up
+
+> adb shell input swipe 540 1600 540 100 150
+
 ### Start activities
 
 - Throught `shell`
