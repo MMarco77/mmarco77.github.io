@@ -2,6 +2,10 @@
 
 ## `adb` cheat sheet
 
+### Android Version
+
+> adb shell getprop ro.build.version.release
+
 ### Package list
 
 > adb shell 'pm list packages' | sed 's/.*://g'
