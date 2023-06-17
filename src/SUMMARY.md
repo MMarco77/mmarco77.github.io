@@ -7,10 +7,13 @@
 
 - [Tools](tools/index.md)
   - [Android](tools/android/index.md)
+    - [AVD](tools/android/AVD/index.md)
+    - [Drozer](tools/android/Drozer/index.md)
+    - [Frida](tools/android/frida/index.md)
   - [Docker](tools/docker/index.md)
     - [Dockerfile](tools/docker/dockerfile/index.md)
-  - [Frida](tools/frida/index.md)
   - [Git](tools/git/index.md)
+  - [linux](tools/linux/index.md)
   
 
 - [Technics]()
@@ -20,3 +23,17 @@
 
 - [Pentest](pentest/index.md)
   - [Useful Commands](pentest/useful-commands/index.md)
+  - [Mobile](pentest/Mobile/index.md)
+
+.
+└── tools
+    ├── android
+    │   ├── AVD
+    │   │   └── index.md
+    │   ├── Drozer
+    │   │   └── index.md
+    │   ├── frida
+    │   │   └── index.md
+    │   └── index.md
+
+15 directories, 16 files
