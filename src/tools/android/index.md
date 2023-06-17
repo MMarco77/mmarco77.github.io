@@ -1,6 +1,10 @@
-# Android command
+# Android
 
-## `adb` cheat sheet
+## File system
+
+
+
+## Android Debug Bridge (`adb`) cheat sheet
 
 ### Android Version
 
@@ -44,3 +48,11 @@
 - Androiderson tips
 
 > adb shell monkey -p your.app.package.name 1
+
+### Push file in temporary folder
+
+> adb push \<FILE\> /data/local/tmp
+
+### Install APK
+
+> adb install \<APK-FILE\>
