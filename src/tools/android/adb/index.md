@@ -1,7 +1,7 @@
 # Android Debug Bridge (`adb`)
 
-- [Android ADB Cheat Sheet¶][2]
-- [adb (Android Debug Bridge) cheatsheet][3]
+- [Android ADB Cheat Sheet¶][1]
+- [adb (Android Debug Bridge) cheatsheet][2]
 
 
 # Basic Command
@@ -329,7 +329,7 @@
         </tr>
         <tr>
             <td>am start -a "android.intent.action.SEND" --es "android.intent.extra.TEXT" "Hello World" -t "text/plain"</td>
-            <td>Mime Type and and Extra string</td>
+            <td>Mime Type and Extra string</td>
         </tr>
         <tr>
             <td>am start -n "your.application.packagename/path.to.the.Activity"</td>
@@ -340,16 +340,18 @@
             <td>Activity with extras</td>
         </tr>
         <tr>
-            <td>Service</td>
             <td>am startservice -n "com.example.application/.BackgroundService"</td>
+            <td>Service</td>
         </tr>
         <tr>
-            <td>Broadcast with Action</td>
             <td>am broadcast -a "android.intent.action.PACKAGE_FIRST_LAUNCH" -d "com.example.application"</td>
+            <td>Broadcast with Action</td>
         </tr>
         <tr>
+            <td>
+            am broadcast -a com.google.android.c2dm.intent.RECEIVE -n <code>&lt;YOUR_PACKAGE_NAME&gt;/&lt;YOUR_RECEIVER_NAME&gt;</code> -e "<code>&lt;EXTRA_KEY_1&gt;</code>"
+            </td>
             <td>Notification (1)</td>
-            <td>am broadcast -a com.google.android.c2dm.intent.RECEIVE -n <YOUR_PACKAGE_NAME>/<YOUR_RECEIVER_NAME (in the manifest)> -e "<EXTRA_KEY_1>"
 "<EXTRA_VALUE_1>" -e "<EXTRA_KEY_2>" "<EXTRA_VALUE_2>"</td>
         </tr>
     </tbody>
@@ -511,4 +513,3 @@ $ adb logcat *:V > output.log
 
 [1]: https://www.automatetheplanet.com/adb-cheat-sheet/
 [2]: https://3os.org/android/adb-cheat-sheet/#push-a-file-to-download-folder-of-the-android-device
-[3]: https://devhints.io/adb
