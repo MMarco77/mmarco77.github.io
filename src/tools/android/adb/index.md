@@ -314,42 +314,48 @@
 # INTENTS
 
 [am Command](https://developer.android.com/studio/command-line/shell.html#am)
-### URI
-```js
-am start -a android.intent.action.VIEW -d https://github.com
-```
 
-### Mime Type and and Extra string
-```js
-am start -a "android.intent.action.SEND" --es "android.intent.extra.TEXT" "Hello World" -t "text/plain"
-```
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>am start -a android.intent.action.VIEW -d https://github.com</td>
+            <td>URI</td>
+        </tr>
+        <tr>
+            <td>am start -a "android.intent.action.SEND" --es "android.intent.extra.TEXT" "Hello World" -t "text/plain"</td>
+            <td>Mime Type and and Extra string</td>
+        </tr>
+        <tr>
+            <td>am start -n "your.application.packagename/path.to.the.Activity"</td>
+            <td>Activity</td>
+        </tr>
+        <tr>
+            <td>am start -n "your.application.packagename/path.to.the.Activity" - e "key" "data"</td>
+            <td>Activity with extras</td>
+        </tr>
+        <tr>
+            <td>Service</td>
+            <td>am startservice -n "com.example.application/.BackgroundService"</td>
+        </tr>
+        <tr>
+            <td>Broadcast with Action</td>
+            <td>am broadcast -a "android.intent.action.PACKAGE_FIRST_LAUNCH" -d "com.example.application"</td>
+        </tr>
+        <tr>
+            <td>Notification (1)</td>
+            <td>am broadcast -a com.google.android.c2dm.intent.RECEIVE -n <YOUR_PACKAGE_NAME>/<YOUR_RECEIVER_NAME (in the manifest)> -e "<EXTRA_KEY_1>"
+"<EXTRA_VALUE_1>" -e "<EXTRA_KEY_2>" "<EXTRA_VALUE_2>"</td>
+        </tr>
+    </tbody>
+</table>
 
-### Activity 
-```js
-am start -n "your.application.packagename/path.to.the.Activity"
-```
-
-### Activity with extras
-```js
-am start -n "your.application.packagename/path.to.the.Activity" - e "key" "data"
-```
-
-### Service 
-```js
-am startservice -n "com.example.application/.BackgroundService"
-```
-
-### Broadcast with Action
-```js
-am broadcast -a "android.intent.action.PACKAGE_FIRST_LAUNCH" -d "com.example.application"
-```
-
-#### Notification
-[stackoverflow](http://stackoverflow.com/questions/27800369/simulating-android-gcm)
-```js
-am broadcast -a com.google.android.c2dm.intent.RECEIVE -n <YOUR_PACKAGE_NAME>/<YOUR_RECEIVER_NAME (in the manifest)> -e "<EXTRA_KEY_1>"
-"<EXTRA_VALUE_1>" -e "<EXTRA_KEY_2>" "<EXTRA_VALUE_2>"
-```
+(1) [stackoverflow](http://stackoverflow.com/questions/27800369/simulating-android-gcm)
 
 # Log
 
