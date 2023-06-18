@@ -349,10 +349,12 @@
         </tr>
         <tr>
             <td>
-            am broadcast -a com.google.android.c2dm.intent.RECEIVE -n <code>&lt;YOUR_PACKAGE_NAME&gt;/&lt;YOUR_RECEIVER_NAME&gt;</code> -e "<code>&lt;EXTRA_KEY_1&gt;</code>"
+            am broadcast -a com.google.android.c2dm.intent.RECEIVE 
+                         -n <code>&lt;YOUR_PACKAGE_NAME&gt;/&lt;YOUR_RECEIVER_NAME&gt;</code> 
+                         -e "<code>&lt;EXTRA_KEY_1&gt;</code>" "<code>&lt;EXTRA_VALUE_1&gt;</code>"
+                         -e "<code>&lt;EXTRA_KEY_2&gt;</code>" "<code>&lt;EXTRA_VALUE_1&gt;</code>"
             </td>
             <td>Notification (1)</td>
-"<EXTRA_VALUE_1>" -e "<EXTRA_KEY_2>" "<EXTRA_VALUE_2>"</td>
         </tr>
     </tbody>
 </table>
