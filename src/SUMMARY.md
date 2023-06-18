@@ -8,6 +8,7 @@
 - [Tools](tools/index.md)
   - [Android](tools/android/index.md)
     - [ADB](tools/android/adb/index.md)
+    - [APKTool](tools/android/apktool/index.md)
     - [AVD](tools/android/AVD/index.md)
     - [Drozer](tools/android/Drozer/index.md)
     - [Frida](tools/android/frida/index.md)
