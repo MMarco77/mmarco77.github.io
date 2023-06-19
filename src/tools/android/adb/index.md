@@ -2,9 +2,25 @@
 
 - [Android ADB Cheat Sheet¶][1]
 - [adb (Android Debug Bridge) cheatsheet][2]
+# Package Installation
 
+- [Basic Command](#basic)
+- [Some Activities](#activities)
+- [Package Installation](#install)
+- [Path](#path)
+- [File Operations](#file_operations)
+- [Phone Info](#phone)
+- [Package Info](#package_info)
+- [Device Related Commands](#device_related_commands)
+- [Intents](#intents)
+- [Log](#log)
+- [Permissions](#permissions)
+- [Android Version](#version)
+- [Proxy](#proxy)
+- [Input & Actions](#input)
+- [Start activities](#activities)
 
-# Basic Command
+# <a name="basic"></a>Basic Command
 
 <table>
     <thead>
@@ -61,7 +77,7 @@
     </tbody>
 </table>
 
-# Package Installation
+# <a name="install"></a>Package Installation
 
 <table>
     <thead>
@@ -90,7 +106,7 @@
     </tbody>
 </table>
 
-# Path
+# <a name="path"></a>Path
 
 <table>
     <thead>
@@ -120,10 +136,14 @@
             <td><strong>adb shell pm list packages -f</strong></td>
             <td><strong>Lists all the packages and full paths</strong></td>
         </tr>
+        <tr>
+            <td><strong>adb shell pm list packages | sed 's/.*://g'</strong></td>
+            <td><strong>Get all available packages</strong></td>
+        </tr>
     </tbody>
 </table>
 
-# File Operations
+# <a name="file_operations"></a>File Operations
 
 <table>
     <thead>
@@ -148,7 +168,7 @@
     </tbody>
 </table>
 
-# Phone Info
+# <a name="phone"></a>Phone Info
 
 <table>
     <thead>
@@ -205,7 +225,7 @@
     </tbody>
 </table>
 
-# Package Info
+# <a name="package_info"></a>Package Info
 
 <table>
     <thead>
@@ -250,7 +270,7 @@
     </tbody>
 </table>
 
-# Device Related Commands
+# <a name="device_related_commands"></a>Device Related Commands
 
 <table>
     <thead>
@@ -311,7 +331,7 @@
     </tbody>
 </table>
 
-# INTENTS
+# <a name="intents"></a>Intents
 
 [am Command](https://developer.android.com/studio/command-line/shell.html#am)
 
@@ -361,7 +381,7 @@
 
 (1) [stackoverflow](http://stackoverflow.com/questions/27800369/simulating-android-gcm)
 
-# Log
+#  <a name="log"></a>Log
 
 <table>
     <thead>
@@ -413,7 +433,7 @@ $ adb logcat -G 16M
 $ adb logcat *:V > output.log
 ```
 
-# Permissions
+# <a name="permissions"></a>Permissions
 
 <table>
     <thead>
@@ -434,7 +454,7 @@ $ adb logcat *:V > output.log
     </tbody>
 </table>
 
-# Android Version
+# <a name="version"></a>Android Version
 
 <table>
     <thead>
@@ -451,7 +471,7 @@ $ adb logcat *:V > output.log
     </tbody>
 </table>
 
-# Proxy
+#  <a name="proxy"></a>Proxy
 
 <table>
     <thead>
@@ -473,45 +493,61 @@ $ adb logcat *:V > output.log
     </tbody>
 </table>
 
+#  <a name="input"></a>Input & Actions
 
-### Package list
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>adb shell input text S3cr37 && adb shell input keyevent 66</td>
+            <td>Input text 'S3cr37' then press [ENTER]</td>
+        </tr>        
+        <tr>
+            <td>adb shell input swipe 540 1600 540 100 150</td>
+            <td>Swipe up (SCREEN not been closed)</td>
+        </tr>        
+        <tr>
+            <td>adb shell input tap X Y</td>
+            <td>Click on screen at coordinate [X, Y]</td>
+        </tr>   
+        </tbody>
+</table>     
+        
+#  <a name="activities"></a>Start activities
 
-> adb shell 'pm list packages' | sed 's/.*://g'
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>adb shell am start -n com.package.name/com.package.name.ActivityName</td>
+            <td>Throught package name (Manifest) </td>
+        </tr>
+        <tr>
+            <td>am start -a com.example.ACTION_NAME -n com.package.name/com.package.name.ActivityName </td>
+            <td>Intent-filter</td>
+        </tr>
+        <tr>
+            <td>adb shell monkey -p your.app.package.name 1</td>
+            <td>Androiderson tips</td>
+        </tr>
+    </tbody>
+</table>
 
-### Get Screen state and locked state
+
+### Get Screen state and locked state (To be verified)
 
 > adb shell service call trust 7
 
-### Input text
-
-> adb shell input text S3cr37 && adb shell input keyevent 66
-
-## Reboot device
-
-> adb reboot
-
-### Swipe Up
-
-> adb shell input swipe 540 1600 540 100 150
-
-### Start activities
-
-- Throught `shell`
-
-> adb shell 
-> am start -n com.package.name/com.package.name.ActivityName
-
-- Directly 
-
-> adb shell am start -n com.package.name/com.package.name.ActivityName
-
-- Intent-filter
-
-> am start -a com.example.ACTION_NAME -n com.package.name/com.package.name.ActivityName 
-
-- Androiderson tips
-
-> adb shell monkey -p your.app.package.name 1
 
 [1]: https://www.automatetheplanet.com/adb-cheat-sheet/
 [2]: https://3os.org/android/adb-cheat-sheet/#push-a-file-to-download-folder-of-the-android-device
