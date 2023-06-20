@@ -28,3 +28,4 @@
   - [Useful Commands](pentest/useful-commands/index.md)
     - [ssh](pentest/useful-commands/ssh/index.md)
   - [Mobile](pentest/Mobile/index.md)
+  - [Lab. Kali Docker](pentest/lab_kali_docker/index.md)
