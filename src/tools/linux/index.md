@@ -13,3 +13,7 @@
 > sed -i 's/foo/bar/gI' input.txt
 
 - `I` to match all cases of foo (foo, FOO, Foo, FoO) add I (capitalized I) option  
+
+## Install `Oh My zsh`
+
+Convert [Oh My Zsh – guide complet : installation rapide sous Linux](https://les-enovateurs.com/oh-my-zsh-installation-rapide-linux)
