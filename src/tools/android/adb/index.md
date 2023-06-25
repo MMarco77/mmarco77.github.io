@@ -325,7 +325,7 @@
             <td>Opens gallery</td>
         </tr>
         <tr>
-            <td>adb shell monkey -p app.package.name</td>
+            <td>adb shell monkey -p app.package.name 1</td>
             <td>Starts the specified package</td>
         </tr>
     </tbody>

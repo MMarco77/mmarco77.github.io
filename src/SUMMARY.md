@@ -12,6 +12,7 @@
     - [AVD](tools/android/AVD/index.md)
     - [Drozer](tools/android/Drozer/index.md)
     - [Frida](tools/android/frida/index.md)
+      - [Example](tools/android/frida/hacktricks/index.md)
     - [Gnirehtet](tools/android/Gnirehtet/index.md)
   - [Docker](tools/docker/index.md)
     - [Dockerfile](tools/docker/dockerfile/index.md)
