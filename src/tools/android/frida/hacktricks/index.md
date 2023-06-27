@@ -14,6 +14,3 @@
 - [tuto2](https://book.hacktricks.xyz/mobile-pentesting/android-app-pentesting/frida-tutorial/frida-tutorial-2)
     - [From](https://11x256.github.io/Frida-hooking-android-part-2/)
     - [APK and source](https://github.com/11x256/frida-android-examples)
-- [tuto3](https://book.hacktricks.xyz/mobile-pentesting/android-app-pentesting/frida-tutorial/owaspuncrackable-1)
-    - [From](https://joshspicer.com/android-frida-1)
-    - [APK](https://github.com/OWASP/owasp-mstg/blob/master/Crackmes/Android/Level_01/UnCrackable-Level1.apk)
