@@ -1,4 +1,4 @@
-# Android Virtual Device (AVD)
+# AVDManager (Android Virtual Device Manager)
 
 ## Android Emulator Crash
 
