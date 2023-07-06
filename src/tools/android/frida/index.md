@@ -67,3 +67,4 @@ $ frida-ps -U | grep -i <part_of_the_package_name>
     - [Learning Frida](https://nibarius.github.io/learning-frida/)
     - [Frida Home](https://frida.re/docs/examples/android/)
 - [Awesome Frida scripts](https://codeshare.frida.re/)
+- [Learning Frida](https://nibarius.github.io/learning-frida/)

@@ -15,7 +15,7 @@
     - [Frida](tools/android/frida/index.md)
       - [hacktricks](tools/android/frida/hacktricks/index.md)
       - [Owasp](tools/android/frida/owasp/index.md)
-      - [Snippet](tools/android/frida/Snippet/index.md)
+      - [Snippets](tools/android/frida/snippets/index.md)
     - [Gnirehtet](tools/android/Gnirehtet/index.md)
   - [Docker](tools/docker/index.md)
     - [Dockerfile](tools/docker/dockerfile/index.md)
