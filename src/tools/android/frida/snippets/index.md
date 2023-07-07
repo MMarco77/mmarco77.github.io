@@ -160,6 +160,7 @@ protected void onCreate(Bundle paramBundle)
     if (sg.vantagepoint.a.c.c()) {
         a("Root detected!");
     }
+  ...
 ```
 
 - Frida Script
@@ -185,46 +186,7 @@ Java.perform(function () {
 })
 ```
 
-**Rappel** Execute script
-
-```shell
-$ frida -U -l disableRoot.js -f owasp.mstg.uncrackable1
-```
-
-### Script frida for secret string
-
-Code that check password:
-
-```java
-public static boolean a(String str) {
-    byte[] bArr;
-    byte[] bArr2 = new byte[0];
-    try {
-        bArr = sg.vantagepoint.a.a.a(b("8d127684cbc37c17616d806cf50473cc"), Base64.decode("5UJiFctbmgbDoLXmpL12mkno8HT4Lv8dlat8FxR2GOc=", 0));
-    } catch (Exception e) {
-        Log.d("CodeCheck", "AES error:" + e.getMessage());
-        bArr = bArr2;
-    }
-    return str.equals(new String(bArr));
-}
-```
-
-Called by:
-
-```java
-public static boolean a(String str) {
-    byte[] bArr;
-    byte[] bArr2 = new byte[0];
-    try {
-        bArr = sg.vantagepoint.a.a.a(b("8d127684cbc37c17616d806cf50473cc"), Base64.decode("5UJiFctbmgbDoLXmpL12mkno8HT4Lv8dlat8FxR2GOc=", 0));
-    } catch (Exception e) {
-        Log.d("CodeCheck", "AES error:" + e.getMessage());
-        bArr = bArr2;
-    }
-    return str.equals(new String(bArr));
-    }
-```
-
+## Decode bytes to string
 
 ```javascript
 // Helper function to decode byte[] to String
@@ -235,38 +197,100 @@ function arrToStr(byteArr) {
     }
     return tmp;
 }
+```
 
-// Java.perform wraps all of our Frida code.
-Java.perform(function() {
-    // Detect root
-    var classAC = Java.use("sg.vantagepoint.a.c");
+## Exported, imported and symbols from module
 
-    classAC.a.implementation = function(v) {
-        console.log("In function A");
-        return false
-    };
+- Lists all names (exports, imports and symbols) in the given module.
+If a 'needle' is given this function returns the address of the name that matches the 'needle'
 
-    classAC.b.implementation = function(v) {
-        console.log("In functions B");
-        return false
-    };
+```javascript
+function listNames(module, needle) {
+    var address = undefined;
+    Process.enumerateModules()
+        .filter(function (m) { return m["path"].toLowerCase().indexOf(module) != -1; })
+        .forEach(function (mod) {
+            mod.enumerateExports().forEach(function (entry) {
+                console.log("Export: " + entry.name);
+                if (entry.name.indexOf(needle) != -1) address = entry.address;
+            });
+            mod.enumerateImports().forEach(function (entry) {
+                console.log("Import: " + entry.name);
+                if (entry.name.indexOf(needle) != -1) address = entry.address;
+            });
+            mod.enumerateSymbols().forEach(function (entry) {
+                console.log("symbol name: " + entry.name);
+                if (entry.name.indexOf(needle) != -1) address = entry.address;
+            });
+        });
+    console.log("");
+    return address;
+}
+```
 
-    classAC.c.implementation = function(v) {
-        console.log("In function C");
-        return false
-    };
+## Hook function in library
 
-    console.log("Root Bypass Complete");
+- An `libfoo.so` use `strncmp` function.
 
-    var classAA = Java.use("sg.vantagepoint.a.a");
-    // Execute a(byte[], byte[])
-    classAA.a.implementation = function(x1, x2) {
-        var rawFunctionCall = this.a(x1, x2);
-        var password = arrToStr(rawFunctionCall);
-        console.log("=> " + password);
-        return password;
-    };
-});
+```javascript
+function listNames(module, needle) {
+    var address = undefined;
+    Process.enumerateModules()
+        .filter(function (m) { return m["path"].toLowerCase().indexOf(module) != -1; })
+        .forEach(function (mod) {
+            mod.enumerateExports().forEach(function (entry) {
+                if (entry.name.indexOf(needle) != -1) address = entry.address;
+            });
+            mod.enumerateImports().forEach(function (entry) {
+                if (entry.name.indexOf(needle) != -1) address = entry.address;
+            });
+            mod.enumerateSymbols().forEach(function (entry) {
+                if (entry.name.indexOf(needle) != -1) address = entry.address;
+            });
+        });
+    return address;
+}
+
+function attachToStrncmp(strncmpAddress, compareTo) {
+    Interceptor.attach(strncmpAddress, {
+        onEnter: function (args) {
+            var len = compareTo.length;
+            if (args[2].toInt32() != len) {return;}
+            var str1 = args[0].readUtf8String(len)
+            var str2 = args[1].readUtf8String(len)
+            if (str1 == compareTo || str2 == compareTo) {
+                console.log("strncmp(" + str1 + ", " + str2 + ", " + len + ") called");
+            }
+        },
+    });
+}
+
+Java.perform(function () {
+    Java.use("<MODULE>.MainActivity").onResume.implementation = function () {
+        this.onResume();
+
+        // Hook to strncmp and look for any calls to it with the magic word as argument
+        var watchDog = <STRING_UNIQUE_2_DISTNGUISHED_CALL>;
+        var strncmp_addr = listNames('libfoo.so', 'strncmp')
+        attachToStrncmp(strncmp_addr, theMagicWord);
+
+        // Find the CodeCheck instance that was created by the app in onCreate()
+        // Then call it with the magic word as argument.
+        Java.choose("CLASS_MODULE", {
+            onMatch: function (instance) {
+                instance.<FCT_IN_CLASS>(
+                    Java.use("java.lang.String").$new(watchDog)
+                );
+                return "stop";  // return 'stop'
+            },
+            onComplete: function () { }
+        });
+
+        // We've got what we wanted, detach again to prevent multiple attachments
+        // to strncmp if onResume is called multiple times.
+        Interceptor.detachAll();
+    }
+})
 ```
 
 ## Other Snippet

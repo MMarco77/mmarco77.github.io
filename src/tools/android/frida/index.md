@@ -55,6 +55,12 @@ $ frida-ps -U
 $ frida-ps -U | grep -i <part_of_the_package_name>
 ```
 
+### Run client script
+
+```shell
+frida -U -l <script>.js -f <package_name>
+```
+
 ## Reference
 
 - Cheat Sheet
