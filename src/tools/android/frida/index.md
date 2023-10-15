@@ -1,10 +1,5 @@
 # Frida
 
-Frida can be used : 
-- Rooted device(s)
-- [Not rooted device(s)](./setup/NotRooted/index.md)
-- [Emulator(s)](./setup/emulator/index.md)
-
 ## Reference
 
 - Cheat Sheet

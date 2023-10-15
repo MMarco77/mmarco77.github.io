@@ -2,7 +2,7 @@
 
 - Ref: [Frida's Gadget Injection on Android: No Root, 2 Methods - Alexandr Fadeev](https://fadeevab.com/frida-gadget-injection-on-android-no-root-2-methods/)
 
-![Architecture](./assets/images/frida-gadget-injection-dark.png)
+![Architecture](./frida-gadget-injection-dark.png)
 
 You have 2 options to inject Frida's Gadget to Android application: 
 
