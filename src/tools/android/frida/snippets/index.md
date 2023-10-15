@@ -300,3 +300,5 @@ Java.perform(function () {
 - [iddoeldor/frida-snippets [EXCELLENT]](https://github.com/iddoeldor/frida-snippets#class-description)
 
 - [Solving OWASP MSTG UnCrackable App for Android Level 2](https://nibarius.github.io/learning-frida/2020/05/23/uncrackable2)
+
+- [Frida Scripting Guide for Java](https://cmrodriguez.me/blog/frida-scripting-guide/)
