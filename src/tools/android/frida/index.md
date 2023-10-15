@@ -2,8 +2,8 @@
 
 Frida can be used : 
 - Rooted device(s)
-- [Not rooted device(s)](./NotRooted.md)
-- [Emulator(s)](./emulator.md)
+- [Not rooted device(s)](./setup/NotRooted/index.md)
+- [Emulator(s)](./setup/emulator/index.md)
 
 ## Reference
 
