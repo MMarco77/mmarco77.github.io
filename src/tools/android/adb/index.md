@@ -15,7 +15,7 @@
 - [Intents](#intents)
 - [Log](#log)
 - [Permissions](#permissions)
-- [Android Version](#version)
+- [System Informations](#getprop)
 - [Proxy](#proxy)
 - [Input & Actions](#input)
 - [Start activities](#activities)
@@ -89,18 +89,18 @@
     <tbody>
         <tr>
             <td><strong>adb shell install</strong> <code>&lt;apk&gt;</code></td>
-            <td><strong>Install app</strong></td>
+            <td>Install app</td>
         </tr>
         <tr>
             <td><strong>adb shell install <code>&lt;path&gt;</code></strong></td>
-            <td><strong>Install app from phone path</strong></td>
-        </tr>
-        <tr>
-            <td>adb shell install -r <code>&lt;path&gt;</code></td>
             <td>Install app from phone path</td>
         </tr>
         <tr>
-            <td>adb shell uninstall <code>&lt;name&gt;</code></td>
+            <td><strong>adb shell install -r <code>&lt;path&gt;</code></strong></td>
+            <td>Install app from phone path</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell uninstall <code>&lt;name&gt;</code></strong></td>
             <td>Remove the app</td>
         </tr>
     </tbody>
@@ -454,7 +454,7 @@ $ adb logcat *:V > output.log
     </tbody>
 </table>
 
-# <a name="version"></a>Android Version
+# <a name="getprop"></a>System Informations
 
 <table>
     <thead>
@@ -465,9 +465,17 @@ $ adb logcat *:V > output.log
     </thead>
     <tbody>
         <tr>
-            <td>adb shell getprop ro.build.version.release</td>
+            <td><strong>adb shell getprop <code>ro.build.version.release</code></strong></td>
             <td>Get Build Version of Release Mode</td>
         </tr>
+        <tr>
+            <td><strong>adb shell getprop <code>ro.product.cpu.abi</code></strong></td>
+            <td>Get current ABI</td>
+        </tr>
+        <!-- <tr>
+            <td><strong>adb shell getprop <code></code></strong></td>
+            <td></td>
+        </tr> -->
     </tbody>
 </table>
 
