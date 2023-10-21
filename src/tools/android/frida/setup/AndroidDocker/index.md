@@ -20,6 +20,10 @@ $ docker run -d -p 6080:6080 -p 5554:5554 -p 5555:5555 -e EMULATOR_DEVICE="Samsu
 - Connect to shell
 
 ```shell
+➜ adb connect 127.0.0.1:5555
+* daemon not running; starting now at tcp:5037
+* daemon started successfully
+connected to 127.0.0.1:5555
 ➜ adb -s 127.0.0.1:5555 shell       
 emu64xa:/ $
 ➜ adb -s 127.0.0.1:5555 root
