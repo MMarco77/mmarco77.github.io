@@ -19,6 +19,7 @@
 - [Proxy](#proxy)
 - [Input & Actions](#input)
 - [Start activities](#activities)
+- [Shell process management](#shellprocess)
 
 # <a name="basic"></a>Basic Command
 
@@ -426,11 +427,19 @@
     </tbody>
 </table>
 
-- Example
+### Example
+
+- 
 
 ```shell
 $ adb logcat -G 16M
 $ adb logcat *:V > output.log
+```
+
+- Logcat for specific package name
+
+```shell
+$ adb logcat -c && adb logcat --pid=$(adb shell pidof -s fr.dghack2023.android_mirrors)
 ```
 
 # <a name="permissions"></a>Permissions
@@ -547,6 +556,23 @@ $ adb logcat *:V > output.log
         <tr>
             <td>adb shell monkey -p your.app.package.name 1</td>
             <td>Androiderson tips</td>
+        </tr>
+    </tbody>
+</table>
+
+# <a name="shellprocess"></a>Shell process management
+
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>adb shell pidof <code>-s fr.dghack2023.android_mirrors</code></strong></td>
+            <td>Get PID of application name (running)</td>
         </tr>
     </tbody>
 </table>
