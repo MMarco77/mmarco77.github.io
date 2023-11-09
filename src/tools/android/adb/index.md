@@ -20,6 +20,7 @@
 - [Input & Actions](#input)
 - [Start activities](#activities)
 - [Shell process management](#shellprocess)
+- [Optimize for Doze and App Standby](#dozemode_standby)
 
 # <a name="basic"></a>Basic Command
 
@@ -118,15 +119,15 @@
     </thead>
     <tbody>
         <tr>
-            <td>adb shell ls</td>
+            <td><strong>adb shell <code>ls</code></strong></td>
             <td>List directory contents</td>
         </tr>
         <tr>
-            <td>adb shell ls -s</td>
+            <td><strong>adb shell <code>ls -s</code></strong></td>
             <td>Print size of each file</td>
         </tr>
         <tr>
-            <td>adb shell ls -R</td>
+            <td><strong>adb shell <code>ls -R</code></strong></td>
             <td>List subdirectories recursively</td>
         </tr>
         <tr>
@@ -577,6 +578,58 @@ $ adb logcat -c && adb logcat --pid=$(adb shell pidof -s fr.dghack2023.android_m
     </tbody>
 </table>
 
+# <a name="dozemode_standby"></a>[Optimize for Doze and App Standby][3]
+
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>adb shell <code>dumpsys </code></strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys battery | grep powered</code></strong></td>
+            <td>Battery powered state</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys battery unplug</code></strong></td>
+            <td>Unplug battery</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys battery reset</code></strong></td>
+            <td>Reset battery</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys deviceidle</code></strong></td>
+            <td>Dump Doze mode info</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys deviceidle enable</code></strong></td>
+            <td>Enable Doze mode (may be required on Android Emulator)</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys deviceidle get light</code></strong></td>
+            <td>Get status of Light Doze mode</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys deviceidle get deep</code></strong></td>
+            <td>Get status of Deep Doze mode</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys deviceidle step light</code></strong></td>
+            <td>Enter Light Doze mode (should be called several times to pass all phases)</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys deviceidle step deep</code></strong></td>
+            <td>Enter Deep Doze mode (should be called several times to pass all phases)</td>
+    </tbody>
+</table>
+
 
 ### Get Screen state and locked state (To be verified)
 
@@ -585,3 +638,4 @@ $ adb logcat -c && adb logcat --pid=$(adb shell pidof -s fr.dghack2023.android_m
 
 [1]: https://www.automatetheplanet.com/adb-cheat-sheet/
 [2]: https://3os.org/android/adb-cheat-sheet/#push-a-file-to-download-folder-of-the-android-device
+[3]: https://developer.android.com/training/monitoring-device-state/doze-standby
