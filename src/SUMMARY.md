@@ -54,3 +54,8 @@
   - [Lab. Kali Docker](pentest/lab_kali_docker/index.md)
 -[dev](dev/index.md)
   - [Python](dev/python/index.md)
+    - [snippets](dev/python/snippets/index.md)
+      - [Full Click Snippets](dev/python/snippets/FullClickSnippet/index.md)
+      - [Full Click Snippets](dev/python/snippets/FullClickSnippet/index.md)
+      - [Get/Post Request](dev/python/snippets/GetPostRequest/index.md)
+      - [MovieToken](dev/python/snippets/MovieToken/README.md)
