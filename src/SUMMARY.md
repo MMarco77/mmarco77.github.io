@@ -30,7 +30,7 @@
   - [linux](tools/linux/index.md)
     - [bash](tools/linux/bash/index.md)
 
-- [Technics]()
+- [Technics](technics/README.md)
   - [Natural Referencing](technics/natural-referencing/index.md)
   - [Web Scrapping](technics/web-scrapping/index.md)
 
@@ -52,10 +52,10 @@
       - [Android Root Detection Bypass Using Frida](pentest/Mobile/red_fox_sec_training/frida/index.md)
       - [SSL Pinning Bypass For Android Using Frida](pentest/Mobile/red_fox_sec_training/frida_ssl_pinning/index.md)
   - [Lab. Kali Docker](pentest/lab_kali_docker/index.md)
--[dev](dev/index.md)
+
+- [dev](dev/index.md)
   - [Python](dev/python/index.md)
     - [snippets](dev/python/snippets/index.md)
-      - [Full Click Snippets](dev/python/snippets/FullClickSnippet/index.md)
       - [Full Click Snippets](dev/python/snippets/FullClickSnippet/index.md)
       - [Get/Post Request](dev/python/snippets/GetPostRequest/index.md)
       - [MovieToken](dev/python/snippets/MovieToken/README.md)

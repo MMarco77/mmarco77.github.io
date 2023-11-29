@@ -21,6 +21,7 @@
 - [Start activities](#activities)
 - [Shell process management](#shellprocess)
 - [Optimize for Doze and App Standby](#dozemode_standby)
+- [Service](#service)
 
 # <a name="basic"></a>Basic Command
 
@@ -627,8 +628,37 @@ $ adb logcat -c && adb logcat --pid=$(adb shell pidof -s fr.dghack2023.android_m
         <tr>
             <td><strong>adb shell <code>dumpsys deviceidle step deep</code></strong></td>
             <td>Enter Deep Doze mode (should be called several times to pass all phases)</td>
+        </tr>
     </tbody>
 </table>
+
+================================================================
+
+- [Service](#service)
+
+# <a name="service"></a>Service
+
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>adb shell <code>dumpsys activity service</code></strong></td>
+            <td>Allow to list running services</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys activity</code> com.service.function</strong></td>
+            <td>Allow to know the services *com.service.function* status.</td>
+        </tr>
+    </tbody>
+</table>
+
+============================================================
+
 
 
 ### Get Screen state and locked state (To be verified)
