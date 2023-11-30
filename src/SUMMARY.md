@@ -59,3 +59,6 @@
       - [Full Click Snippets](dev/python/snippets/FullClickSnippet/index.md)
       - [Get/Post Request](dev/python/snippets/GetPostRequest/index.md)
       - [MovieToken](dev/python/snippets/MovieToken/index.md)
+  - [Rust](dev/rust/index.md)
+    - [snippets](dev/rust/snippets/index.md)
+      - [Error handling](dev/rust/snippets/error/index.md)
