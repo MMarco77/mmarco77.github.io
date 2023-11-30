@@ -1,0 +1,3525 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js ayu">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title></title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "ayu";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="index.html">knowledge-based </a></li><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">Knowledges</li><li class="chapter-item "><a href="tools/index.html"><strong aria-hidden="true">1.</strong> Tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/android/index.html"><strong aria-hidden="true">1.1.</strong> Android</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/android/adb/index.html"><strong aria-hidden="true">1.1.1.</strong> ADB</a></li><li class="chapter-item "><a href="tools/android/apktool/index.html"><strong aria-hidden="true">1.1.2.</strong> APKTool</a></li><li class="chapter-item "><a href="tools/android/emulator/index.html"><strong aria-hidden="true">1.1.3.</strong> emulator</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/android/emulator/AVDManager/index.html"><strong aria-hidden="true">1.1.3.1.</strong> AVDManager</a></li></ol></li><li class="chapter-item "><a href="tools/android/Drozer/index.html"><strong aria-hidden="true">1.1.4.</strong> Drozer</a></li><li class="chapter-item "><a href="tools/android/frida/index.html"><strong aria-hidden="true">1.1.5.</strong> Frida</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/android/frida/setup/index.html"><strong aria-hidden="true">1.1.5.1.</strong> Setup</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/android/frida/setup/NotRooted/index.html"><strong aria-hidden="true">1.1.5.1.1.</strong> Setup on not rooted device(s)</a></li><li class="chapter-item "><a href="tools/android/frida/setup/emulator/index.html"><strong aria-hidden="true">1.1.5.1.2.</strong> Setup on emulator</a></li><li class="chapter-item "><a href="tools/android/frida/setup/AndroidDocker/index.html"><strong aria-hidden="true">1.1.5.1.3.</strong> Setup in Android docker</a></li></ol></li><li class="chapter-item "><a href="tools/android/frida/snippets/index.html"><strong aria-hidden="true">1.1.5.2.</strong> Snippets</a></li><li class="chapter-item "><a href="tools/android/frida/tutorials/index.html"><strong aria-hidden="true">1.1.5.3.</strong> Tutorials</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/android/frida/tutorials/hacktricks/index.html"><strong aria-hidden="true">1.1.5.3.1.</strong> hacktricks</a></li><li class="chapter-item "><a href="tools/android/frida/tutorials/owasp/index.html"><strong aria-hidden="true">1.1.5.3.2.</strong> Owasp</a></li></ol></li></ol></li><li class="chapter-item "><a href="tools/android/Gnirehtet/index.html"><strong aria-hidden="true">1.1.6.</strong> Gnirehtet</a></li></ol></li><li class="chapter-item "><a href="tools/docker/index.html"><strong aria-hidden="true">1.2.</strong> Docker</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/docker/dockerfile/index.html"><strong aria-hidden="true">1.2.1.</strong> Dockerfile</a></li></ol></li><li class="chapter-item "><a href="tools/git/index.html"><strong aria-hidden="true">1.3.</strong> Git</a></li><li class="chapter-item "><a href="tools/graphviz/index.html"><strong aria-hidden="true">1.4.</strong> GraphViz</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/graphviz/examples/index.html"><strong aria-hidden="true">1.4.1.</strong> Examples</a></li></ol></li><li class="chapter-item "><a href="tools/linux/index.html"><strong aria-hidden="true">1.5.</strong> linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="tools/linux/bash/index.html"><strong aria-hidden="true">1.5.1.</strong> bash</a></li></ol></li></ol></li><li class="chapter-item "><a href="technics/index.html"><strong aria-hidden="true">2.</strong> Technics</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="technics/natural-referencing/index.html"><strong aria-hidden="true">2.1.</strong> Natural Referencing</a></li><li class="chapter-item "><a href="technics/web-scrapping/index.html"><strong aria-hidden="true">2.2.</strong> Web Scrapping</a></li></ol></li><li class="chapter-item "><a href="pentest/index.html"><strong aria-hidden="true">3.</strong> Pentest</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="pentest/useful-commands/index.html"><strong aria-hidden="true">3.1.</strong> Useful Commands</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="pentest/useful-commands/ssh/index.html"><strong aria-hidden="true">3.1.1.</strong> ssh</a></li></ol></li><li class="chapter-item "><a href="pentest/Mobile/index.html"><strong aria-hidden="true">3.2.</strong> Mobile</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="pentest/Mobile/red_fox_sec_training/index.html"><strong aria-hidden="true">3.2.1.</strong> red_fox_sec_training</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="pentest/Mobile/red_fox_sec_training/web_view/index.html"><strong aria-hidden="true">3.2.1.1.</strong> Exploiting Android WebView Vulnerabilities</a></li><li class="chapter-item "><a href="pentest/Mobile/red_fox_sec_training/broad_cast_receivers/index.html"><strong aria-hidden="true">3.2.1.2.</strong> Exploiting Broadcast Receivers</a></li><li class="chapter-item "><a href="pentest/Mobile/red_fox_sec_training/content_providers/index.html"><strong aria-hidden="true">3.2.1.3.</strong> Exploiting Content Providers</a></li><li class="chapter-item "><a href="pentest/Mobile/red_fox_sec_training/drozer/index.html"><strong aria-hidden="true">3.2.1.4.</strong> Android Pentesting with Drozer</a></li><li class="chapter-item "><a href="pentest/Mobile/red_fox_sec_training/tapjacking/index.html"><strong aria-hidden="true">3.2.1.5.</strong> Android Tapjacking Vulnerability</a></li><li class="chapter-item "><a href="pentest/Mobile/red_fox_sec_training/crypto/index.html"><strong aria-hidden="true">3.2.1.6.</strong> Broken Cryptography in Android Applications</a></li><li class="chapter-item "><a href="pentest/Mobile/red_fox_sec_training/pentest_method/index.html"><strong aria-hidden="true">3.2.1.7.</strong> Android Pentesting Methodology (Pt. 1)</a></li><li class="chapter-item "><a href="pentest/Mobile/red_fox_sec_training/pentest_method/index.html"><strong aria-hidden="true">3.2.1.8.</strong> Android Pentesting Methodology (Pt. 2)</a></li><li class="chapter-item "><a href="pentest/Mobile/red_fox_sec_training/pentest_method/index.html"><strong aria-hidden="true">3.2.1.9.</strong> Android Pentesting Methodology (Pt. 3)</a></li><li class="chapter-item "><a href="pentest/Mobile/red_fox_sec_training/frida/index.html"><strong aria-hidden="true">3.2.1.10.</strong> Android Root Detection Bypass Using Frida</a></li><li class="chapter-item "><a href="pentest/Mobile/red_fox_sec_training/frida_ssl_pinning/index.html"><strong aria-hidden="true">3.2.1.11.</strong> SSL Pinning Bypass For Android Using Frida</a></li></ol></li></ol></li><li class="chapter-item "><a href="pentest/lab_kali_docker/index.html"><strong aria-hidden="true">3.3.</strong> Lab. Kali Docker</a></li></ol></li><li class="chapter-item "><a href="dev/index.html"><strong aria-hidden="true">4.</strong> dev</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="dev/python/index.html"><strong aria-hidden="true">4.1.</strong> Python</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="dev/python/snippets/index.html"><strong aria-hidden="true">4.1.1.</strong> snippets</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="dev/python/snippets/FullClickSnippet/index.html"><strong aria-hidden="true">4.1.1.1.</strong> Full Click Snippets</a></li><li class="chapter-item "><a href="dev/python/snippets/GetPostRequest/index.html"><strong aria-hidden="true">4.1.1.2.</strong> Get/Post Request</a></li><li class="chapter-item "><a href="dev/python/snippets/MovieToken/index.html"><strong aria-hidden="true">4.1.1.3.</strong> MovieToken</a></li></ol></li></ol></li><li class="chapter-item "><a href="dev/rust/index.html"><strong aria-hidden="true">4.2.</strong> Rust</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="dev/rust/snippets/index.html"><strong aria-hidden="true">4.2.1.</strong> snippets</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="dev/rust/snippets/error/index.html"><strong aria-hidden="true">4.2.1.1.</strong> Error handling</a></li></ol></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu (default)</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="knowledge-based"><a class="header" href="#knowledge-based">Knowledge-based</a></h1>
+<p>Set of knowledge organized by theme.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tools"><a class="header" href="#tools">Tools</a></h1>
+<p>Some cool tools I use/to use</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="android"><a class="header" href="#android">Android</a></h1>
+<h2 id="path-user-land"><a class="header" href="#path-user-land">Path (USer land)</a></h2>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>/data/data/<code>&lt;package name&gt;</code>/databases</td>
+            <td>App databases</td>
+        </tr>
+        <tr>
+            <td>/data/data/<code>&lt;package name&gt;</code>/shared_prefs/</td>
+            <td>Shared preferences</td>
+        </tr>
+        <tr>
+            <td>/mnt/sdcard/Download/</td>
+            <td>Download folder</td>
+        </tr>
+        <tr>
+            <td>/data/app</td>
+            <td>Apk installed by user</td>
+        </tr>
+        <tr>
+            <td>/system/app</td>
+            <td>Pre-installed APK files</td>
+        </tr>
+        <tr>
+            <td>/mmt/asec</td>
+            <td>Encrypted apps (App2SD)</td>
+        </tr>
+        <tr>
+            <td>/mmt/emmc</td>
+            <td>Internal SD Card</td>
+        </tr>
+        <tr>
+            <td>/mmt/adcard</td>
+            <td>External/Internal SD Card</td>
+        </tr>
+        <tr>
+            <td>/mmt/adcard/external_sd</td>
+            <td>External SD Card</td>
+        </tr>
+    </tbody>
+</table>
+<h2 id="usefull-docker"><a class="header" href="#usefull-docker">Usefull docker</a></h2>
+<p><a href="https://hub.docker.com/r/mingc/android-build-box">mingc/android-build-box</a> An optimized docker image includes Android, Kotlin, Flutter sdk. </p>
+<pre><code class="language-shell">$ docker pull mingc/android-build-box
+</code></pre>
+<p><a href="https://hub.docker.com/r/mingc/android-build-box">Work in progress</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="android-debug-bridge-adb"><a class="header" href="#android-debug-bridge-adb">Android Debug Bridge (<code>adb</code>)</a></h1>
+<ul>
+<li><a href="https://www.automatetheplanet.com/adb-cheat-sheet/">Android ADB Cheat Sheet¶</a></li>
+<li><a href="https://3os.org/android/adb-cheat-sheet/#push-a-file-to-download-folder-of-the-android-device">adb (Android Debug Bridge) cheatsheet</a></li>
+</ul>
+<h1 id="package-installation"><a class="header" href="#package-installation">Package Installation</a></h1>
+<ul>
+<li><a href="tools/android/adb/index.html#basic">Basic Command</a></li>
+<li><a href="tools/android/adb/index.html#activities">Some Activities</a></li>
+<li><a href="tools/android/adb/index.html#install">Package Installation</a></li>
+<li><a href="tools/android/adb/index.html#path">Path</a></li>
+<li><a href="tools/android/adb/index.html#file_operations">File Operations</a></li>
+<li><a href="tools/android/adb/index.html#phone">Phone Info</a></li>
+<li><a href="tools/android/adb/index.html#package_info">Package Info</a></li>
+<li><a href="tools/android/adb/index.html#device_related_commands">Device Related Commands</a></li>
+<li><a href="tools/android/adb/index.html#intents">Intents</a></li>
+<li><a href="tools/android/adb/index.html#log">Log</a></li>
+<li><a href="tools/android/adb/index.html#permissions">Permissions</a></li>
+<li><a href="tools/android/adb/index.html#getprop">System Informations</a></li>
+<li><a href="tools/android/adb/index.html#proxy">Proxy</a></li>
+<li><a href="tools/android/adb/index.html#input">Input &amp; Actions</a></li>
+<li><a href="tools/android/adb/index.html#activities">Start activities</a></li>
+<li><a href="tools/android/adb/index.html#shellprocess">Shell process management</a></li>
+<li><a href="tools/android/adb/index.html#dozemode_standby">Optimize for Doze and App Standby</a></li>
+<li><a href="tools/android/adb/index.html#service">Service</a></li>
+</ul>
+<h1 id="basic-command"><a class="header" href="#basic-command"><a name="basic"></a>Basic Command</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>adb devices</td>
+            <td>Lists connected devices</td>
+        </tr>
+        <tr>
+            <td>adb connect 192.168.2.1</td>
+            <td>Connects to adb device over network</td>
+        </tr>
+        <tr>
+            <td>adb root</td>
+            <td>Restarts adbd with root permissions</td>
+        </tr>
+        <tr>
+            <td>adb start-server</td>
+            <td>Starts the adb server</td>
+        </tr>
+        <tr>
+            <td>adb kill-server</td>
+            <td>Kills the adb server</td>
+        </tr>
+        <tr>
+            <td>adb reboot</td>
+            <td>Reboots the device</td>
+        </tr>
+        <tr>
+            <td>adb shell</td>
+            <td>Starts the backround terminal</td>
+        </tr>
+        <tr>
+            <td>adb devices -l</td>
+            <td>List of devices by product/model</td>
+        </tr>
+        <tr>
+            <td>adb -s <code>&lt;deviceName&gt; &lt;command&gt;</code></td>
+            <td>Redirect command to specific device</td>
+        </tr>
+        <tr>
+            <td>adb –d <code>&lt;command&gt;</code></td>
+            <td>Directs command to only attached USB device</td>
+        </tr>
+        <tr>
+            <td>adb –e <code>&lt;command&gt;</code></td>
+            <td>Directs command to only attached emulator</td>
+        </tr>
+    </tbody>
+</table>
+<h1 id="package-installation-1"><a class="header" href="#package-installation-1"><a name="install"></a>Package Installation</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>adb shell install</strong> <code>&lt;apk&gt;</code></td>
+            <td>Install app</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell install <code>&lt;path&gt;</code></strong></td>
+            <td>Install app from phone path</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell install -r <code>&lt;path&gt;</code></strong></td>
+            <td>Install app from phone path</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell uninstall <code>&lt;name&gt;</code></strong></td>
+            <td>Remove the app</td>
+        </tr>
+    </tbody>
+</table>
+<h1 id="path"><a class="header" href="#path"><a name="path"></a>Path</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>adb shell <code>ls</code></strong></td>
+            <td>List directory contents</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>ls -s</code></strong></td>
+            <td>Print size of each file</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>ls -R</code></strong></td>
+            <td>List subdirectories recursively</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell pm path <code>&lt;package name&gt;</code></strong></td>
+            <td><strong>Get full path of a package</strong></td>
+        </tr>
+        <tr>
+            <td><strong>adb shell pm list packages -f</strong></td>
+            <td><strong>Lists all the packages and full paths</strong></td>
+        </tr>
+        <tr>
+            <td><strong>adb shell pm list packages | sed 's/.*://g'</strong></td>
+            <td><strong>Get all available packages</strong></td>
+        </tr>
+    </tbody>
+</table>
+<h1 id="file-operations"><a class="header" href="#file-operations"><a name="file_operations"></a>File Operations</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>adb push <code>&lt;local&gt; &lt;remote&gt;</code></strong></td>
+            <td><strong>Copy file/dir to device</strong></td>
+        </tr>
+        <tr>
+            <td><strong>adb pull <code>&lt;remote&gt; &lt;local&gt;</code></strong></td>
+            <td><strong>Copy file/dir from device</strong></td>
+        </tr>
+        <tr>
+            <td>run-as <code>&lt;package&gt;</code> cat <code>&lt;file&gt;</code></td>
+            <td>Access the private package files</td>
+        </tr>
+    </tbody>
+</table>
+<h1 id="phone-info"><a class="header" href="#phone-info"><a name="phone"></a>Phone Info</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>adb get-statе</td>
+            <td>Print device state</td>
+        </tr>
+        <tr>
+            <td>adb get-serialno</td>
+            <td>Get the serial number</td>
+        </tr>
+        <tr>
+            <td>adb shell dumpsys iphonesybinfo</td>
+            <td>Get the IMEI</td>
+        </tr>
+        <tr>
+            <td>adb shell netstat</td>
+            <td>List TCP connectivity</td>
+        </tr>
+        <tr>
+            <td>adb shell pwd</td>
+            <td>Print current working directory</td>
+        </tr>
+        <tr>
+            <td>adb shell dumpsys battery</td>
+            <td>Battery status</td>
+        </tr>
+        <tr>
+            <td>adb shell pm list features</td>
+            <td>List phone features</td>
+        </tr>
+        <tr>
+            <td>adb shell service list</td>
+            <td>List all services</td>
+        </tr>
+        <tr>
+            <td>adb shell dumpsys activity <code>&lt;package&gt;/&lt;activity&gt;</code></td>
+            <td>Activity info</td>
+        </tr>
+        <tr>
+            <td>adb shell ps</td>
+            <td>Print process status</td>
+        </tr>
+        <tr>
+            <td>adb shell wm size</td>
+            <td>Displays the current screen resolution</td>
+        </tr>
+    </tbody>
+</table>
+<h1 id="package-info"><a class="header" href="#package-info"><a name="package_info"></a>Package Info</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>adb shell list packages</td>
+            <td>Lists package names</td>
+        </tr>
+        <tr>
+            <td>adb shell list packages -r</td>
+            <td>Lists package name + path to apks</td>
+        </tr>
+        <tr>
+            <td>adb shell list packages -3</td>
+            <td>Lists third party package names</td>
+        </tr>
+        <tr>
+            <td>adb shell list packages -s</td>
+            <td>Lists only system packages</td>
+        </tr>
+        <tr>
+            <td>adb shell list packages -u</td>
+            <td>Lists package names + uninstalled</td>
+        </tr>
+        <tr>
+            <td>adb shell dumpsys package packages</td>
+            <td>Lists info on all apps</td>
+        </tr>
+        <tr>
+            <td>adb shell dump <code>&lt;name&gt;</code></td>
+            <td>Lists info on one package</td>
+        </tr>
+        <tr>
+            <td>adb shell path <code>&lt;package&gt;</code></td>
+            <td>Path to the apk file</td>
+        </tr>
+    </tbody>
+</table>
+<h1 id="device-related-commands"><a class="header" href="#device-related-commands"><a name="device_related_commands"></a>Device Related Commands</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>adb reboot-recovery</td>
+            <td>Reboot device into recovery mode</td>
+        </tr>
+        <tr>
+            <td>adb reboot fastboot</td>
+            <td>Reboot device into recovery mode</td>
+        </tr>
+        <tr>
+            <td>adb shell screencap -p "/path/to/screenshot.png"</td>
+            <td>Capture screenshot</td>
+        </tr>
+        <tr>
+            <td>adb shell screenrecord "/path/to/record.mp4"</td>
+            <td>Record device screen</td>
+        </tr>
+        <tr>
+            <td>adb backup -apk -all -f backup.ab</td>
+            <td>Backup settings and apps</td>
+        </tr>
+        <tr>
+            <td>adb backup -apk -shared -all -f backup.ab</td>
+            <td>Backup settings, apps and shared storage</td>
+        </tr>
+        <tr>
+            <td>adb backup -apk -nosystem -all -f backup.ab</td>
+            <td>Backup only non-system apps</td>
+        </tr>
+        <tr>
+            <td>adb restore backup.ab</td>
+            <td>Restore a previous backup</td>
+        </tr>
+        <tr>
+            <td>-------</td>
+            <td>-----------</td>
+        </tr>
+        <tr>
+            <td>adb shell am start -a android.intent.action.VIEW -d URL</td>
+            <td>Opens URL</td>
+        </tr>
+        <tr>
+            <td>adb shell am start -t image/* -a android.intent.action.VIEW</td>
+            <td>Opens gallery</td>
+        </tr>
+        <tr>
+            <td>adb shell monkey -p app.package.name -v 1</td>
+            <td>Starts the specified package</td>
+        </tr>
+    </tbody>
+</table>
+<h1 id="intents"><a class="header" href="#intents"><a name="intents"></a>Intents</a></h1>
+<p><a href="https://developer.android.com/studio/command-line/shell.html#am">am Command</a></p>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>am start -a android.intent.action.VIEW -d https://github.com</td>
+            <td>URI</td>
+        </tr>
+        <tr>
+            <td>am start -a "android.intent.action.SEND" --es "android.intent.extra.TEXT" "Hello World" -t "text/plain"</td>
+            <td>Mime Type and Extra string</td>
+        </tr>
+        <tr>
+            <td>am start -n "your.application.packagename/path.to.the.Activity"</td>
+            <td>Activity</td>
+        </tr>
+        <tr>
+            <td>am start -n "your.application.packagename/path.to.the.Activity" - e "key" "data"</td>
+            <td>Activity with extras</td>
+        </tr>
+        <tr>
+            <td>am startservice -n "com.example.application/.BackgroundService"</td>
+            <td>Service</td>
+        </tr>
+        <tr>
+            <td>am broadcast -a "android.intent.action.PACKAGE_FIRST_LAUNCH" -d "com.example.application"</td>
+            <td>Broadcast with Action</td>
+        </tr>
+        <tr>
+            <td>
+            am broadcast -a com.google.android.c2dm.intent.RECEIVE 
+                         -n <code>&lt;YOUR_PACKAGE_NAME&gt;/&lt;YOUR_RECEIVER_NAME&gt;</code> 
+                         -e "<code>&lt;EXTRA_KEY_1&gt;</code>" "<code>&lt;EXTRA_VALUE_1&gt;</code>"
+                         -e "<code>&lt;EXTRA_KEY_2&gt;</code>" "<code>&lt;EXTRA_VALUE_1&gt;</code>"
+            </td>
+            <td>Notification (1)</td>
+        </tr>
+    </tbody>
+</table>
+<p>(1) <a href="http://stackoverflow.com/questions/27800369/simulating-android-gcm">stackoverflow</a></p>
+<h1 id="log"><a class="header" href="#log"><a name="log"></a>Log</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>adb logcat <code>[options] [filter] [filter]</code></strong></td>
+            <td><strong>View device log</strong></td>
+        </tr>
+        <tr>
+            <td>adb bugreport</td>
+            <td>Print bug reports</td>
+        </tr>
+        <tr>
+            <td>adb logcat</td>
+            <td>Starts printing log messages to stdout</td>
+        </tr>
+        <tr>
+            <td>adb logcat -g</td>
+            <td>Displays current log buffer sizes</td>
+        </tr>
+        <tr>
+            <td>adb logcat -G <code>&lt;size&gt;</code></td>
+            <td>Sets the buffer size (K or M)</td>
+        </tr>
+        <tr>
+            <td>adb logcat -c</td>
+            <td>Clears the log buffers</td>
+        </tr>
+        <tr>
+            <td>adb logcat *:V</td>
+            <td>Enables ALL log messages (verbose)</td>
+        </tr>
+        <tr>
+            <td>adb logcat -f <code>&lt;filename&gt;</code></td>
+            <td>Dumps to specified file</td>
+        </tr>
+    </tbody>
+</table>
+<h3 id="example"><a class="header" href="#example">Example</a></h3>
+<ul>
+<li></li>
+</ul>
+<pre><code class="language-shell">$ adb logcat -G 16M
+$ adb logcat *:V &gt; output.log
+</code></pre>
+<ul>
+<li>Logcat for specific package name</li>
+</ul>
+<pre><code class="language-shell">$ adb logcat -c &amp;&amp; adb logcat --pid=$(adb shell pidof -s fr.dghack2023.android_mirrors)
+</code></pre>
+<h1 id="permissions"><a class="header" href="#permissions"><a name="permissions"></a>Permissions</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>adb shell permissions groups</td>
+            <td>List permission groups definitions</td>
+        </tr>
+        <tr>
+            <td>adb shell list permissions -g -r</td>
+            <td>List permissions details</td>
+        </tr>
+    </tbody>
+</table>
+<h1 id="system-informations"><a class="header" href="#system-informations"><a name="getprop"></a>System Informations</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>adb shell getprop <code>ro.build.version.release</code></strong></td>
+            <td>Get Build Version of Release Mode</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell getprop <code>ro.product.cpu.abi</code></strong></td>
+            <td>Get current ABI</td>
+        </tr>
+        <!-- <tr>
+            <td><strong>adb shell getprop <code></code></strong></td>
+            <td></td>
+        </tr> -->
+    </tbody>
+</table>
+<h1 id="proxy"><a class="header" href="#proxy"><a name="proxy"></a>Proxy</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>adb shell settings put global http_proxy <code>&lt;address&gt;:&lt;port&gt;</code></td>
+            <td>Set network proxy</td>
+        </tr>
+        <tr>
+            <td>adb shell settings put global http_proxy :0
+</td>
+            <td>Disable network proxy</td>
+        </tr>
+    </tbody>
+</table>
+<h1 id="input--actions"><a class="header" href="#input--actions"><a name="input"></a>Input &amp; Actions</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>adb shell input text S3cr37 && adb shell input keyevent 66</td>
+            <td>Input text 'S3cr37' then press [ENTER]</td>
+        </tr>        
+        <tr>
+            <td>adb shell input swipe 540 1600 540 100 150</td>
+            <td>Swipe up (SCREEN not been closed)</td>
+        </tr>        
+        <tr>
+            <td>adb shell input tap X Y</td>
+            <td>Click on screen at coordinate [X, Y]</td>
+        </tr>   
+        </tbody>
+</table>     
+<h1 id="start-activities"><a class="header" href="#start-activities"><a name="activities"></a>Start activities</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>adb shell am start -n com.package.name/com.package.name.ActivityName</td>
+            <td>Throught package name (Manifest) </td>
+        </tr>
+        <tr>
+            <td>am start -a com.example.ACTION_NAME -n com.package.name/com.package.name.ActivityName </td>
+            <td>Intent-filter</td>
+        </tr>
+        <tr>
+            <td>adb shell monkey -p your.app.package.name 1</td>
+            <td>Androiderson tips</td>
+        </tr>
+    </tbody>
+</table>
+<h1 id="shell-process-management"><a class="header" href="#shell-process-management"><a name="shellprocess"></a>Shell process management</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>adb shell pidof <code>-s fr.dghack2023.android_mirrors</code></strong></td>
+            <td>Get PID of application name (running)</td>
+        </tr>
+    </tbody>
+</table>
+<h1 id="optimize-for-doze-and-app-standby"><a class="header" href="#optimize-for-doze-and-app-standby"><a name="dozemode_standby"></a><a href="https://developer.android.com/training/monitoring-device-state/doze-standby">Optimize for Doze and App Standby</a></a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>adb shell <code>dumpsys </code></strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys battery | grep powered</code></strong></td>
+            <td>Battery powered state</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys battery unplug</code></strong></td>
+            <td>Unplug battery</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys battery reset</code></strong></td>
+            <td>Reset battery</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys deviceidle</code></strong></td>
+            <td>Dump Doze mode info</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys deviceidle enable</code></strong></td>
+            <td>Enable Doze mode (may be required on Android Emulator)</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys deviceidle get light</code></strong></td>
+            <td>Get status of Light Doze mode</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys deviceidle get deep</code></strong></td>
+            <td>Get status of Deep Doze mode</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys deviceidle step light</code></strong></td>
+            <td>Enter Light Doze mode (should be called several times to pass all phases)</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys deviceidle step deep</code></strong></td>
+            <td>Enter Deep Doze mode (should be called several times to pass all phases)</td>
+        </tr>
+    </tbody>
+</table>
+<p>================================================================</p>
+<ul>
+<li><a href="tools/android/adb/index.html#service">Service</a></li>
+</ul>
+<h1 id="service"><a class="header" href="#service"><a name="service"></a>Service</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>adb shell <code>dumpsys activity service</code></strong></td>
+            <td>Allow to list running services</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys activity</code> com.service.function</strong></td>
+            <td>Allow to know the services *com.service.function* status.</td>
+        </tr>
+    </tbody>
+</table>
+<p>============================================================</p>
+<h3 id="get-screen-state-and-locked-state-to-be-verified"><a class="header" href="#get-screen-state-and-locked-state-to-be-verified">Get Screen state and locked state (To be verified)</a></h3>
+<blockquote>
+<p>adb shell service call trust 7</p>
+</blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="android-apktool-for-reverse-engineering"><a class="header" href="#android-apktool-for-reverse-engineering">Android Apktool for Reverse Engineering</a></h1>
+<p>A tool for reverse engineering 3rd party, closed, binary Android apps. It can decode resources to nearly original form and rebuild them after making some modifications. It also makes working with an app easier because of the project like file structure and automation of some repetitive tasks like building apk, etc.</p>
+<p>It is <code>NOT</code> intended for piracy and other non-legal uses. It could be used for localizing, adding some features or support for custom platforms, analyzing applications and much more.</p>
+<h2 id="download-and-documentation"><a class="header" href="#download-and-documentation">Download and Documentation</a></h2>
+<p><a href="https://ibotpeaches.github.io/Apktool/" title="Apktool Official Website">Official Apktool Website</a>{target=_blank}</p>
+<h2 id="how-to-sign-apk-after-compile"><a class="header" href="#how-to-sign-apk-after-compile">How to Sign APK After Compile</a></h2>
+<p>In order to install modified APK on Android device, you need to sign it with a certificate. Android APK won't be signed by default. You need to sign it manually.</p>
+<p>Install <strong>apksigner</strong></p>
+<pre><code class="language-bash">apt install -y apksigner
+</code></pre>
+<p>Create certificate at the same folder you've compiled your modified APK</p>
+<pre><code class="language-bash">keytool -genkey -v -keystore keystore.jks -keyalg RSA -keysize 2048 -validity 10000
+</code></pre>
+<p>Enter A password (we will need it to singe the APK), enter any data you wish for the certificate information. At the end enter <strong>'y'</strong> at the end to create the certificate.</p>
+<p>Now we should have 2 files: your.apk, keystore.jks. The only step left is to singe the APK with new certificate.</p>
+<pre><code class="language-bash">apksigner sign --ks keystore.jks your.apk
+</code></pre>
+<p>When installing the APK you will be prompted with a warning of &quot;unknown certificate&quot; just hit Install.</p>
+<!-- appendices -->
+<!-- end appendices -->
+<div style="break-before: page; page-break-before: always;"></div><h1 id="install-and-create-emulators-using-avdmanager-and-sdkmanager"><a class="header" href="#install-and-create-emulators-using-avdmanager-and-sdkmanager">Install and Create Emulators using AVDMANAGER and SDKMANAGER</a></h1>
+<h2 id="tldr"><a class="header" href="#tldr">TL;DR</a></h2>
+<p>For an emulator that mimics a Pixel 5 Device with Google APIs and ARM/x86_64 architecture:</p>
+<ol>
+<li>List All System Images Available for Download:</li>
+</ol>
+<pre><code class="language-shell">$ sdkmanager --list | grep system-images
+</code></pre>
+<ol start="2">
+<li>Install platform tools, build tools, android platform:</li>
+</ol>
+<pre><code class="language-shell">$ echo &quot;yes&quot;  | sdkmanager &quot;platform-tools&quot; &quot;build-tools;31.0.0&quot; &quot;platforms;android-31&quot;
+</code></pre>
+<ol start="2">
+<li>Install system images:</li>
+</ol>
+<pre><code class="language-shell">$ echo &quot;yes&quot; | sdkmanager &quot;system-images;android-31;google_apis;x86_64&quot;
+
+</code></pre>
+<ol start="3">
+<li>Create Emulator:</li>
+</ol>
+<pre><code class="language-shell">echo &quot;no&quot; | avdmanager --verbose create avd \
+                --force \
+                --name &quot;pixel_5_api30_google_atd_emulator&quot; \
+                --package &quot;system-images;android-31;google_apis;x86_64&quot; \
+                --tag &quot;google_atd&quot; \
+                --abi &quot;arm64-v8a&quot; \
+                --device &quot;pixel_5&quot;
+</code></pre>
+<p>I recommend always using the new <code>google_atd</code> or <code>aosp_atd</code> images when possible. In my benchmarks, they are about 40% more efficient than the <code>google_apis</code> image.</p>
+<p><strong>Note</strong>: Available device (<code>--device</code>) list:</p>
+<pre><code class="language-shell">$ avdmanager list device
+</code></pre>
+<p>Passing in a device will make the Emulator settings (usually found in the <code>~/.android/avd/emulator.avd/config.ini</code> file) try to mimic that device. It is not actually the device. But, certain settings like pixel density, resolution, memory, partition size, etc will be changed. Generally the lower resolution devices will be less taxing on your CPU resources on CI, and are preferred especially without GPU/Hardware acceleration.</p>
+<ol start="4">
+<li>Run Emulator:</li>
+</ol>
+<pre><code class="language-shell">$ emulator @generic_api30_aosp_atd_emulator &amp;
+</code></pre>
+<p>or </p>
+<pre><code class="language-shell">emulator @pixel_5_google_atd_emulator &amp;
+</code></pre>
+<ol start="5">
+<li>Available adv</li>
+</ol>
+<pre><code class="language-shell">$ avdmanager list avd
+</code></pre>
+<h3 id="aliases"><a class="header" href="#aliases">Aliases</a></h3>
+<p>Add aliases to your <code>~/.zshrc</code> or <code>~/.bashrc</code> to run the emulators with parameters more easily. </p>
+<pre><code class="language-bash">alias pixel_5_wiped='emulator @pixel_5 -no-boot-anim -netdelay none -no-snapshot -wipe-data &amp;'
+</code></pre>
+<h3 id="starting-multiple-emulators"><a class="header" href="#starting-multiple-emulators">Starting multiple emulators</a></h3>
+<p>You can pass the <code>-read-only</code> parameter when starting up an emulator </p>
+<pre><code class="language-shell">$ emulator @pixel_5 -read-only
+</code></pre>
+<p>to run multiple devices at the same time.</p>
+<h3 id="other"><a class="header" href="#other">Other</a></h3>
+<ol>
+<li>aosp_atd and google_atd system images are only available on x86 and ARM architecture at API level 30.</li>
+</ol>
+<p>See also: https://android-developers.googleblog.com/2021/10/whats-new-in-scalable-automated-testing.html</p>
+<pre><code class="language-shell">$ sdkmanager --list | grep atd
+  system-images;android-30;aosp_atd;arm64-v8a                                              | 1            | AOSP ATD ARM 64 v8a System Image
+  system-images;android-30;aosp_atd;x86                                                    | 1            | AOSP ATD Intel x86 Atom System Image
+  system-images;android-30;google_atd;arm64-v8a                                            | 1            | Google APIs ATD ARM 64 v8a System Image
+  system-images;android-30;google_atd;x86                                                  | 1            | Google APIs ATD Intel x86 Atom System Image
+</code></pre>
+<h2 id="ensure-path-is-correct"><a class="header" href="#ensure-path-is-correct">ensure PATH is correct</a></h2>
+<p>(if studio is in /opt/android-studio, and SDKs etc under ~/Android/Sdk):</p>
+<pre><code>ANDROID_STUDIO_LOC=/opt/android-studio
+ANDROID_SDK_ROOT=~/Android/Sdk
+PATH=$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_STUDIO_LOC/bin:$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools:$PATH
+</code></pre>
+<h2 id="docs"><a class="header" href="#docs">Docs</a></h2>
+<p>See: <a href="https://developer.android.com/studio/run/emulator-commandline">Google's Emulator CLI Documentation</a> for more info.</p>
+<p>See: <a href="https://developer.android.com/studio/command-line/avdmanager">Google's AVDManager Documentation</a> for more info.</p>
+<p>See: <a href="https://developer.android.com/studio/command-line/sdkmanager">Google's SDKManager Documentation</a> for more info.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="avdmanager-android-virtual-device-manager"><a class="header" href="#avdmanager-android-virtual-device-manager">AVDManager (Android Virtual Device Manager)</a></h1>
+<h2 id="android-emulator-crash"><a class="header" href="#android-emulator-crash">Android Emulator Crash</a></h2>
+<h3 id="load-libvulkanso-failed"><a class="header" href="#load-libvulkanso-failed"><code>load libvulkan.so: failed</code></a></h3>
+<ul>
+<li><a href="https://stackoverflow.com/questions/68741533/android-emulator-does-not-start-after-arctic-fox-upgrade-libvulkan-so-failed">Android Emulator does not start after Arctic Fox upgrade, libvulkan.so: failed</a></li>
+</ul>
+<p>Go to emulator folder then change <code>gpu</code> mode:</p>
+<pre><code class="language-shell">$ cd $HOME/.android/avd/&lt;EMULATOR-LABEL&gt;.avd
+$ sed -i 's/hw.gpu.mode = auto/hw.gpu.mode = guest/g' ./config.ini
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="drozer"><a class="header" href="#drozer">Drozer</a></h1>
+<p>Drozer is a good tool for simulating a rogue application. F-Secure stopped its development, but it still can be used in your penetration test without any problems. From their GitHub page, there is an <a href="https://github.com/FSecureLABS/drozer/releases/download/2.3.4/drozer-agent-2.3.4.apk">APK</a> that should be installed on the device. The command is</p>
+<pre><code class="language-shell">$ adb install drozer-agent-2.3.4.apk
+</code></pre>
+<p>Drozer allows you to search for security vulnerabilities in apps and devices by assuming the role of an app and interacting with the Dalvik VM, other apps’ IPC endpoints, and the underlying OS. Even though it is decommissioned and out of development, I still use it as a go-to tool when it comes to mobile pentesting. More details can be found on their <a href="https://github.com/WithSecureLabs/drozer">GitHub</a>.</p>
+<pre><code class="language-shell">$ wget https://github.com/WithSecureLabs/drozer/releases/download/2.4.4/drozer_2.4.4.deb
+$ sudo dpkg -i drozer-2.4.4.deb
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="frida"><a class="header" href="#frida">Frida</a></h1>
+<h2 id="frida-tools"><a class="header" href="#frida-tools">Frida Tools</a></h2>
+<h3 id="frida-ps"><a class="header" href="#frida-ps">frida-ps</a></h3>
+<ul>
+<li>Get the list of running processes/applications</li>
+</ul>
+<pre><code class="language-shell"># -U option for USB devices or emulators
+$ frida-ps -U
+</code></pre>
+<ul>
+<li>Get the list of installed applications with -i option</li>
+</ul>
+<pre><code class="language-shell">$ frida-ps -U -i
+</code></pre>
+<h2 id="frida-cli"><a class="header" href="#frida-cli">Frida CLI</a></h2>
+<ul>
+<li>By default, Frida tries to attach to a running process</li>
+</ul>
+<pre><code class="language-shell">$ frida -U com.android.chrome
+</code></pre>
+<ul>
+<li>To spawn an application, use the -f option as follow</li>
+</ul>
+<pre><code class="language-shell">$ frida -U -f com.android.chrome
+</code></pre>
+<ul>
+<li>By default, the process is paused</li>
+</ul>
+<pre><code class="language-shell">$ frida -U -f com.android.chrome --no-pause
+</code></pre>
+<h2 id="frida-scripting"><a class="header" href="#frida-scripting">Frida Scripting</a></h2>
+<ul>
+<li>
+<p>Python bindings are provided with Frida</p>
+<ul>
+<li>However, the hooks need to be written in JavaScript :(</li>
+</ul>
+</li>
+<li>
+<p>Here are the basics Frida functions</p>
+<ul>
+<li>Java.perform(function() {//your code here});
+<ul>
+<li>Perform code instrumentation inside the Java code</li>
+</ul>
+</li>
+<li>Java.use(class_name)
+<ul>
+<li>Use a specific Java class</li>
+</ul>
+</li>
+<li>overload
+<ul>
+<li>Overload a specific method (functions with different prototypes)</li>
+</ul>
+</li>
+<li>implementation
+<ul>
+<li>Tamper the implementation of the selected method</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>The most convenient way is to use scripts</p>
+</li>
+</ul>
+<pre><code class="language-shell">$ frida -U -l myscript.js com.android.chrome
+</code></pre>
+<ul>
+<li>Here is an example allowing to hook the onCreate function</li>
+</ul>
+<pre><code class="language-Javascript">Java.perform(function () {
+    // Declare the Activity class as a variable
+    var Activity = Java.use(&quot;android.app.Activity&quot;);
+    
+    // Hook the onCreate function
+    Activity.onCreate.implementation = function () {
+        console.log(&quot;[*] onCreate() got called!&quot;);
+        this.onCreate();
+    };
+});
+</code></pre>
+<ul>
+<li>When spawning an application, it is recommended to use Java.available as follow
+<ul>
+<li>Sometimes the JVM is not ready, and the script failed to execute</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-Javascript">if(Java.available) {
+    Java.perform(function () {
+        // your code here
+    };
+}
+</code></pre>
+<ul>
+<li>To print debug messages, you can use those functions </li>
+</ul>
+<pre><code class="language-shell">$ send(message)
+$ console.log(line) / console.warn(line) / console.error(line)
+</code></pre>
+<h2 id="reference"><a class="header" href="#reference">Reference</a></h2>
+<ul>
+<li>Cheat Sheet
+<ul>
+<li><a href="https://learnfrida.info/">Frida Handbook</a></li>
+<li>Intigriti
+<ul>
+<li><a href="https://github.com/carlospolop/hacktricks/blob/master/mobile-pentesting/android-app-pentesting/frida-tutorial/README.md">Github</a></li>
+<li><a href="https://book.hacktricks.xyz/mobile-pentesting/android-app-pentesting/frida-tutorial">Blog</a></li>
+</ul>
+</li>
+<li><a href="https://www.varutra.com/android-pentesting-using-frida/">Android Pentesting Using Frida</a></li>
+<li><a href="https://braincoke.fr/blog/2021/03/android-reverse-engineering-for-beginners-frida/#about-frida">Android reverse engineering for beginners - Frida</a></li>
+<li><a href="https://nibarius.github.io/learning-frida/">Learning Frida</a></li>
+<li><a href="https://frida.re/docs/examples/android/">Frida Home</a></li>
+</ul>
+</li>
+<li><a href="https://codeshare.frida.re/">Awesome Frida scripts</a></li>
+<li><a href="https://nibarius.github.io/learning-frida/">Learning Frida</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="frida-setup"><a class="header" href="#frida-setup">Frida setup</a></h1>
+<p>Frida can installed : </p>
+<ul>
+<li>Rooted device(s)</li>
+<li><a href="tools/android/frida/setup/./NotRooted/index.html">Not rooted device(s)</a></li>
+<li><a href="tools/android/frida/setup/./emulator/index.html">Emulator(s)</a></li>
+</ul>
+<h3 id="setup-python-modules"><a class="header" href="#setup-python-modules">Setup python modules</a></h3>
+<p>Sous python 3.9 et plus</p>
+<pre><code class="language-shell"># Pyenv or venv
+$ pip install frida-tools
+$ pip install frida
+</code></pre>
+<h3 id="get-frida-server"><a class="header" href="#get-frida-server">Get Frida server</a></h3>
+<pre><code class="language-bash">VER=`frida --version`
+ABI=`adb shell getprop ro.product.cpu.abi`
+wget https://github.com/frida/frida/releases/download/$VER/frida-server-$VER-android-$ABI.xz
+xz -d frida-server-$VER-android-$ABI.xz
+mv frida-server-* frida-server
+</code></pre>
+<p>Where : </p>
+<ul>
+<li><code>VERSION</code> is the last version (16.0.19 at Apr 27 2023)</li>
+<li><code>PLATFORM</code> is one of [<code>android</code>|<code>windows</code>|<code>linux</code>]. This is the device target.</li>
+<li><code>ARCHI</code> is [<code>arm</code>|<code>arm64</code>|<code>x86</code>|<code>x86_64</code>|<code>armeabi</code>]</li>
+</ul>
+<h3 id="get-frida-gadget"><a class="header" href="#get-frida-gadget">Get Frida gadget</a></h3>
+<pre><code class="language-bash">VER=`frida --version`
+ABI=`adb shell getprop ro.product.cpu.abi`
+wget https://github.com/frida/frida/releases/download/$VER/frida-gadget-$VER-android-$ABI.so.xz
+xz -d frida-server-$VER-android-$ABI.xz
+mv frida-server-* frida-server
+</code></pre>
+<p>Where : </p>
+<ul>
+<li><code>VERSION</code> is the last version (16.0.19 at Apr 27 2023)</li>
+<li><code>PLATFORM</code> is one of [<code>android</code>|<code>windows</code>|<code>linux</code>]. This is the device target.</li>
+<li><code>ARCHI</code> is [<code>arm</code>|<code>arm64</code>|<code>x86</code>|<code>x86_64</code>|<code>armeabi</code>]</li>
+</ul>
+<h3 id="run-frida-server"><a class="header" href="#run-frida-server">Run frida server</a></h3>
+<pre><code class="language-shell"># Restart root
+$ adb root
+adbd is running as root
+$ adb push frida-server /data/local/tmp/
+frida-server: 1 file pushed, 0 skipped. 318.4 MB/s (112503224 bytes in 0.337s)
+$ adb shell &quot;chmod 755 /data/local/tmp/frida-server&quot;
+$ adb shell &quot;/data/local/tmp/frida-server -D &amp;&quot; 
+</code></pre>
+<h3 id="get-running-process-list"><a class="header" href="#get-running-process-list">Get running process list</a></h3>
+<pre><code class="language-shell"># List packages and processes
+$ frida-ps -U 
+# Get all the package name
+$ frida-ps -U | grep -i &lt;part_of_the_package_name&gt;
+</code></pre>
+<h3 id="run-client-script"><a class="header" href="#run-client-script">Run client script</a></h3>
+<pre><code class="language-shell">frida -U -l &lt;script&gt;.js -f &lt;package_name&gt;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="inject-fridas-gadget-under-android-not-rooted-device"><a class="header" href="#inject-fridas-gadget-under-android-not-rooted-device">Inject Frida's <em>Gadget</em> under Android: Not rooted device</a></h1>
+<ul>
+<li>Ref: <a href="https://fadeevab.com/frida-gadget-injection-on-android-no-root-2-methods/">Frida's Gadget Injection on Android: No Root, 2 Methods - Alexandr Fadeev</a></li>
+</ul>
+<p><img src="tools/android/frida/setup/NotRooted/./frida-gadget-injection-dark.png" alt="Architecture" /></p>
+<p>You have 2 options to inject Frida's Gadget to Android application: </p>
+<ol>
+<li>
+<p><strong>Method 1</strong>: If targeted APK contains any native library (<code>&lt;apk&gt;/lib/arm64-v8a/libfromapk.so</code>), then you can inject libfrida-gadget.so as a dependency into the native library.</p>
+</li>
+<li>
+<p><strong>Method 2</strong>: If APK doesn't contain a native library, then you can inject <code>System.loadLibrary</code> bytecode.</p>
+<pre><code> Only method 1 will be used here
+</code></pre>
+</li>
+</ol>
+<h2 id="method-1--inject-a-libfrida-gadgetso-as-a-dependency-to-a-native-library-jni-inside-of-apk"><a class="header" href="#method-1--inject-a-libfrida-gadgetso-as-a-dependency-to-a-native-library-jni-inside-of-apk">Method 1 : Inject a <code>libfrida-gadget.so</code> as a dependency to a native library (JNI) inside of APK</a></h2>
+<p>The used APK coming from github project <a href="https://github.com/Wirtos/cdroid.git">cdroid</a> where 2 APK were generated : </p>
+<ul>
+<li>first with &quot;android.permission.INTERNET&quot;</li>
+<li>second without this permission.</li>
+</ul>
+<p>Basically, you need this article: <a href="https://lief.quarkslab.com/doc/stable/tutorials/09_frida_lief.html">How to use frida on a non-rooted device - LIEF</a>.</p>
+<ol>
+<li>Download and unpack frida-gadget &gt;= 12.8.8 for Android for arm64 </li>
+</ol>
+<p>!!! les versions 12.7.0 à 12.8.7 ne parviennet pas à contacter le serveur <a href="https://github.com/frida/frida-core/issues/286">Issue#286</a>.</p>
+<pre><code class="language-shell">$ wget https://github.com/frida/frida/releases/download/16.1.4/frida-gadget-16.1.4-android-arm64.so.xz
+$ unxz -d frida-gadget-16.1.4-android-arm64.so.xz
+</code></pre>
+<ol start="2">
+<li><em>Unpack</em> APK</li>
+</ol>
+<pre><code class="language-shell">$ apktool d -rs &lt;target&gt;.apk
+</code></pre>
+<ul>
+<li>Use apktool &gt;= 2.4.1.</li>
+<li><code>-rs</code> is to not decode resources and sources, it will save you time and keep your nerves while compiling the APK back.</li>
+<li><strong>unzip/zip</strong> doesn't always work - application may not bring up.</li>
+</ul>
+<ol start="3">
+<li>Copy frida-gadget to the unpacked APK directory.</li>
+</ol>
+<pre><code class="language-shell">$ cp frida-gadget-16.1.4-android-arm64.so target/lib/arm64-v8a/libfrida-gadget.so
+</code></pre>
+<ol start="4">
+<li>Patch library with the following script</li>
+</ol>
+<pre><code class="language-python">#!/usr/bin/env python3
+
+import lief
+
+libnative = lief.parse(&quot;target/lib/arm64-v8a/libfromapk.so&quot;)
+libnative.add_library(&quot;libfrida-gadget.so&quot;) # Injection!
+libnative.write(&quot;target/lib/arm64-v8a/libfromapk.so&quot;)
+</code></pre>
+<ol start="5">
+<li>Check the injection succeeded.</li>
+</ol>
+<pre><code class="language-shell">$ readelf -d target/lib/arm64-v8a/libfromapk.so
+
+Dynamic section at offset 0xb2220 contains 30 entries:
+  Tag        Type                         Name/Value
+ 0x0000000000000001 (NEEDED)             Shared library: [libfrida-gadget.so]
+...
+</code></pre>
+<ol start="6">
+<li>Re-pack APK.</li>
+</ol>
+<pre><code class="language-shell">apktool b &lt;target&gt;
+</code></pre>
+<p>&amp;. Sign APK</p>
+<p>used &quot;Uber APK signer&quot;: <a href="https://github.com/patrickfav/uber-apk-signer">uber-apk-signer</a></p>
+<pre><code class="language-shell">$ java -jar uber-apk-signer-1.1.0.jar -a ./target/dist/target.apk
+</code></pre>
+<ol start="5">
+<li>Install l'APK</li>
+</ol>
+<pre><code class="language-shell">$ adb install -r -g &lt;apk_file&gt;.apk
+</code></pre>
+<h2 id="check-frida-gadget"><a class="header" href="#check-frida-gadget">Check <em>frida-gadget</em></a></h2>
+<ol>
+<li>Print log </li>
+</ol>
+<pre><code class="language-shell">$ adb logcat | grep -i frida
+XX-XX XX:XX:XX.XXX 17595 17618 I Frida   : Listening on 127.0.0.1 TCP port 27042
+</code></pre>
+<ol start="2">
+<li>Check openning port</li>
+</ol>
+<pre><code class="language-shell">$ adb shell netstat -ln | grep 27042
+tcp        0      0 127.0.0.1:27042         0.0.0.0:*               LISTEN
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="frida-1"><a class="header" href="#frida-1">Frida</a></h1>
+<h2 id="frida-setup-1"><a class="header" href="#frida-setup-1">Frida Setup</a></h2>
+<pre><code>Sous python 3.9 et plus
+</code></pre>
+<h3 id="setup-python-modules-1"><a class="header" href="#setup-python-modules-1">Setup python modules</a></h3>
+<pre><code class="language-shell"># Pyenv or venv
+$ pip install frida-tools
+$ pip install frida
+</code></pre>
+<h3 id="get-frida-server-1"><a class="header" href="#get-frida-server-1">Get Frida server</a></h3>
+<pre><code class="language-shell">$ wget https://github.com/frida/frida/releases/download/VERSION/frida-server-VERSION-PLATFORM-ARCHI.xz 
+</code></pre>
+<p>Where : </p>
+<ul>
+<li><code>VERSION</code> is the last version (16.0.19 at Apr 27 2023)</li>
+<li><code>PLATFORM</code> is one of [<code>android</code>|<code>windows</code>|<code>linux</code>]. This is the device target.</li>
+<li><code>ARCHI</code> is [<code>arm</code>|<code>arm64</code>|<code>x86</code>|<code>x86_64</code>|<code>armeabi</code>]</li>
+</ul>
+<p>Example:</p>
+<p>For <code>Pixel 5, Android 12,  API 31 emulator</code> (from Android studio).</p>
+<pre><code class="language-shell">$ wget https://github.com/frida/frida/releases/download/16.0.19/frida-server-16.0.19-android-x86_64.xz
+$ xz --decompress frida-server-16.0.19-android-x86_64.xz
+$ mv frida-server-* frida-server
+</code></pre>
+<h3 id="run-frida-server-1"><a class="header" href="#run-frida-server-1">Run frida server</a></h3>
+<pre><code class="language-shell"># Restart root
+$ adb root
+adbd is running as root
+$ adb push frida-server /data/local/tmp/
+frida-server: 1 file pushed, 0 skipped. 318.4 MB/s (112503224 bytes in 0.337s)
+$ adb shell &quot;chmod 755 /data/local/tmp/frida-server&quot;
+$ adb shell &quot;/data/local/tmp/frida-server -D &amp;&quot; 
+</code></pre>
+<h3 id="get-running-process-list-1"><a class="header" href="#get-running-process-list-1">Get running process list</a></h3>
+<pre><code class="language-shell"># List packages and processes
+$ frida-ps -U 
+# Get all the package name
+$ frida-ps -U | grep -i &lt;part_of_the_package_name&gt;
+</code></pre>
+<h3 id="run-client-script-1"><a class="header" href="#run-client-script-1">Run client script</a></h3>
+<pre><code class="language-shell">frida -U -l &lt;script&gt;.js -f &lt;package_name&gt;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="android-emulatorfrida"><a class="header" href="#android-emulatorfrida">Android Emulator/Frida</a></h1>
+<p>Inspired from <a href="https://www.youtube.com/@lauriewired">Lairue Wired</a></p>
+<h2 id="docker"><a class="header" href="#docker">Docker</a></h2>
+<ul>
+<li>Docker pul</li>
+</ul>
+<blockquote>
+<p>docker pull budtmo/docker-android:latest</p>
+</blockquote>
+<p><a href="https://github.com/budtmo/docker-android">docker-android</a></p>
+<ul>
+<li>Docker run</li>
+</ul>
+<pre><code class="language-shell"># docker run --privileged -d -p 6080:6080 -p 5554:5554 -p 5555:5555 -e DEVICE=&quot;Samsung Galaxy S6&quot; --name android-container budtmo/docker-android-x86-8.1
+$ docker run -d -p 6080:6080 -p 5554:5554 -p 5555:5555 -e EMULATOR_DEVICE=&quot;Samsung Galaxy S10&quot; -e WEB_VNC=true --device /dev/kvm --name android-container budtmo/docker-android:latest
+</code></pre>
+<ul>
+<li>Connect to shell</li>
+</ul>
+<pre><code class="language-shell">➜ adb connect 127.0.0.1:5555
+* daemon not running; starting now at tcp:5037
+* daemon started successfully
+connected to 127.0.0.1:5555
+➜ adb -s 127.0.0.1:5555 shell       
+emu64xa:/ $
+➜ adb -s 127.0.0.1:5555 root
+restarting adbd as root
+➜ adb -s 127.0.0.1:5555 shell 
+emu64xa:/ # 
+</code></pre>
+<h2 id="setup-frida"><a class="header" href="#setup-frida">Setup Frida</a></h2>
+<pre><code class="language-shell">➜ pip show frida
+Name: frida
+Version: 16.1.4
+Summary: Dynamic instrumentation toolkit for developers, reverse-engineers, and security researchers
+Home-page: https://frida.re
+Author: Frida Developers
+Author-email: oleavr@frida.re
+License: wxWindows Library Licence, Version 3.1
+Location: /home/user/.pyenv/versions/3.10.10/envs/frida_env/lib/python3.10/site-packages
+Requires: typing-extensions
+Required-by: frida-tools
+</code></pre>
+<ul>
+<li>For the emulator =&gt; Frida server <code>x86</code></li>
+</ul>
+<pre><code class="language-shell">➜ unxz frida-server-16.1.4-android-x86_64.xz
+➜ adb -s 127.0.0.1:5555 push frida-server-16.1.4-android-x86_64 /data/local/tmp
+frida-server-16.1.4-android-x86_64: 1 file pushed, 0 skipped. 46.9 MB/s (51624572 bytes in 1.050s)
+➜ adb -s 127.0.0.1:5555 shell 
+emu64xa:/ # cd /data/local/tmp
+127|emu64xa:/data/local/tmp # ls
+frida-server-16.1.4-android-x86_64
+128|emu64xa:/data/local/tmp # chmod +x ./frida-server-16.1.4-android-x86_64
+➜ adb -s 127.0.0.1:5555 shell /data/local/tmp/frida-server-16.1.4-android-x86_64 -D &amp;
+[1] 690322
+➜ adb -s 127.0.0.1:5555 shell                                                        
+1|emu64xa:/ # netstat -tlp                                                                                            
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program Name
+tcp        0      0 localhost:27042         0.0.0.0:*               LISTEN      6435/frida-server-16.1.4-android-x86_64
+tcp        0      0 10.0.2.16:43826         par10s41-in-f4.1e:https CLOSE_WAIT  2550/com.google.android.googlequicksearchbox:search
+tcp        0      0 10.0.2.16:41458         par10s41-in-f4.1e:https CLOSE_WAIT  2550/com.google.android.googlequicksearchbox:search
+tcp6       0      0 [::]:5555               [::]:*                  LISTEN      6152/adbd
+tcp6       0      0 ::ffff:10.0.2.16:46468  wl-in-f188.1e100.n:5228 ESTABLISHED 5168/com.google.android.gms.persistent
+</code></pre>
+<h2 id="frida-quick-start"><a class="header" href="#frida-quick-start">Frida quick start</a></h2>
+<ul>
+<li>Running process list </li>
+</ul>
+<blockquote>
+<p>frida-ps -U</p>
+</blockquote>
+<ul>
+<li>Running application</li>
+</ul>
+<blockquote>
+<p>frida-ps -Ua</p>
+</blockquote>
+<ul>
+<li>Attach to a process</li>
+</ul>
+<pre><code class="language-shell">➜ frida-ps -Ua   
+ PID  Name         Identifier                             
+----  -----------  ---------------------------------------
+2550  Google       com.google.android.googlequicksearchbox
+2550  Google       com.google.android.googlequicksearchbox
+5482  Messages     com.google.android.apps.messaging      
+1581  Phone        com.google.android.dialer              
+6074  Photos       com.google.android.apps.photos         
+1085  SIM Toolkit  com.android.stk                        
+6041  Settings     com.android.settings
+6499  YouTube      com.google.android.youtube             
+➜ frida -U Youtube
+     ____
+    / _  |   Frida 16.1.4 - A world-class dynamic instrumentation toolkit
+   | (_| |
+    &gt; _  |   Commands:
+   /_/ |_|       help      -&gt; Displays the help system
+   . . . .       object?   -&gt; Display information about 'object'
+   . . . .       exit/quit -&gt; Exit
+   . . . .
+   . . . .   More info at https://frida.re/docs/home/
+   . . . .
+   . . . .   Connected to sdk gphone x86 64 (id=127.0.0.1:5555)
+                                                                                
+[sdk gphone x86 64::Youtube ]-&gt; Exit
+</code></pre>
+<h2 id="sample"><a class="header" href="#sample">Sample</a></h2>
+<ul>
+<li>Name: <a href="https://bazaar.abuse.ch/sample/c81234b6ceb3572c6d862a9313e019b98efd83165d8c085bd3e74971c66763bb/">Android</a></li>
+<li>SHA256: c81234b6ceb3572c6d862a9313e019b98efd83165d8c085bd3e74971c66763bb</li>
+<li>ZIP password: infected</li>
+</ul>
+<h3 id="script-to-hook"><a class="header" href="#script-to-hook">Script to hook</a></h3>
+<pre><code class="language-js">Java.perform(() =&gt; {
+    const wwuClass = Java.use('com.first.smoke.WWuToNtMwQcZlXnFwNx');
+
+    wwuClass.arrivesample.implementation = function () {
+        send('arrivesample() got called! Let\'s call the original implementation');
+        var retValue = this.arrivesample();
+        send('arrivesample() got called! Let\'s call the original implementation');
+        return retValue;
+    };
+});
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="frida-snippet-code"><a class="header" href="#frida-snippet-code">Frida Snippet Code</a></h1>
+<h2 id="skeleton"><a class="header" href="#skeleton">Skeleton</a></h2>
+<pre><code class="language-python">if (Java.available) {
+  Java.perform(function() {
+    # Code python
+  }
+}
+</code></pre>
+<h2 id="methods-call"><a class="header" href="#methods-call">Methods call</a></h2>
+<ul>
+<li>Static method</li>
+</ul>
+<pre><code class="language-javascript">var BasicTypes = Java.use(&quot;com.blog.testfrida.examples.BasicTypes&quot;); 
+BasicTypes.divideFloat(23,3);
+</code></pre>
+<ul>
+<li>Non static method</li>
+</ul>
+<pre><code class="language-javascript">// Class reference
+var Person = Java.use(&quot;com.blog.testfrida.complexobjects.Person&quot;);
+// Create instance
+var personInstance = Person.$new(); 
+</code></pre>
+<ul>
+<li>Send string parameters to function</li>
+</ul>
+<pre><code class="language-javascript">var String = Java.use(&quot;java.lang.String&quot;); 
+personInstance.setName(String.$new(&quot;Peter Griffin&quot;));
+</code></pre>
+<h3 id="overridden-methods"><a class="header" href="#overridden-methods">Overridden methods</a></h3>
+<p>Here is overridden methods: </p>
+<pre><code class="language-java">public static int multiply(int val1, int val2) {
+    return val1 * val2;
+}
+
+public static byte multiply(byte val1, byte val2) {
+    return (byte) (val1 * val2);
+}
+</code></pre>
+<ul>
+<li>Use in javascript will be:</li>
+</ul>
+<pre><code class="language-javascript">var BasicTypes = Java.use(&quot;com.blog.testfrida.examples.BasicTypes&quot;); 
+console.log(BasicTypes.multiply(3,5));
+</code></pre>
+<p>Frida solves the method by the argument types.</p>
+<ul>
+<li>Override methods</li>
+</ul>
+<pre><code class="language-javascript">var BasicTypes = Java.use(&quot;com.blog.testfrida.examples.BasicTypes&quot;); 
+console.log(BasicTypes.multiply(3,5));
+
+// Failed to used this methods: which ones we are overridern
+// BasicTypes.multiply.implementation = function (val1, val2) {
+//    console.log(&quot;it works&quot;);
+//    return val1 * val2;
+//}
+BasicTypes.multiply.overload('int','int').implementation = function (val1, val2) {
+    return val1 * val2;
+}
+</code></pre>
+<h2 id="trace-class"><a class="header" href="#trace-class">Trace class</a></h2>
+<h3 id="list-all-overwritten-methods-and-get-count"><a class="header" href="#list-all-overwritten-methods-and-get-count">List all overwritten methods and get count</a></h3>
+<pre><code class="language-javascript">function traceClass(targetClass) {
+    var hook;
+    try {
+        hook = Java.use(targetClass);
+    } catch (e) {
+        console.error(&quot;trace class failed&quot;, e);
+        return;
+    }
+
+    var methods = hook.class.getDeclaredMethods();
+    hook.$dispose();
+
+    var parsedMethods = [];
+    methods.forEach(function (method) {
+        var methodStr = method.toString();
+        var methodReplace = methodStr.replace(targetClass + &quot;.&quot;, &quot;TOKEN&quot;).match(/\sTOKEN(.*)\(/)[1];
+         parsedMethods.push(methodReplace);
+    });
+
+    uniqBy(parsedMethods, JSON.stringify).forEach(function (targetMethod) {
+        traceMethod(targetClass + '.' + targetMethod);
+    });
+}
+
+function traceMethod(targetClassMethod) {
+    var delim = targetClassMethod.lastIndexOf('.');
+    if (delim === -1)
+        return;
+
+    var targetClass = targetClassMethod.slice(0, delim);
+    var targetMethod = targetClassMethod.slice(delim + 1, targetClassMethod.length);
+
+    var hook = Java.use(targetClass);
+    var overloadCount = hook[targetMethod].overloads.length;
+
+    console.log(targetClassMethod + &quot; (overloadCount: &quot; + overloadCount + &quot;)&quot;);
+}
+
+// remove duplicates from array
+function uniqBy(array, key) {
+    var seen = {};
+    return array.filter(function (item) {
+        var k = key(item);
+        return seen.hasOwnProperty(k) ? false : (seen[k] = true);
+    });
+}
+</code></pre>
+<ul>
+<li>Usage</li>
+</ul>
+<pre><code class="language-javascript">traceClass(&quot;java.lang.String&quot;);
+</code></pre>
+<h3 id="list-overwritten-methods"><a class="header" href="#list-overwritten-methods">List overwritten methods</a></h3>
+<pre><code class="language-javascript">function listOverritenMethods(className, func) {
+    var Class = Java.use(className);
+    var overloadedMethods = Class[func].overloads;
+    for (var i in overloadedMethods) {
+        console.log(overloadedMethods[i]);
+    }
+}
+</code></pre>
+<ul>
+<li>Usage </li>
+</ul>
+<pre><code class="language-javascript">listOverritenMethods(&quot;java.lang.String&quot;, &quot;getBytes&quot;);
+</code></pre>
+<h2 id="function-substitution"><a class="header" href="#function-substitution">Function substitution</a></h2>
+<ul>
+<li>Code that detect 'root'</li>
+</ul>
+<pre><code class="language-smali">protected void onCreate(Bundle paramBundle)
+{
+    if (sg.vantagepoint.a.c.c()) {
+        a(&quot;Root detected!&quot;);
+    }
+  ...
+</code></pre>
+<ul>
+<li>Frida Script</li>
+</ul>
+<pre><code class="language-javascript">Java.perform(function () {
+    let theClass = Java.use(&quot;sg.vantagepoint.a.c&quot;);
+    theClass.a.implementation = function(v) {
+        console.log(&quot;In function A&quot;);
+        return false
+    }
+})
+</code></pre>
+<p>or </p>
+<pre><code class="language-javascript">Java.perform(function () {
+    let MainActivity = Java.use(&quot;sg.vantagepoint.uncrackable.MainActivity&quot;);
+    MainActivity.a.overload('java.lang.String').implementation = function (str) {
+        console.log(`MainActivity.a is called: str=${str}`);
+    };
+})
+</code></pre>
+<h2 id="decode-bytes-to-string"><a class="header" href="#decode-bytes-to-string">Decode bytes to string</a></h2>
+<pre><code class="language-javascript">// Helper function to decode byte[] to String
+function arrToStr(byteArr) {
+    var tmp = &quot;&quot;;
+    for (var k = 0; k &lt; byteArr.length; k++) {
+    tmp += String.fromCharCode(byteArr[k]);
+    }
+    return tmp;
+}
+</code></pre>
+<h2 id="exported-imported-and-symbols-from-module"><a class="header" href="#exported-imported-and-symbols-from-module">Exported, imported and symbols from module</a></h2>
+<ul>
+<li>Lists all names (exports, imports and symbols) in the given module.
+If a 'needle' is given this function returns the address of the name that matches the 'needle'</li>
+</ul>
+<pre><code class="language-javascript">function listNames(module, needle) {
+    var address = undefined;
+    Process.enumerateModules()
+        .filter(function (m) { return m[&quot;path&quot;].toLowerCase().indexOf(module) != -1; })
+        .forEach(function (mod) {
+            mod.enumerateExports().forEach(function (entry) {
+                console.log(&quot;Export: &quot; + entry.name);
+                if (entry.name.indexOf(needle) != -1) address = entry.address;
+            });
+            mod.enumerateImports().forEach(function (entry) {
+                console.log(&quot;Import: &quot; + entry.name);
+                if (entry.name.indexOf(needle) != -1) address = entry.address;
+            });
+            mod.enumerateSymbols().forEach(function (entry) {
+                console.log(&quot;symbol name: &quot; + entry.name);
+                if (entry.name.indexOf(needle) != -1) address = entry.address;
+            });
+        });
+    console.log(&quot;&quot;);
+    return address;
+}
+</code></pre>
+<h2 id="hook-function-in-library"><a class="header" href="#hook-function-in-library">Hook function in library</a></h2>
+<ul>
+<li>An <code>libfoo.so</code> use <code>strncmp</code> function.</li>
+</ul>
+<pre><code class="language-javascript">function listNames(module, needle) {
+    var address = undefined;
+    Process.enumerateModules()
+        .filter(function (m) { return m[&quot;path&quot;].toLowerCase().indexOf(module) != -1; })
+        .forEach(function (mod) {
+            mod.enumerateExports().forEach(function (entry) {
+                if (entry.name.indexOf(needle) != -1) address = entry.address;
+            });
+            mod.enumerateImports().forEach(function (entry) {
+                if (entry.name.indexOf(needle) != -1) address = entry.address;
+            });
+            mod.enumerateSymbols().forEach(function (entry) {
+                if (entry.name.indexOf(needle) != -1) address = entry.address;
+            });
+        });
+    return address;
+}
+
+function attachToStrncmp(strncmpAddress, compareTo) {
+    Interceptor.attach(strncmpAddress, {
+        onEnter: function (args) {
+            var len = compareTo.length;
+            if (args[2].toInt32() != len) {return;}
+            var str1 = args[0].readUtf8String(len)
+            var str2 = args[1].readUtf8String(len)
+            if (str1 == compareTo || str2 == compareTo) {
+                console.log(&quot;strncmp(&quot; + str1 + &quot;, &quot; + str2 + &quot;, &quot; + len + &quot;) called&quot;);
+            }
+        },
+    });
+}
+
+Java.perform(function () {
+    Java.use(&quot;&lt;MODULE&gt;.MainActivity&quot;).onResume.implementation = function () {
+        this.onResume();
+
+        // Hook to strncmp and look for any calls to it with the magic word as argument
+        var watchDog = &lt;STRING_UNIQUE_2_DISTNGUISHED_CALL&gt;;
+        var strncmp_addr = listNames('libfoo.so', 'strncmp')
+        attachToStrncmp(strncmp_addr, theMagicWord);
+
+        // Find the CodeCheck instance that was created by the app in onCreate()
+        // Then call it with the magic word as argument.
+        Java.choose(&quot;CLASS_MODULE&quot;, {
+            onMatch: function (instance) {
+                instance.&lt;FCT_IN_CLASS&gt;(
+                    Java.use(&quot;java.lang.String&quot;).$new(watchDog)
+                );
+                return &quot;stop&quot;;  // return 'stop'
+            },
+            onComplete: function () { }
+        });
+
+        // We've got what we wanted, detach again to prevent multiple attachments
+        // to strncmp if onResume is called multiple times.
+        Interceptor.detachAll();
+    }
+})
+</code></pre>
+<h2 id="other-snippet"><a class="header" href="#other-snippet">Other Snippet</a></h2>
+<ul>
+<li>
+<p><a href="https://www.shielder.com/it/blog/2019/02/fridalab-writeup/">FridaLab – Writeup</a></p>
+</li>
+<li>
+<p><a href="https://github.com/iddoeldor/frida-snippets#class-description">iddoeldor/frida-snippets [EXCELLENT]</a></p>
+</li>
+<li>
+<p><a href="https://nibarius.github.io/learning-frida/2020/05/23/uncrackable2">Solving OWASP MSTG UnCrackable App for Android Level 2</a></p>
+</li>
+<li>
+<p><a href="https://cmrodriguez.me/blog/frida-scripting-guide/">Frida Scripting Guide for Java</a></p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="frida-tutorials"><a class="header" href="#frida-tutorials">Frida Tutorials</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hacktricks"><a class="header" href="#hacktricks">hacktricks</a></h1>
+<h2 id="android-hacking-with-frida"><a class="header" href="#android-hacking-with-frida"><a href="https://joshspicer.com/android-frida-1">Android Hacking with FRIDA</a></a></h2>
+<h2 id="ref"><a class="header" href="#ref">Ref</a></h2>
+<ul>
+<li><a href="https://medium.com/infosec-adventures/introduction-to-frida-5a3f51595ca1">tuto1</a>
+<ul>
+<li><a href="https://medium.com/infosec-adventures/introduction-to-frida-5a3f51595ca1">From</a></li>
+<li><a href="https://github.com/t0thkr1s/frida-demo/releases">APK</a></li>
+<li><a href="https://github.com/t0thkr1s/frida-demo">Source Code</a></li>
+</ul>
+</li>
+<li><a href="https://book.hacktricks.xyz/mobile-pentesting/android-app-pentesting/frida-tutorial/frida-tutorial-2">tuto2</a>
+<ul>
+<li><a href="https://11x256.github.io/Frida-hooking-android-part-2/">From</a></li>
+<li><a href="https://github.com/11x256/frida-android-examples">APK and source</a></li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="uncrackable-mobile-apps"><a class="header" href="#uncrackable-mobile-apps">UnCrackable Mobile Apps</a></h1>
+<p>These are the UnCrackable Apps for Android and iOS, a collection of mobile reverse engineering challenges. These challenges are used as examples throughout the OWASP MASTG. Of course, you can also solve them for fun.</p>
+<p>See https://mas.owasp.org/crackmes for more information.</p>
+<ul>
+<li><a href="https://github.com/OWASP/owasp-mastg/tree/master/Crackmes/Android">Android</a>
+<ul>
+<li><a href="https://github.com/OWASP/owasp-mastg/blob/master/Crackmes/Android/Level_01/UnCrackable-Level1.apk">Level 1</a></li>
+<li><a href="https://github.com/OWASP/owasp-mastg/blob/master/Crackmes/Android/Level_02/UnCrackable-Level2.apk">Level 2</a></li>
+<li><a href="https://github.com/OWASP/owasp-mastg/blob/master/Crackmes/Android/Level_03/UnCrackable-Level3.apk">Level 3</a></li>
+<li>Level 4
+<ul>
+<li>[v0.9](https://github.com/OWASP/owasp-mastg/blob/master/
+Crackmes/Android/Level_04/r2pay-v0.9.apk)</li>
+<li><a href="https://github.com/OWASP/owasp-mastg/blob/master/Crackmes/Android/Level_04/r2pay-v1.0.apk">v1.0</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="gnirehtet-tethering"><a class="header" href="#gnirehtet-tethering">Gnirehtet (tethering)</a></h1>
+<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
+<ul>
+<li>Install</li>
+</ul>
+<pre><code class="language-shell">cd /tmp
+wget &quot;https://github.com/Genymobile/gnirehtet/releases/download/v2.3/gnirehtet-rust-linux64-v2.3.zip&quot;
+unzip ./gnirehtet-rust-linux64-v2.3.zip
+cd gnirehtet-rust-linux64
+./gnirehtet install
+</code></pre>
+<ul>
+<li>Run</li>
+</ul>
+<pre><code class="language-shell">$ ./gnirehtet run
+</code></pre>
+<h2 id="ref-1"><a class="header" href="#ref-1">Ref.</a></h2>
+<ul>
+<li>
+<p><a href="https://medium.com/genymobile/gnirehtet-reverse-tethering-android-2afacdbdaec7">Introducing “gnirehtet”, a reverse tethering tool for Android</a></p>
+</li>
+<li>
+<p><a href="https://medium.com/genymobile/gnirehtet-2-our-reverse-tethering-tool-for-android-now-available-in-rust-999960483d5a">Gnirehtet 2: our reverse tethering tool for Android now available in Rust</a></p>
+</li>
+<li>
+<p><a href="https://github.com/Genymobile/gnirehtet">Github</a></p>
+</li>
+<li>
+<p><a href="https://blog.rom1v.com/2017/09/gnirehtet-reecrit-en-rust/">Gnirehtet réécrit en Rust</a></p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="docker-1"><a class="header" href="#docker-1">Docker</a></h1>
+<ul>
+<li><a href="tools/docker/index.html#docker-volumes">Docker volumes</a></li>
+<li><a href="tools/docker/index.html#manage-image-size">Manage image size</a></li>
+<li><a href="tools/docker/index.html#docker-forensic">Docker Forensic</a></li>
+<li><a href="tools/docker/index.html#docker-compose">Docker-compose</a></li>
+<li><a href="tools/docker/index.html#to-get-further">To get further</a></li>
+</ul>
+<pre><code class="language-bash">docker images # list images
+docker pull &lt;img:tag&gt; # pull a certain image
+docker run -it &lt;img:tag&gt; &lt;command&gt; # run a command in a new container (interactively)
+
+docker ps -as # list all containers
+docker exec -it &lt;container-id&gt; &lt;command&gt; # run a command in a running container
+docker container prune # delete all containers
+docker inspect &lt;container-id&gt; # show low-level info on a container
+docker commit &lt;container-id&gt; &lt;repository:tag&gt; # create a new image from container changes
+
+# Networks managing: None, Host, Bridge (default)
+docker network create --driver &lt;driver&gt; --subnet x.x.x.x/x --gateway x.x.x.x &lt;network-name&gt; # create a new network
+docker network connect &lt;network-name&gt; &lt;container-id&gt; [--ip x.x.x.x] # connect a container to a network (and changing the default ip)
+docker rmi $(docker images|grep none|awk '{ print $3 }') # remove docker images with tag or name at none
+</code></pre>
+<h2 id="docker-volumes"><a class="header" href="#docker-volumes">Docker volumes</a></h2>
+<pre class="mermaid">flowchart TB
+	A[Container]--bind out --&gt;B
+	subgraph B[Filesystem]
+	D[ContainerData]
+	end
+	A--volume --&gt;D
+	A--tmpfs mount --&gt;C[Memory]
+</pre>
+<pre><code class="language-bash">docker volume create &lt;volume-name&gt; # create a volume
+docker inspect &lt;volume-name&gt; # to get the mount point on the host
+</code></pre>
+<pre><code class="language-bash">docker run -itd --mount src=&lt;volume-name&gt;,target=/some/path --name &lt;container-name-to-create&gt; --rm &lt;image-name&gt; # mount a volume on the container
+</code></pre>
+<h2 id="manage-image-size"><a class="header" href="#manage-image-size">Manage image size</a></h2>
+<pre><code class="language-bash">docker image history &lt;image-name&gt; -notrunc # know the size and layers of an image
+</code></pre>
+<p><a href="tools/docker/./Dockerfile/index.html">Multi-stage Build</a>: allows to reduce the final size of a docker image by performing some operations before creating the final image (e.g. compiling the source code)</p>
+<p>Choose your base image:</p>
+<ul>
+<li>alpine</li>
+<li>debian</li>
+<li>scratch</li>
+<li>busybox:glibc (useful if the program is dynamic)</li>
+</ul>
+<p><code>C_GO_ENABLED=0</code>: Go doesn't use system libraries anymore but its own implementations so it becomes static (<code>net</code> and <code>dns</code> for example)</p>
+<p>Alpine uses musl but there is the possibility to install build-base</p>
+<p>The others use glibc. The 2 are not compatible (i.e. compiling on glibc and running on alpine will not work)</p>
+<h2 id="docker-forensic"><a class="header" href="#docker-forensic">Docker Forensic</a></h2>
+<ul>
+<li>
+<p>Dive: exploring image, layer, contents</p>
+</li>
+<li>
+<p>LiME: Linux Memory Extractor</p>
+</li>
+</ul>
+<h1 id="docker-compose"><a class="header" href="#docker-compose">Docker-compose</a></h1>
+<pre><code class="language-bash">docker-compose up --build -d # run, build and keep detach
+docker-compose stop/down
+</code></pre>
+<h1 id="to-get-further"><a class="header" href="#to-get-further">To get further</a></h1>
+<ul>
+<li><a href="tools/docker/../kubernetes/index.html">Kubernetes</a></li>
+<li>Skaffold</li>
+<li>Kustomize</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="dockerfile"><a class="header" href="#dockerfile">Dockerfile</a></h1>
+<h2 id="multi-stage-build"><a class="header" href="#multi-stage-build">Multi-stage build</a></h2>
+<p>Get a minimalist container simply running a binary. This helps keep the running docker container small while still be able to compile a project needing a lot of dependencies.</p>
+<pre><code class="language-dockerfile"># Step 1
+FROM golang:alpine3.7 as build-env # Create an alias
+COPY main.go /hello/main.go
+WORKDIR /hello
+RUN env GOOS=linux GOARCH=amd64 go build
+
+# Step 2
+FROM scratch
+COPY --from=build-env /hello/hello /bin/hello # copy the compiled file from the build-env image
+ENTRYPOINT [&quot;/bin/hello&quot;]
+</code></pre>
+<pre><code class="language-bash">docker build -t hello-scratch:v1 . # build your image with the Dockerfile in the current directory
+docker images # check you have your newly created image
+docker run hello-scratch:v1 # run your image
+</code></pre>
+<p><a href="https://docs.docker.com/build/building/multi-stage/">Official documentation for the multi-stage</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="git"><a class="header" href="#git">Git</a></h1>
+<ul>
+<li>Cancel last local commit</li>
+</ul>
+<pre><code class="language-bash">git reset HEAD~1
+</code></pre>
+<p>-Remove a file from the index without deleting it</p>
+<pre><code class="language-bash">git reset HEAD &lt;filename&gt; # does not delete the file but removes it from the index
+</code></pre>
+<ul>
+<li>Create new branch</li>
+</ul>
+<pre><code class="language-bash">git branch &lt;branchName&gt; # locally
+# upstream branch
+git branch --set-upstream-to=origin/&lt;branchName&gt;
+git push -u origin &lt;branchName&gt;
+</code></pre>
+<ul>
+<li>Merge some commits together</li>
+</ul>
+<pre><code class="language-bash">git rebase -i HEAD~X
+# X = number of commits to merge
+# 1. make your modification
+# 2. if commits were already pushed: git push --force
+# 3. else: git push
+</code></pre>
+<ul>
+<li>Unstagged files and change active branch</li>
+</ul>
+<pre><code class="language-bash">git stash push -m &quot;message&quot;
+git stash list
+git checkout &lt;another branch&gt;
+git stash pop
+</code></pre>
+<ul>
+<li>Delete file from git history</li>
+</ul>
+<pre><code class="language-bash">git filter-branch --index-filter &quot;git rm -rf --cached --ignore-unmatch &lt;path-to-file&gt;&quot; HEAD
+git push -all --force
+</code></pre>
+<ul>
+<li>Find file in git history</li>
+</ul>
+<pre><code class="language-bash">git log --all --full-history -- &lt;path-to-file&gt;
+</code></pre>
+<ul>
+<li>Apply commits on another branch</li>
+</ul>
+<pre><code class="language-bash">git cherry-pick &lt;commit-hash&gt;
+</code></pre>
+<ul>
+<li>Add &amp; push tags</li>
+</ul>
+<pre><code class="language-bash">git tag &lt;tag-name&gt;
+git push --tags
+</code></pre>
+<ul>
+<li>Use GIT with a GUI</li>
+</ul>
+<pre><code class="language-bash">gitk --all
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="graphviz"><a class="header" href="#graphviz">GraphViz</a></h1>
+<ul>
+<li>File to PNG</li>
+</ul>
+<blockquote>
+<p>dot &lt;/path/tp/file/dot&gt; -Tpng -o output.png</p>
+</blockquote>
+<h2 id="reference-1"><a class="header" href="#reference-1">Reference</a></h2>
+<ul>
+<li><a href="https://sketchviz.com/graphviz-examples">Sketchviz - Graphviz Examples</a></li>
+<li><a href="https://sketchviz.com/flowcharts-in-graphviz">Sketchviz - Guide to Flowcharts in Graphviz</a></li>
+<li><a href="https://graphs.grevian.org/example">GraphViz Pocket Reference</a></li>
+<li><a href="https://www.graphviz.org/pdf/dotguide.pdf">Drawing graphs with dot (pdf)</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="graphviz-1"><a class="header" href="#graphviz-1">GraphViz</a></h1>
+<h2 id="simple-command"><a class="header" href="#simple-command">Simple command</a></h2>
+<ul>
+<li>With <code>graphiviz</code> python module</li>
+</ul>
+<pre><code class="language-python">import graphviz
+
+dot_data = &quot;&quot;&quot;
+// The Round Table
+digraph {
+    A [label=&quot;King Arthur&quot;]
+    B [label=&quot;Sir Bedevere the Wise&quot;]
+    L [label=&quot;Sir Lancelot the Brave&quot;]
+    A -&gt; B
+    A -&gt; L
+    B -&gt; L [constraint=false]
+}
+&quot;&quot;&quot;
+graph = graphviz.Source(dot_data)
+graph
+</code></pre>
+<p><img src="tools/graphviz/examples/./assets/output_1_0.svg" alt="svg" /></p>
+<ul>
+<li>With command line</li>
+</ul>
+<pre><code class="language-python">!dot -Tpng ./assets/source.dot -o ./assets/source.png
+</code></pre>
+<p><img src="tools/graphviz/examples/./assets/output_1_0.svg" alt="image" /></p>
+<h2 id="some-examples"><a class="header" href="#some-examples">Some examples</a></h2>
+<h2 id="basic"><a class="header" href="#basic">Basic</a></h2>
+<ul>
+<li>graph</li>
+</ul>
+<p>No direction</p>
+<pre><code class="language-text">graph {
+  hello -- world;
+}
+</code></pre>
+<p><img src="tools/graphviz/examples/./assets/basic.png" alt="image" /></p>
+<ul>
+<li>digraph</li>
+</ul>
+<p>oriented graph</p>
+<pre><code class="language-text">graph {
+  hello -&gt; world;
+}
+</code></pre>
+<p><img src="tools/graphviz/examples/./assets/digraph_basic.png" alt="image" /></p>
+<ul>
+<li>digraph oriented AND edge in color</li>
+</ul>
+<pre><code class="language-text">digraph {
+  rankdir=LR;
+  
+  hello [ label = &quot;Hello&quot; ];
+  hello -&gt; world [ color=&quot;orange&quot;, penwidth=3.0 ];
+}
+</code></pre>
+<p><img src="tools/graphviz/examples/./assets/digraph_color_basic.png" alt="image" /></p>
+<ul>
+<li>digraph with font</li>
+</ul>
+<pre><code class="language-text">digraph {
+  Tinos [ fontname=&quot;Tinos&quot; ];
+  Handlee [ fontname=&quot;Handlee&quot; ];
+  &quot;Sedgwick Ave&quot; [ fontname=&quot;Sedgwick Ave&quot; ];
+  &quot;*also Sedgwick*&quot;;
+}
+</code></pre>
+<p><img src="tools/graphviz/examples/./assets/digraph_font_basic.png" alt="image" /></p>
+<ul>
+<li>digraph custom edge</li>
+</ul>
+<pre><code class="language-text">digraph {
+  node [ shape=square ];
+  edge [ style=dashed ];
+  
+  see -&gt; think -&gt; do;
+}
+</code></pre>
+<p><img src="tools/graphviz/examples/./assets/digraph_custom_edge.png" alt="image" /></p>
+<h3 id="simple-graph"><a class="header" href="#simple-graph">Simple Graph</a></h3>
+<pre><code class="language-graphviz">graph {
+    a -- b;
+    b -- c;
+    c -- d;
+    d -- e;
+    e -- f;
+    a -- f;
+    a -- c;
+    a -- d;
+    a -- e;
+    b -- d;
+    b -- e;
+    b -- f;
+    c -- e;
+    c -- f;
+    d -- f;
+}
+</code></pre>
+<p><img src="tools/graphviz/examples/./assets/output_7_0.png" alt="svg" /></p>
+<h3 id="full-digraph"><a class="header" href="#full-digraph">Full digraph</a></h3>
+<pre><code class="language-python">import graphviz
+
+dot_data = &quot;&quot;&quot;
+digraph {
+    a -&gt; b[label=&quot;0.2&quot;,weight=&quot;0.2&quot;];
+    a -&gt; c[label=&quot;0.4&quot;,weight=&quot;0.4&quot;];
+    c -&gt; b[label=&quot;0.6&quot;,weight=&quot;0.6&quot;];
+    c -&gt; e[label=&quot;0.6&quot;,weight=&quot;0.6&quot;];
+    e -&gt; e[label=&quot;0.1&quot;,weight=&quot;0.1&quot;];
+    e -&gt; b[label=&quot;0.7&quot;,weight=&quot;0.7&quot;];
+}
+&quot;&quot;&quot;
+graphviz.Source(dot_data)
+</code></pre>
+<p><img src="tools/graphviz/examples/./assets/output_9_0.svg" alt="svg" /></p>
+<h3 id="showing-a-path"><a class="header" href="#showing-a-path">Showing A path</a></h3>
+<pre><code class="language-python">import graphviz
+
+dot_data = &quot;&quot;&quot;
+graph {
+    a -- b[color=red,penwidth=3.0];
+    b -- c;
+    c -- d[color=red,penwidth=3.0];
+    d -- e;
+    e -- f;
+    a -- d;
+    b -- d[color=red,penwidth=3.0];
+    c -- f[color=red,penwidth=3.0];
+}
+&quot;&quot;&quot;
+graphviz.Source(dot_data)
+</code></pre>
+<p><img src="tools/graphviz/examples/./assets/output_11_0.svg" alt="svg" /></p>
+<h3 id="subgraph"><a class="header" href="#subgraph">Subgraph</a></h3>
+<pre><code class="language-python">import graphviz
+
+dot_data = &quot;&quot;&quot;
+digraph {
+    subgraph cluster_0 {
+        label=&quot;Subgraph A&quot;;
+        a -&gt; b;
+        b -&gt; c;
+        c -&gt; d;
+    }
+
+    subgraph cluster_1 {
+        label=&quot;Subgraph B&quot;;
+        a -&gt; f;
+        f -&gt; c;
+    }
+}
+&quot;&quot;&quot;
+graphviz.Source(dot_data)
+</code></pre>
+<h3 id="complex-digraph"><a class="header" href="#complex-digraph">Complex digraph</a></h3>
+<pre><code class="language-python">import graphviz
+
+dot_data = &quot;&quot;&quot;
+digraph G {
+    size =&quot;4,4&quot;;
+    main [shape=box]; /* this is a comment */
+    main -&gt; parse [weight=8];
+    parse -&gt; execute;
+    main -&gt; init [style=dotted];
+    main -&gt; cleanup;
+    execute -&gt; { make_string; printf}
+    init -&gt; make_string;
+    edge [color=red]; // so is this
+    main -&gt; printf [style=bold,label=&quot;100 times&quot;];
+    make_string [label=&quot;make a\nstring&quot;];
+    node [shape=box,style=filled,color=&quot;.7 .3 1.0&quot;];
+    execute -&gt; compare;
+}
+&quot;&quot;&quot;
+graphviz.Source(dot_data)
+</code></pre>
+<p><img src="tools/graphviz/examples/./assets/output_15_0.png" alt="image" /></p>
+<h3 id="complex-label"><a class="header" href="#complex-label">Complex label</a></h3>
+<pre><code class="language-text">digraph G {
+    a -&gt; b -&gt; c;
+    b -&gt; d;
+    a [shape=polygon,sides=5,peripheries=3,color=lightblue,style=filled];
+    c [shape=polygon,sides=4,skew=.4,label=&quot;hello world&quot;]
+    d [shape=invtriangle];
+    e [shape=polygon,sides=4,distortion=.7];
+}
+</code></pre>
+<p><img src="tools/graphviz/examples/./assets/label.png" alt="image" /></p>
+<h3 id="advanced-graphs"><a class="header" href="#advanced-graphs">Advanced Graphs</a></h3>
+<h4 id="edge-connection"><a class="header" href="#edge-connection">Edge connection</a></h4>
+<p>Use <code>&lt;angle-brackets&gt;</code> to connect edge</p>
+<pre><code class="language-text">digraph {
+  rankdir=LR;
+  node [ shape=record ];
+
+  struct1 [
+      label = &quot;a|b|&lt;port1&gt;c&quot;;
+  ];
+  
+  struct2 [
+      label = &quot;a|{&lt;port2&gt;b1|b2}|c&quot;;
+  ];
+  
+  struct1:port1 -&gt; struct2:port2 [ label=&quot;xyz&quot; ];
+}
+</code></pre>
+<p><img src="tools/graphviz/examples/./assets/digraph_edge_connection.png" alt="image" /></p>
+<h4 id="clusters-or-subgraph"><a class="header" href="#clusters-or-subgraph"><code>Clusters</code> (or <code>subgraph</code>)</a></h4>
+<p>You can group related nodes by putting them in a subgraph whose name begins with <code>cluster_</code>.</p>
+<pre><code class="language-text">digraph {
+  node [ fontname=&quot;Handlee&quot; ];
+  subgraph cluster_frontend {
+    label=&quot;*Frontend*&quot;;
+    React;
+    Bootstrap;
+  }
+      
+  subgraph cluster_backend {
+    label=&quot;*Backend*&quot;;
+    expressjs;
+    &quot;aws-sdk&quot;;
+  }
+
+  React -&gt; expressjs;
+  expressjs -&gt; &quot;aws-sdk&quot;;
+}
+</code></pre>
+<p><img src="tools/graphviz/examples/./assets/digraph_subgraph.png" alt="image" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="some-linux-command"><a class="header" href="#some-linux-command">Some linux command</a></h1>
+<h2 id="use-stream-editor-sed"><a class="header" href="#use-stream-editor-sed"><code>Use Stream EDitor</code> (SED)</a></h2>
+<h3 id="find-and-replace-text-within-a-file-using-sed-command"><a class="header" href="#find-and-replace-text-within-a-file-using-sed-command">Find and replace text within a file using sed command</a></h3>
+<blockquote>
+<p>sed -i 's/old-text/new-text/g' input.txt</p>
+</blockquote>
+<ul>
+<li><code>-i</code> to update file pass</li>
+<li><code>s</code> is the substitute command of sed for find and replace</li>
+<li><code>g</code> means global replace i.e. find all occurrences</li>
+</ul>
+<blockquote>
+<p>sed -i 's/foo/bar/gI' input.txt</p>
+</blockquote>
+<ul>
+<li><code>I</code> to match all cases of foo (foo, FOO, Foo, FoO) add I (capitalized I) option</li>
+</ul>
+<h2 id="install-oh-my-zsh"><a class="header" href="#install-oh-my-zsh">Install <code>Oh My zsh</code></a></h2>
+<p>Convert <a href="https://les-enovateurs.com/oh-my-zsh-installation-rapide-linux">Oh My Zsh – guide complet : installation rapide sous Linux</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bash-tips"><a class="header" href="#bash-tips">Bash tips</a></h1>
+<h2 id="touch-file-into-sub-unexisting-folder"><a class="header" href="#touch-file-into-sub-unexisting-folder">touch file into sub unexisting folder</a></h2>
+<pre><code class="language-shell">$ file=&quot;./nested/folder/deep/more.txt&quot;
+$ mkdir -p &quot;${file%/*}&quot; &amp;&amp; touch &quot;$file&quot;
+</code></pre>
+<p>Where</p>
+<pre><code class="language-shell">$ file=&quot;./nested/folder/deep/more.txt&quot;
+$ echo &quot;${file%/*}&quot; # dirname ${file}
+./nested/folder/deep
+$ echo &quot;$file&quot;
+</code></pre>
+<p>Possible function: </p>
+<pre><code class="language-shell">$ mktouch() {mkdir -p $(dirname $1) &amp;&amp; touch $1;}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="natural-referencing"><a class="header" href="#natural-referencing">Natural Referencing</a></h1>
+<h2 id="the-domain-name"><a class="header" href="#the-domain-name">The domain name</a></h2>
+<ul>
+<li>avoid <code>-</code> which are considered as penalizing</li>
+<li>it's better without offensive words and easy to spell</li>
+<li>the size of the domain name must be about 9 words</li>
+<li>register your domain name for 1 year or less is characterized as suspicious</li>
+<li>a valid SSL certificate is better</li>
+</ul>
+<h2 id="page-construction"><a class="header" href="#page-construction">Page construction</a></h2>
+<ul>
+<li>you need keywords related to your site</li>
+<li>the content of the pages must be relevant and organized</li>
+<li>if the speed of loading the page is long ( Ex: images too heavy) your site will be less well referenced</li>
+<li>it is preferable to have a qualitative code</li>
+<li>feature snippets: this is a portion of text that directly answers a question asked in the search engine. Indeed, it is an extract that leads the user to click on the page to get the full content. Try the site <a href="technics/natural-referencing/answerthepublic.com">Answer The Public</a> to know what people are looking for on Google (could be interested to look for your keywords).</li>
+</ul>
+<h2 id="backlinks"><a class="header" href="#backlinks">Backlinks</a></h2>
+<p>Links that lead to your website. For Google, if a site has many backlinks, it is a popular and quality site. It also takes into account the age of the domain name that makes the incoming link. Indeed, there is a difference between Wikipedia and a site that is a few months old.</p>
+<p>It takes into account the link that redirects to your site.</p>
+<ul>
+<li>the complete site (https://your-own-site.com), the complete site is considered of quality</li>
+<li>a specific page of your site (https://your-own-site.com/a/very/specific/page/somewhere/in/your/site), there is only one interesting content.</li>
+</ul>
+<h2 id="user-loyalty"><a class="header" href="#user-loyalty">User loyalty</a></h2>
+<ul>
+<li>The more time they spend on the site, the better.</li>
+<li>Encourage users to comment on content. Many comments involve a topic of interest, so users will return to the site to see the responses (⚠️ to moderation).</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="web-scrapping"><a class="header" href="#web-scrapping">Web Scrapping</a></h1>
+<h2 id="frameworks"><a class="header" href="#frameworks">Frameworks</a></h2>
+<ul>
+<li>BeautifulSoup</li>
+<li>MechanicalSoup</li>
+<li>Scrapy</li>
+<li>Photon → collection of URLs, files, specific data (emails, social networks)</li>
+<li>Puppeteer</li>
+</ul>
+<h3 id="puppeteer"><a class="header" href="#puppeteer">Puppeteer</a></h3>
+<p>Allows to drive a chromium instance (works with nodejs).</p>
+<ul>
+<li>automate tasks (forms, data monitoring)</li>
+<li>browse web pages (tests, scrapping)</li>
+<li>make screenshots or export web pages to PDF</li>
+<li>capture a chronological trace of a site to diagnose performance problems</li>
+<li>test chrome extensions</li>
+<li>possibility to display the window to follow the navigation</li>
+<li>dev chrome tools → <code>Recorder</code> allows to record a navigation and extract the puppeteer code.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="penetration-testing---pentest"><a class="header" href="#penetration-testing---pentest">Penetration testing - Pentest</a></h1>
+<h2 id="introduction-to-penetration-testing"><a class="header" href="#introduction-to-penetration-testing">Introduction to penetration testing</a></h2>
+<p>Definitions:</p>
+<ul>
+<li><strong>Risk assessment</strong>: Analysis of services to identify vulnerabilities in systems, applications or processes.</li>
+<li><strong>Penetration testing</strong>: Check if the vulnerabilities found are really present or not (false positives).</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="useful-commands"><a class="header" href="#useful-commands">Useful commands</a></h1>
+<h2 id="http-serverone-line"><a class="header" href="#http-serverone-line">HTTP ServerOne line</a></h2>
+<pre><code class="language-bash">python -m SimpleHTTPServer 8000 # Python 2.x
+
+python -m http.server 8000 # Python 3.x
+
+updog # pretty interface
+</code></pre>
+<h2 id="steganography"><a class="header" href="#steganography">Steganography</a></h2>
+<p>Find images information</p>
+<pre><code class="language-bash">identify -verbose
+pngcheck [image]
+zsteg [image] # detects stegano data hidden in PNG &amp; BMP
+
+
+steghide extract -sf [filename]
+stegseek [file] [wordlist] # bruteforce steghide passphrase
+</code></pre>
+<h2 id="web"><a class="header" href="#web">Web</a></h2>
+<h3 id="attaque-sql"><a class="header" href="#attaque-sql">Attaque SQL</a></h3>
+<pre><code class="language-bash">sqlmap -u &quot;http://172.16.128.39:8080/student_grade/index.php?student_id=&quot; --tables -D Dysto_School -T student
+</code></pre>
+<h3 id="website-request-command-line"><a class="header" href="#website-request-command-line">Website request command line</a></h3>
+<pre><code class="language-bash">curl -v [url]
+curl -v -X POST [url]
+wget [url]
+</code></pre>
+<hr />
+<h2 id="forensic-investigation"><a class="header" href="#forensic-investigation">Forensic Investigation</a></h2>
+<pre><code class="language-bash">volatility
+testdisk
+</code></pre>
+<h3 id="hidden-files-extraction"><a class="header" href="#hidden-files-extraction">Hidden files extraction</a></h3>
+<pre><code class="language-bash">binwalk -e
+</code></pre>
+<h2 id="windows"><a class="header" href="#windows">Windows</a></h2>
+<p>Find the Wi-Fi password using CMD</p>
+<pre><code class="language-bash">netsh wlan show profile &lt;ESSID&gt; key=clear
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ssh-secure-shell"><a class="header" href="#ssh-secure-shell">SSH (Secure SHell)</a></h1>
+<h2 id="basic-connection"><a class="header" href="#basic-connection">Basic connection</a></h2>
+<pre><code>ssh user@ip
+</code></pre>
+<blockquote>
+<p>ssh user@192.168.0.46</p>
+</blockquote>
+<h2 id="file-transfert"><a class="header" href="#file-transfert">File transfert</a></h2>
+<pre><code>scp [user@ip:]/full/file/path/src [user@ip:]/full/folder/path/dst
+</code></pre>
+<pre><code class="language-shell"># Upload (From local -&gt; remote)
+$ scp /home/mickael/data/Ficher2 root@192.168.10.131:/var/www/
+# Download (From remote -&gt; to local)
+$ scp root@192.168.10.131:/var/www/Fichier2 /home/mickael/data/
+</code></pre>
+<h2 id="recurcive-copies"><a class="header" href="#recurcive-copies">Recurcive copies</a></h2>
+<pre><code>scp -r [user@ip:]/full/root?folder/path/src [user@ip:]/full/folder/path/dst
+</code></pre>
+<blockquote>
+<p>scp -r /home/mickael/data/ root@192.168.10.131:/var/www/</p>
+</blockquote>
+<h2 id="x11-forwarding"><a class="header" href="#x11-forwarding">X11 Forwarding</a></h2>
+<p><img src="pentest/useful-commands/ssh/./assets/x11_forwarding.png" alt="img" /></p>
+<ul>
+<li>
+<p>On server</p>
+</li>
+<li>
+<p>In file <code>/etc/ssh/sshd_config</code></p>
+</li>
+</ul>
+<pre><code class="language-shell">X11Forwarding yes
+X11DisplayOffset 10
+</code></pre>
+<p><em>NOTE</em> Do not forget to reboot</p>
+<blockquote>
+<p>service sshd restart</p>
+</blockquote>
+<p><em>in progress</em></p>
+<h2 id="tunneling"><a class="header" href="#tunneling">Tunneling</a></h2>
+<p>We are going to match a local port of our machine to a remote port of the machine to which we are connecting, all through our SSH connection:</p>
+<pre><code class="language-shell">$ ssh -f user@monserveur -L 2500:localhost:80 -N
+</code></pre>
+<ul>
+<li><code>-f</code> to put command in foreground</li>
+<li><code>-L</code> define <em>pathfinder</em> `local_port:target_tunnel_output:target_port_output_tunnel&quot;</li>
+<li><code>-N</code> Do not execute e re;ote command</li>
+</ul>
+<p>For <code>-L</code>, here, the local port 2500 will represent the port 80 of ther remote.</p>
+<p>Multiple SSH tunnels can be established at the same time, as long as they don't forward (match) the same ports. For example, here I have an active tunnel on my local port 2500, I can establish a second one on port 2501, to establish a connection with my local STMP server:</p>
+<pre><code class="language-shell">$ ssh -f mickael@1.2.3.4 -L 2501:192.168.1.10:25 -N
+</code></pre>
+<h2 id="proxy-ssh"><a class="header" href="#proxy-ssh">Proxy SSH</a></h2>
+<p><img src="pentest/useful-commands/ssh/./assets/proxy.jpg" alt="img" /></p>
+<pre><code class="language-shell">$ ssh -D 12345 mickael@monserveur
+</code></pre>
+<h2 id="port-knocking"><a class="header" href="#port-knocking">Port knocking</a></h2>
+<p><img src="pentest/useful-commands/ssh/./assets/port-knocking-ssh.png" alt="img" /></p>
+<p>Use tools <code>knockd</code></p>
+<pre><code class="language-shell">$ apt install knockd
+</code></pre>
+<p>Update config. file</p>
+<ul>
+<li>/etc/knockd.conf</li>
+</ul>
+<pre><code class="language-ini">[ouvrir_SSH]
+
+sequence = 2005,1905,3005
+
+seq_timeout = 20 command = /sbin/iptables -I INPUT -s %IP% -p tcp --dport 22 -j ACCEPT tcpflags = syn
+
+[fermer_SSH]
+
+sequence = 3005,1905,2005
+
+seq_timeout = 20
+
+command = /sbin/iptables -D INPUT -s %IP% -p tcp --dport 22 -j ACCEPT tcpflags = syn
+</code></pre>
+<p><strong>IMPORTANT</strong> </p>
+<p>Your server must have closed all unused ports beforehand. More simply with the command </p>
+<pre><code>iptables -P INPUT DROP
+</code></pre>
+<p>which will have the effect of closing all the input ports. Be careful with this command all the same if you don't want to cut off your own access.</p>
+<h2 id="ref-2"><a class="header" href="#ref-2">Ref.</a></h2>
+<ul>
+<li><a href="https://www.it-connect.fr/cours/comprendre-et-maitriser-ssh/">Comprendre et maîtriser SSH</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="penetration-testing-application-for-android"><a class="header" href="#penetration-testing-application-for-android">Penetration Testing Application for Android</a></h1>
+<p>List for Android penetration testing applications and tools that can be used to aid in penetration testing. The following are the most commonly used applications.
+Feel free to suggest new applications and tools at comments section below.</p>
+<h2 id="list-of-android-penetration-testing-tools-and-applications"><a class="header" href="#list-of-android-penetration-testing-tools-and-applications">List of Android Penetration Testing Tools and Applications</a></h2>
+<ul>
+<li><a href="https://magiskmanager.com/" title="Magisk Manager Official Website">Magisk Manager</a> - Systemless rooting system.</li>
+<li><a href="https://github.com/ElderDrivers/EdXposedManager/releases" title="EdXposed Manager Github Page">EdXposed Manager</a> - Companion Android application for EdXposed.</li>
+<li><a href="https://play.google.com/store/apps/details?id=stericson.busybox" title="BusyBox Play Store Page">BusyBox</a> - Android busyBox.</li>
+<li><a href="https://play.google.com/store/apps/details?id=com.dundastech.sqlitemasterlight" title="SQLite Editor Play Store Page">SQLite Editor Master</a> - SQLite Editor.</li>
+<li><a href="https://play.google.com/store/apps/details?id=com.speedsoftware.rootexplorer" title="Root Explorer Play Store Page">Root Explorer</a> File Manager for Root Users (Root Required).</li>
+<li><a href="https://github.com/tegal1337/CiLocks" title="CiLocks Github Page">CiLocks</a> - Python script to brute force android lockscreen password.</li>
+<li><a href="https://play.google.com/store/apps/details?id=net.techet.netanalyzerlite.an" title="Network Analyzer Play Store Page">Network Analyzer</a> - Network Analyzer for Android.</li>
+<li><a href="https://www.apkmirror.com/apk/grey-shirts/packet-capture/packet-capture-1-4-7-release/packet-capture-1-4-7-android-apk-download/" title="Packet Capture APK Mirror">Packet Capture</a> - Packet capture/Network traffic sniffer.</li>
+<li><a href="https://play.google.com/store/apps/details?id=yarolegovich.materialterminal&amp;hl=en" title="Material Terminal Play Store Page">Material Terminal</a> - Terminal for Android.</li>
+<li><a href="https://github.com/matlink/gplaycli" title="Gplaycli Github Page">Gplaycli</a> Cli Tool to download APK form PlayStore.</li>
+</ul>
+<!-- appendices -->
+<!-- end appendices -->
+<p>Some Reference</p>
+<ul>
+<li><a href="https://securitycafe.ro/2023/04/03/mobile-pentesting-101-how-to-set-up-your-android-environment/">Mobile Pentesting 101 – How to set up your Android Environment</a></li>
+<li><a href="https://securitycafe.ro/2022/02/01/root-detection-and-ssl-pinning-bypass/#1-frida">Root detection and SSL pinning bypass</a></li>
+<li><a href="https://securitycafe.ro/2022/09/05/mobile-pentesting-101-bypassing-biometric-authentication/#intro-to-keystore">Mobile Pentesting 101 – Bypassing Biometric Authentication</a></li>
+<li><a href="https://github.com/fire1ce/3os.org/blob/main/docs/android">Github - fire1ce/3os.org </a></li>
+<li><a href="https://github.com/ivan-sincek/android-penetration-testing-cheat-sheet">Github - ivan-sincek/android-penetration-testing-cheat-sheet</a></li>
+<li><a href="https://github.com/cryptax/androidre/tree/master">Androidre</a></li>
+<li><a href="https://medium.com/innovies-club/running-android-emulator-in-a-docker-container-19ecb68e1909">Running Android Emulator in a Docker Container</a></li>
+<li><a href="https://redfoxsec.com/blog/category/mobile/">RedFox Sec tutorial</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="red-fox-training"><a class="header" href="#red-fox-training">Red Fox TRaining</a></h1>
+<p>Here is some training/tuto to Android pentest from <a href="pentest/Mobile/red_fox_sec_training/1"><code>Red Fox Sec</code> blog</a>.</p>
+<ul>
+<li><a href="pentest/Mobile/red_fox_sec_training/./web_view/index.html">Exploiting Android WebView Vulnerabilities</a></li>
+<li><a href="pentest/Mobile/red_fox_sec_training/./broad_cast_receivers/index.html">Exploiting Broadcast Receivers</a></li>
+<li><a href="pentest/Mobile/red_fox_sec_training/./content_providers/index.html">Exploiting Content Providers</a></li>
+<li><a href="pentest/Mobile/red_fox_sec_training/./drozer/index.html">Android Pentesting with Drozer</a></li>
+<li><a href="pentest/Mobile/red_fox_sec_training/./tapjacking/index.html">Android Tapjacking Vulnerability</a></li>
+<li><a href="pentest/Mobile/red_fox_sec_training/./crypto/index.html">Broken Cryptography in Android Applications</a></li>
+<li><a href="pentest/Mobile/red_fox_sec_training/./pentest_method/index.html">Android Pentesting Methodology (Pt. 1)</a></li>
+<li><a href="pentest/Mobile/red_fox_sec_training/./pentest_method/index.html">Android Pentesting Methodology (Pt. 2)</a></li>
+<li><a href="pentest/Mobile/red_fox_sec_training/./pentest_method/index.html">Android Pentesting Methodology (Pt. 3)</a></li>
+<li><a href="pentest/Mobile/red_fox_sec_training/./frida_root/index.html">Android Root Detection Bypass Using Frida</a></li>
+<li><a href="pentest/Mobile/red_fox_sec_training/./frida_ssl_pinning/index.html">SSL Pinning Bypass For Android Using Frida</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="exploiting-android-webview-vulnerabilities"><a class="header" href="#exploiting-android-webview-vulnerabilities">Exploiting Android WebView Vulnerabilities</a></h1>
+<p>https://redfoxsec.com/blog/exploiting-android-webview-vulnerabilities/</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="exploiting-broadcast-receivers"><a class="header" href="#exploiting-broadcast-receivers">Exploiting Broadcast Receivers</a></h1>
+<p>https://redfoxsec.com/blog/exploiting-broadcast-receivers/</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="exploiting-content-providers"><a class="header" href="#exploiting-content-providers">Exploiting Content Providers</a></h1>
+<p>https://redfoxsec.com/blog/exploiting-content-providers/</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="android-pentesting-with-drozer"><a class="header" href="#android-pentesting-with-drozer">Android Pentesting with Drozer</a></h1>
+<p>https://redfoxsec.com/blog/android-pentesting-with-drozer/</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="android-tapjacking-vulnerability"><a class="header" href="#android-tapjacking-vulnerability">Android Tapjacking Vulnerability</a></h1>
+<p>https://redfoxsec.com/blog/android-tapjacking-vulnerability/</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="broken-cryptography-in-android-applications"><a class="header" href="#broken-cryptography-in-android-applications">Broken Cryptography in Android Applications</a></h1>
+<p>https://redfoxsec.com/blog/broken-cryptography-android-applications/</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="android-pentesting-methodology"><a class="header" href="#android-pentesting-methodology">Android Pentesting Methodology</a></h1>
+<ul>
+<li>https://redfoxsec.com/blog/android-pentesting-methodology-part-1/</li>
+<li>https://redfoxsec.com/blog/android-pentesting-methodology-part-2/</li>
+<li>https://redfoxsec.com/blog/android-pentesting-methodology-part-3/</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="android-pentesting-methodology-1"><a class="header" href="#android-pentesting-methodology-1">Android Pentesting Methodology</a></h1>
+<ul>
+<li>https://redfoxsec.com/blog/android-pentesting-methodology-part-1/</li>
+<li>https://redfoxsec.com/blog/android-pentesting-methodology-part-2/</li>
+<li>https://redfoxsec.com/blog/android-pentesting-methodology-part-3/</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="android-pentesting-methodology-2"><a class="header" href="#android-pentesting-methodology-2">Android Pentesting Methodology</a></h1>
+<ul>
+<li>https://redfoxsec.com/blog/android-pentesting-methodology-part-1/</li>
+<li>https://redfoxsec.com/blog/android-pentesting-methodology-part-2/</li>
+<li>https://redfoxsec.com/blog/android-pentesting-methodology-part-3/</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="android-root-detection-bypass-using-frida"><a class="header" href="#android-root-detection-bypass-using-frida">Android Root Detection Bypass Using Frida</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="kali-in-docker-for-pentest"><a class="header" href="#kali-in-docker-for-pentest">Kali in docker for pentest</a></h1>
+<p>Mettre <code>Kali</code> en docker afin d'éviter les VMs.
+Il faut un <code>docker</code> et <code>docker-compose</code>. Puis définir des alias</p>
+<h2 id="docker-composeyml"><a class="header" href="#docker-composeyml">Docker-compose.yml</a></h2>
+<pre><code class="language-docker-compose">version: &quot;3.3&quot;
+services:
+  kali:
+    build: .
+    image: kali_custom
+    container_name: kali
+    hostname: kalilinux
+    environment:
+      - DISPLAY=$DISPLAY
+    volumes:
+      - '/tmp/.X11-unix:/tmp/.X11-unix:rw'
+      - '/home/user/pentest:/pentest:rw'
+    network_mode: host
+    stdin_open: true # docker run -i
+    tty: true # docker run -t
+    cap_add:
+      - NET_RAW
+      - NET_ADMIN
+</code></pre>
+<h2 id="dockerfile-1"><a class="header" href="#dockerfile-1">Dockerfile</a></h2>
+<pre><code class="language-Dockerfile">FROM kalilinux/kali-rolling
+
+RUN apt update &amp;&amp; apt upgrade -y
+
+RUN apt install zsh curl iputils-ping netcat-traditional iproute2 rlwrap \
+    dnsutils burpsuite nmap socat whois gobuster wireshark-common \
+    metasploit-framework \
+    netdiscover \
+    exiftool file sleuthkit tree \
+    libssl-dev \
+    build-essential git libdistorm3-dev yara libraw1394-11 libcapstone-dev capstone-tool tzdata \
+    # python
+    python3 python3-dev libpython3-dev python3-pip python3-setuptools python3-wheel \
+    hashcat \
+    software-properties-common apt-transport-https \
+    -y
+
+RUN apt install wget
+RUN mkdir tools &amp;&amp; wget http://www.caesum.com/handbook/Stegsolve.jar -O stegsolve.jar &amp;&amp; chmod +x stegsolve.jar
+
+RUN apt install testdisk proxychains nano -y
+
+# Volatility
+# ?pycrypto?
+RUN python3 -m pip install -U distorm3 pillow openpyxl ujson pytz ipython capstone yara-python
+RUN python3 -m pip install -U git+https://github.com/volatilityfoundation/volatility3.git
+
+
+# Clean up
+RUN apt clean autoclean \
+    &amp;&amp; apt autoremove --yes \
+    &amp;&amp; rm -rf /var/lib/{apt,dpkg,cache,log}/ \
+    &amp;&amp; rm -rf /var/lib/apt/lists/*
+RUN echo 'export PATH=/home/username/.local/bin:$PATH' &gt;&gt; ~/.profile
+
+WORKDIR /pentest
+
+CMD [&quot;/bin/zsh&quot;]
+</code></pre>
+<h2 id="alias"><a class="header" href="#alias">Alias</a></h2>
+<p>A définir dans <code>.zshrc</code></p>
+<pre><code class="language-bash">...
+kali () {
+	if [[ $(systemctl is-active docker.service) == &quot;inactive&quot; ]]
+	then
+		sudo systemctl start docker
+	fi
+	xhost +local:docker
+	pushd /media/user/Backup/kali_docker &gt; /dev/null
+	docker-compose up -d --build
+	popd &gt; /dev/null
+	echo &quot;[+] Kali is running.&quot;
+	echo &quot;[+] docker exec -it kali zsh&quot;
+}
+
+kali_shell() {
+	running=$(docker container inspect -f '{{.State.Running}}' kali 2&gt;/dev/null)
+	if [ &quot;$running&quot; = &quot;true&quot; ]
+	then
+		docker exec -it kali zsh
+	else
+		echo &quot;[-] kali container is not running&quot;
+	fi
+}
+...
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="dev"><a class="header" href="#dev">Dev.</a></h1>
+<h2 id="language"><a class="header" href="#language">Language</a></h2>
+<table><thead><tr><th>Name</th><th>Purpose</th><th>Imperative</th><th>Object-oriented</th><th>Functional</th><th>Procedural</th><th>Generic</th><th>Reflective</th><th>Other paradigms</th><th>Standardized</th></tr></thead><tbody>
+<tr><td><a href="dev/./python/index.html">Python</a></td><td>Application, general, web, scripting, artificial intelligence, scientific computing</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Aspect-oriented</td><td>De facto standard via Python Enhancement Proposals (PEPs)</td></tr>
+<tr><td><a href="dev/./rust/index.html">Rust</a></td><td>Application, server-side, system, web</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td><td>Concurrent</td><td>No</td></tr>
+</tbody></table>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="python"><a class="header" href="#python">Python</a></h1>
+<h2 id="pyenv"><a class="header" href="#pyenv">pyenv</a></h2>
+<p>Dev. environment setup.</p>
+<ul>
+<li><a href="https://blog.stephane-robert.info/post/python-pyenv-pipenv/">Utilisation plusieurs versions de python avec Pyenv</a></li>
+</ul>
+<h2 id="linter"><a class="header" href="#linter">linter</a></h2>
+<p><a href="https://realpython.com/python-code-quality/">Python Code Quality: Tools &amp; Best Practices</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="snippets"><a class="header" href="#snippets">Snippets</a></h1>
+<p>Some useful snippet code for CTF</p>
+<style>
+.badge_module {
+  background-color: #ffc107;
+  color: black;
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 5px;
+}
+.badge_theme {
+  background-color: #3a87ad;
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 5px;
+}
+</style>
+<table>
+    <thead>
+        <tr>
+            <th>Folder</th>
+            <th>Tags</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- ITEM --> 
+        <tr>
+            <td rowspan="2">MovieToken</td>
+            <td>
+                <span class="badge_module">tesseract</span>
+                <span class="badge_module">Open-CV</span>
+                <span class="badge_module">Pillow</span>
+                <span class="badge_module">Click</span>
+            </td>
+            <td rowspan="2">Extract text information from movie.</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="badge_theme">MP4</span>
+                <span class="badge_theme">PNG</span>
+                <span class="badge_theme">Regular Expression</span>
+            </td>
+        </tr>
+        <!-- ITEM --> 
+        <tr>
+            <td rowspan="2">GetPostRequestPydantic</td>
+            <td>
+                <span class="badge_module">Request</span>
+                <span class="badge_module">pydantic</span>
+            </td>
+            <td rowspan="2">Send and receive request.</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="badge_theme">Logging</span>
+                <span class="badge_theme">functools::partial</span>
+            </td>
+        </tr>
+        <!-- ITEM --> 
+        <tr>
+            <td>FullClickSnippet</td>
+            <td>
+                <span class="badge_module">Click</span>
+            </td>
+            <td>Some snippet about click.</td>
+        </tr>
+    </tbody>
+</table><div style="break-before: page; page-break-before: always;"></div><h1 id="click"><a class="header" href="#click">Click</a></h1>
+<p>Quelques <em>snippets</em> d'utilisation de click</p>
+<h2 id="requirements"><a class="header" href="#requirements">Requirements</a></h2>
+<pre><code class="language-ini">click==8.*
+PyYAML==6.*
+pytoml==0.1.21
+</code></pre>
+<h2 id="basic-1"><a class="header" href="#basic-1">Basic</a></h2>
+<p>Utilisation d'un argument <em>positional</em> avec l'aide en ligne.</p>
+<pre><code class="language-python">#!/usr/bin/env python3
+&quot;&quot;&quot;Basic click demo.&quot;&quot;&quot;
+
+import click
+
+
+@click.command(
+    context_settings={&quot;help_option_names&quot;: [&quot;-h&quot;, &quot;--help&quot;]},
+    help=&quot;Basic demo.&quot;,
+)
+@click.argument(
+    &quot;name&quot;,
+    type=click.STRING,
+    metavar=&quot;NAME &quot;,
+)
+def main(name: str):
+    &quot;&quot;&quot;Main function.&quot;&quot;&quot;
+    click.clear()
+    click.echo(f&quot;Hello {name} (classic)&quot;)
+    click.secho(f&quot;Hello {name} (fg only)&quot;, fg=&quot;green&quot;)
+    click.secho(f&quot;Hello {name} (bg only)&quot;, bg=&quot;yellow&quot;)
+    click.secho(f&quot;Hello {name} (both fg &amp; bg)&quot;, fg=&quot;red&quot;, bg=&quot;blue&quot;)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()  # pylint: disable=E1120
+
+</code></pre>
+<h2 id="prompt"><a class="header" href="#prompt">Prompt</a></h2>
+<p>Si un parametre est manquant, on utilise un prompt:</p>
+<pre><code class="language-python">#!/usr/bin/env python3
+&quot;&quot;&quot;Use prompt for parameter.&quot;&quot;&quot;
+
+import click
+
+
+@click.command(
+    context_settings={&quot;help_option_names&quot;: [&quot;-h&quot;, &quot;--help&quot;]},
+    help=&quot;Basic demo 2: Use prompt if arguments is missing.&quot;,
+)
+@click.option(&quot;-n&quot;, &quot;--name&quot;, prompt=&quot;Your name&quot;, help=&quot;The person to greet.&quot;)
+@click.option(&quot;-c&quot;, &quot;--count&quot;, default=1, help=&quot;number of greetings&quot;)
+def main(name: str, count: int):
+    &quot;&quot;&quot;Simple program that greets NAME for a total of COUNT times.&quot;&quot;&quot;
+    for _ in range(count):
+        click.echo(f&quot;Hello, {name}!&quot;)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()  # pylint: disable=E11
+</code></pre>
+<h2 id="parametre-du-type-path"><a class="header" href="#parametre-du-type-path">Parametre du type <code>Path</code></a></h2>
+<p>On utilise un parametre dont les proprietes seront verifier mais dont le resultats sera un <code>string</code> pour permetre de créér un <em>Path</em></p>
+<pre><code class="language-python">#!/usr/bin/env python3
+&quot;&quot;&quot;Parse and display data with click.file.&quot;&quot;&quot;
+
+from typing import Dict, List
+from string import ascii_letters
+import math
+from pathlib import Path
+
+from collections import Counter
+import click
+
+
+def convert_size(size_bytes):
+    &quot;&quot;&quot;Convert size in human readable form.&quot;&quot;&quot;
+    if size_bytes == 0:
+        return &quot;0B&quot;
+    size_name = (&quot;B&quot;, &quot;KB&quot;, &quot;MB&quot;, &quot;GB&quot;, &quot;TB&quot;)
+    i = int(math.floor(math.log(size_bytes, 1024)))
+    if i &gt;= len(size_name):
+        return &quot;0B&quot;
+    p = math.pow(1024, i)
+    s = round(size_bytes / p, 2)
+    return f&quot;{s} {size_name[i]}&quot;
+
+
+@click.command(
+    context_settings={&quot;help_option_names&quot;: [&quot;-h&quot;, &quot;--help&quot;]},
+    help=&quot;Basic demo 3: Use click.Path arguments.&quot;,
+)
+@click.argument(
+    &quot;folder_path&quot;,
+    type=click.Path(exists=True, file_okay=False, dir_okay=True),
+    metavar=&quot;MY_DIRECTORY&quot;,
+)
+@click.argument(
+    &quot;file_path&quot;,
+    type=click.Path(exists=True, file_okay=True, dir_okay=False),
+    metavar=&quot;MY_FILE&quot;,
+)
+def main(folder_path: str, file_path: str):
+    &quot;&quot;&quot;Main function.&quot;&quot;&quot;
+    click.clear()
+
+    folder_path = Path(folder_path)
+    file_path = Path(file_path)
+
+    # Display directory
+    files: List[Path] = folder_path.glob(&quot;*.py&quot;)
+    files_details: List[str] = [
+        f&quot;{x.stem} ({convert_size(x.stat().st_size)})&quot; for x in files
+    ]
+    click.secho(&quot;Glob folder&quot;, bg=&quot;green&quot;)
+    click.echo(&quot;\n&quot;.join(files_details))
+
+    # File
+    contains: str = file_path.read_text()  # pylint: disable=W1514
+    stat: Dict[str, int] = Counter(contains)
+    letter_stat = {k: v for k, v in stat.items() if k in ascii_letters}
+    letter_stat = sorted(letter_stat.items(), key=lambda x: x[1], reverse=True)
+    click.secho(f&quot;Letters statstics for {file_path.name}&quot;, bg=&quot;green&quot;)
+    click.echo(&quot;\n&quot;.join(f&quot;{x[0]} =&gt; {x[1]}&quot; for x in letter_stat))
+
+
+if __name__ == &quot;__main__&quot;:
+    main()  # pylint: disable=E1120
+
+</code></pre>
+<h2 id="parametre-file"><a class="header" href="#parametre-file">Parametre <strong>FILE</strong></a></h2>
+<p>Parametre de type <code>FILE</code>. <em>Handle</em> en paramtre.</p>
+<pre><code class="language-python">#!/usr/bin/env python3
+&quot;&quot;&quot;Read JSON file with Click.file.&quot;&quot;&quot;
+
+from typing import IO
+from json import load
+import click
+
+
+@click.command(
+    context_settings={&quot;help_option_names&quot;: [&quot;-h&quot;, &quot;--help&quot;]},
+    help=&quot;Basic demo 4: Use click.File arguments.&quot;,
+)
+@click.argument(&quot;json_file&quot;, type=click.File(mode=&quot;r&quot;, encoding=&quot;utf-8&quot;))
+def main(json_file: IO[str]):
+    &quot;&quot;&quot;Main function.&quot;&quot;&quot;
+    click.clear()
+    json_contains = load(json_file)
+    click.secho(&quot;Json contains&quot;, bg=&quot;green&quot;)
+    click.echo(json_contains)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()  # pylint: disable=E1120
+
+</code></pre>
+<h2 id="parametre-enumchoice"><a class="header" href="#parametre-enumchoice">Parametre Enum/Choice</a></h2>
+<p>Utilisation d'un <code>Enum</code> custom pour permettre d'exploiter un <em>choice</em></p>
+<pre><code class="language-python">#!/usr/bin/env python3
+&quot;&quot;&quot; Parse file according with parser.&quot;&quot;&quot;
+from typing import IO, Optional
+
+from enum import Enum
+
+import json
+import csv
+import yaml
+
+import click
+
+
+class ConfigFormat(Enum):
+    &quot;&quot;&quot;Enum format type.&quot;&quot;&quot;
+
+    YAML = 0
+    JSON = 1
+    CSV = 2
+    TXT = 3
+
+
+class EnumType(click.Choice):
+    &quot;&quot;&quot;Helper to ;ap Enum &lt;=&gt; click.Choice.&quot;&quot;&quot;
+
+    def __init__(self, enum):
+        self.__enum = enum
+        super().__init__(enum.__members__)
+
+    def convert(self, value, param, ctx):
+        return self.__enum[super().convert(value, param, ctx)]
+
+
+@click.command(
+    context_settings={&quot;help_option_names&quot;: [&quot;-h&quot;, &quot;--help&quot;]},
+    help=&quot;Basic demo 5: Use click.Choice arguments.&quot;,
+)
+@click.argument(&quot;file_path&quot;, type=click.File(mode=&quot;r&quot;, encoding=&quot;utf-8&quot;))
+@click.option(
+    &quot;-f&quot;,
+    &quot;--form&quot;,
+    type=EnumType(ConfigFormat),
+    default=ConfigFormat.JSON.name,
+    show_default=True,
+    help=&quot;Select format type of input file&quot;,
+)
+def main(file_path: IO[str], form: ConfigFormat):
+    &quot;&quot;&quot;Parse data from file according with format.&quot;&quot;&quot;
+
+    click.clear()
+    contains: Optional[str] = None
+
+    if form == ConfigFormat.JSON:
+        contains = json.load(file_path)
+    elif form is ConfigFormat.YAML:
+        contains = yaml.safe_load(file_path)
+    elif form == ConfigFormat.CSV:
+        spamreader = csv.reader(file_path, delimiter=&quot; &quot;, quotechar=&quot;|&quot;)
+        contains = &quot;&quot;
+        for row in spamreader:
+            contains += f&quot;{', '.join(row)}\n&quot;
+    else:
+        contains = &quot;\n&quot;.join(file_path.readlines())
+
+    click.secho(&quot;File contains&quot;, bg=&quot;green&quot;)
+    click.echo(contains)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()  # pylint: disable=E1120
+
+</code></pre>
+<h2 id="utilidation-des-group"><a class="header" href="#utilidation-des-group">Utilidation des <code>group</code></a></h2>
+<pre><code class="language-python">#!/usr/bin/env python
+&quot;&quot;&quot; Display some usefull tools available by group.&quot;&quot;&quot;
+
+import time
+import click
+
+
+@click.group()
+def cli():
+    &quot;&quot;&quot;Examples of usefull click utils.&quot;&quot;&quot;
+
+
+@cli.command()
+def editor():
+    &quot;&quot;&quot;Launch an editor.&quot;&quot;&quot;
+    message = click.edit(&quot;Prepopulated text&quot;)
+    click.echo(f&quot;Your message: {message}&quot;)
+
+
+@cli.command(name=&quot;find-app-dir&quot;)
+def find_app_dir():
+    &quot;&quot;&quot;Find the appropriate application data folder.&quot;&quot;&quot;
+    click.echo(click.get_app_dir(&quot;part05&quot;))
+
+
+@cli.command()
+@click.option(&quot;--lines&quot;, default=7, show_default=True)
+def paging(lines: int):
+    &quot;&quot;&quot;Page through output.&quot;&quot;&quot;
+    data = &quot;\n&quot;.join([f&quot;Line {lines}&quot;])
+    click.echo_via_pager(data)
+
+
+@cli.command(name=&quot;progress-bar&quot;)
+@click.option(
+    &quot;--delay&quot;,
+    help=&quot;Step progression delay.&quot;,
+    required=True,
+    default=0.5,
+    show_default=True,
+)
+@click.option(&quot;--count&quot;, help=&quot;&quot;, default=10)
+def progress_bar(count: int, delay: float):
+    &quot;&quot;&quot;Display a progress bar.&quot;&quot;&quot;
+    data = range(count)
+    with click.progressbar(data) as click_bar:
+        for _ in click_bar:
+            time.sleep(delay)
+
+
+if __name__ == &quot;__main__&quot;:
+    cli()  # pylint: disable=E1120
+
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="get-and-post"><a class="header" href="#get-and-post">Get and Post</a></h1>
+<p>Un petit programme pour faire des requetes <code>GET</code> et <code>POST</code> en python.
+Ce script est la solution au CTF <code>DGHACK 2023</code> pour le chall de dev <code>Feed This Dragon</code></p>
+<pre><code class="language-python">#! /usr/bin/env python
+
+import sys
+from typing import Callable, List, Dict
+from uuid import uuid1
+from functools import partial
+from dataclasses import dataclass
+from pydantic import BaseModel
+import requests
+
+console_handler = logging.StreamHandler()
+console_handler.setLevel(logging.INFO)
+file_handler = logging.FileHandler(&quot;log.txt&quot;)
+file_handler.setLevel(logging.DEBUG)
+logger = logging.getLogger()
+logger.setLevel(logging.DEBUG)
+logger.addHandler(console_handler)
+logger.addHandler(file_handler)
+
+
+URL = &quot;http://feedthisdragon4.chall.malicecyber.com/api/v1&quot;
+
+TRAP: List[str] = [&quot;bomb&quot;]
+FOOD: List[str] = [&quot;veggy&quot;, &quot;candy&quot;, &quot;burger&quot;, &quot;food&quot;]
+BOOS: List[str] = [&quot;lilboo&quot;, &quot;midboo&quot;, &quot;bigboo&quot;]
+LIFE: List[str] = [&quot;life&quot;]
+FOX: List[str] = [&quot;fox&quot;]
+MONEY: List[str] = [&quot;coin&quot;, &quot;gem&quot;]
+SECRET: List[str] = [&quot;secret&quot;, &quot;nyan&quot;]
+
+
+@dataclass
+class NextPost:
+    &quot;&quot;&quot;Next item to click.&quot;&quot;&quot;
+
+    item: str = &quot;&quot;
+    shop: str = &quot;&quot;
+
+
+class Achievement(BaseModel):
+    &quot;&quot;&quot;Achievements form.&quot;&quot;&quot;
+
+    acquired: bool
+    color: str
+    description: str
+    name: str
+    slug: str
+    uuid: str
+
+
+class Item(BaseModel):
+    &quot;&quot;&quot;Items data.&quot;&quot;&quot;
+
+    type: str
+    uuid: str
+    x: int
+    y: int
+
+
+class Upgrade(BaseModel):
+    &quot;&quot;&quot;Upgrade data.&quot;&quot;&quot;
+
+    cost: int
+    description: str
+    level: int
+    name: str
+    slug: str
+    uuid: str
+
+
+class GameResponse(BaseModel):
+    &quot;&quot;&quot;Game response&quot;&quot;&quot;
+
+    achievements: List[Achievement]
+    bag: int
+    coin: int
+    health: int
+    hunger: int
+    hunger_actual: int
+    hunger_needed: int
+    items: List[Item]
+    level: int
+    max_health: int
+    upgrades: List[Upgrade]
+    uuid: str
+
+
+def format_header(*, uuid: str, update: str, itemUuid: str = &quot;&quot;, shopUuid: str = &quot;&quot;):
+    &quot;&quot;&quot;Format post header.&quot;&quot;&quot;
+    header = {
+        # &quot;Content-Type&quot;: &quot;application/json; charset=utf-8&quot;,
+        &quot;Cookie&quot;: f&quot;uuid={uuid}&quot;,
+        &quot;Authorization&quot;: &quot;mynotsosecrettoken&quot;,
+        &quot;Session&quot;: uuid,
+        &quot;Update&quot;: update,
+        &quot;ItemUuid&quot;: itemUuid,
+        &quot;ShopUuid&quot;: shopUuid,
+    }
+    return header
+
+
+def extract_items(game_map: GameResponse) -&gt; Dict[str, List[str]]:
+    &quot;&quot;&quot;Allow to extract items information.&quot;&quot;&quot;
+    available_items = {}
+    for item in game_map.items:
+        key = item.type
+        available_items.setdefault(key, []).append(f&quot;[{item.x},{item.y}]&quot;)
+    return available_items
+
+
+def get_strategy(game_map: GameResponse) -&gt; List[Callable[[GameResponse], NextPost]]:
+    &quot;&quot;&quot;Apply correct strategies.&quot;&quot;&quot;
+    strategies: List[Callable[[GameResponse], NextPost]] = []
+
+    if not game_map.items:
+        return strategies
+
+    # Map status
+    not_achieved = [i.slug for i in game_map.achievements if not i.acquired]
+
+    # [STRATEGY] Achievement Saw
+    # saw =&gt; Why are those items so far from the screen
+    if &quot;saw&quot; in not_achieved:
+        strategies.append(find_item_coordinate)
+
+    # [STRATEGY] Achievement 'Secret'
+    if &quot;secret&quot; in not_achieved:
+        strategies.append(partial(find_item, SECRET))
+
+    # [STRATEGY] Achievement hurt
+    if &quot;hurt&quot; in not_achieved:
+        strategies.append(partial(find_item, TRAP))
+    else:
+        # [STRATEGY] Kill Boos
+        strategies.append(partial(find_item, BOOS))
+
+    # [STRATEGY] Health
+    if game_map.health &lt;= 2:
+        if game_map.coin == 0:
+            strategies.append(partial(find_item, MONEY))
+        else:
+            strategies.append(partial(find_item, LIFE))
+            strategies.append(partial(upgrades, &quot;Hard&quot;))
+
+    # [STRATEGY] Achievement Fatter
+    if &quot;fatter&quot; in not_achieved or &quot;bigger&quot; in not_achieved:
+        strategies.append(partial(find_item, FOOD))
+        strategies.append(partial(upgrades, &quot;Feed&quot;))
+
+    # [STRATEGY] Achievement money
+    if &quot;gold&quot; in not_achieved:
+        strategies.append(partial(find_item, MONEY))
+        strategies.append(partial(upgrades, &quot;Greed&quot;))
+        if game_map.bag &lt; 10000:
+            strategies.append(partial(upgrades, &quot;Bag&quot;))
+
+    logger.debug(&quot;strategies =&gt;&quot;)
+    for idx, strategy in enumerate(strategies):
+        logger.debug(f&quot;\t- [{idx}] {strategy}&quot;)
+
+    return strategies
+
+
+def find_item_coordinate(game_map: GameResponse) -&gt; List[NextPost]:
+    &quot;&quot;&quot;Strategy find item.&quot;&quot;&quot;
+    next_list: List[NextPost] = []
+    for item in game_map.items:
+        if item.x &gt; 100 or item.y &gt; 100:
+            return [NextPost(item=item.uuid)]
+    return next_list
+
+
+def find_item(ref_label: List[str], game_map: GameResponse) -&gt; List[NextPost]:
+    &quot;&quot;&quot;Strategy find item.&quot;&quot;&quot;
+    next_list: List[NextPost] = []
+    for item in game_map.items:
+        if item.type in ref_label:
+            next_list.append(NextPost(item=item.uuid))
+
+    if not next_list:
+        logger.debug(f&quot;\tNothing like {ref_label}.&quot;)
+    return next_list
+
+
+def upgrades(ref_label: str, game_map: GameResponse) -&gt; List[NextPost]:
+    &quot;&quot;&quot;Strategy Upgrade.&quot;&quot;&quot;
+    for item in game_map.upgrades:
+        if item.name == ref_label:
+            return [NextPost(shop=item.uuid)]
+        logger.debug(&quot;\tNothing like %s&quot;, ref_label)
+    return []
+
+
+def get_map_info(cur_game: GameResponse):
+    &quot;&quot;&quot;Display map info.&quot;&quot;&quot;
+    logger.info(&quot;\n&quot;)
+    logger.info(&quot;-&quot; * 20)
+    logger.info(f&quot;Level: {cur_game.level}&quot;)
+    logger.info(f&quot;Health: {cur_game.health}&quot;)
+    logger.info(f&quot;Hunger: {cur_game.hunger}&quot;)
+    logger.info(f&quot;Hunger actual: {cur_game.hunger_actual}&quot;)
+    logger.info(f&quot;Hunger needed: {cur_game.hunger_needed}&quot;)
+    logger.info(f&quot;bag =&gt; {cur_game.bag}&quot;)
+    logger.info(f&quot;coin =&gt; {cur_game.coin}&quot;)
+
+    available_items = extract_items(game_map=cur_game)
+    formatted = &quot;| &quot;.join(
+        [f&quot;{k} ({len(v)}): {','.join(v)}&quot; for k, v in available_items.items()]
+    )
+    logger.debug(f&quot;Items: {formatted}&quot;)
+
+    # logger.debug(f&quot;Upgrades: {cur_game.upgrades}&quot;)
+
+    achievements: List[str] = [
+        f&quot;{achievement.slug}&quot;
+        for achievement in cur_game.achievements
+        if not achievement.acquired
+    ]
+    logger.info(f&quot;Achievements: {'| '.join(achievements)}&quot;)
+    return len(achievements) == 0
+
+
+def get_request(*, uuid: str, update: str) -&gt; List[NextPost]:
+    &quot;&quot;&quot;Get request to send.&quot;&quot;&quot;
+    # Send POST request with JSON data using the json parameter
+    response = requests.get(URL, headers=format_header(uuid=uuid, update=update))
+
+    if response.status_code != 200:
+        logger.error(&quot;Error invalid request&quot;)
+
+    # Print the response
+    cur_game = None
+    try:
+        cur_game = GameResponse.model_validate(response.json())
+        logger.debug(response.json())
+    except:
+        logger.error(&quot;!!!!!!!!!!!!!! Crash !!!!!!!!!!!!!!!&quot;)
+        logger.error(response.json())
+        sys.exit(1)
+
+    # Display map
+    done = get_map_info(cur_game)
+    if done:
+        logger.info(&quot;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; DONE &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&quot;)
+        return []
+
+    # Next pos list
+    next_list: List[NextPost] = []
+
+    # done if dead
+    if cur_game.health &lt;= 0:
+        logger.error(&quot;!!! You dead !!!&quot;)
+        return sys.exit(1)
+
+    strategies = get_strategy(cur_game)
+    for idx, fct in enumerate(strategies):
+        logger.debug(f&quot;=&gt; Apply {fct}&quot;)
+        if next_pos := fct(cur_game):
+            logger.debug(f&quot;\tSuccess {idx}&quot;)
+            next_list += next_pos
+        else:
+            logger.debug(f&quot;\tFailed {idx}&quot;)
+
+    return next_list
+
+
+def post_request(*, uuid: str, itemUuid: str, shopUuid: str):
+    &quot;&quot;&quot;Post request.&quot;&quot;&quot;
+    # Send POST request with JSON data using the json parameter
+    response = requests.post(
+        URL,
+        headers=format_header(
+            uuid=uuid, update=&quot;true&quot;, itemUuid=itemUuid, shopUuid=shopUuid
+        ),
+    )
+    logger.debug(f&quot;Post Answer =&gt; {response.json()}&quot;)
+
+
+if __name__ == &quot;__main__&quot;:
+    NEW_GAME_UUID = str(uuid1())
+
+    # Init party
+    logger.info(&quot;[Initialize new gameStart new game]&quot;)
+    _ = get_request(uuid=NEW_GAME_UUID, update=&quot;false&quot;)
+
+    logger.info(&quot;[Start challenge]&quot;)
+    while True:
+        next_post_list = get_request(uuid=NEW_GAME_UUID, update=&quot;true&quot;)
+        if not next_post_list:
+            continue
+
+        # _ = input(&quot;Post request\n&quot;)
+
+        logger.debug(f&quot;Post Items =&gt; {next_post_list}&quot;)
+        for pos in next_post_list:
+            post_request(uuid=NEW_GAME_UUID, itemUuid=pos.item, shopUuid=pos.shop)
+
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="token-from-movie"><a class="header" href="#token-from-movie">Token from movie</a></h1>
+<h2 id="mise-en-place-des-dépendances"><a class="header" href="#mise-en-place-des-dépendances">Mise en place des dépendances</a></h2>
+<pre><code class="language-bash">$ sudo apt update
+$ sudo apt install tesseract-ocr
+$ sudo apt install libtesseract-dev
+$ sudo apt install tesseract-ocr-eng
+$ pip install Pillow
+$ pip install pytesseract
+$ pip install wand
+$ pip install opencv-python
+</code></pre>
+<p>Extraction d'un token à partir d'une video</p>
+<pre><code class="language-python">#! /usr/bin/env python3
+
+import re
+import sys
+
+from PIL import Image
+import pytesseract
+from wand.image import Image as Img
+from pathlib import Path
+
+import cv2
+
+import click
+
+# Pattern to be find
+PATTERN = re.compile(r&quot;([0-9]{4})&quot;, re.IGNORECASE)
+
+def rm_tree(pth: Path):
+    &quot;&quot;&quot;Remove recursive of folder.&quot;&quot;&quot;
+    if not pth.exists():
+        return
+    for child in pth.glob(&quot;*&quot;):
+        if child.is_file():
+            child.unlink()
+        else:
+            rm_tree(child)
+    pth.rmdir()
+
+
+def setup(movie_path: Path):
+    &quot;&quot;&quot;Clean temporary folder&quot;&quot;&quot;
+    rm_tree(movie_path)
+    movie_path.mkdir()
+
+
+def files(movie_path: Path, working_area: Path) -&gt; cv2.VideoCapture:
+    &quot;&quot;&quot;Read video.&quot;&quot;&quot;
+    setup(working_area)
+
+    # specify the source video path
+    src_vid = cv2.VideoCapture(str(movie_path))
+    return src_vid
+
+def process(src_video: cv2.VideoCapture, rate, working_area: Path):
+    &quot;&quot;&quot;Process video.&quot;&quot;&quot;
+    # Check if file is open
+    if not src_video.isOpened():
+        print(&quot;[!] Video stream is closed&quot;)
+        sys.exit(1)
+
+    # Integer name file
+    index = 0
+    while src_video.isOpened():
+        ret, frame = src_video.read()
+        if not ret:
+            break
+
+        # name each frame and save s png
+        name = Path(working_area) / Path(f&quot;frame{index}.png&quot;)
+        # 
+        # Save every rate th
+        if not (index % rate):
+            cv2.imwrite(str(name.absolute()), frame)
+        index += 1
+
+        if cv2.waitKey(10) &amp; 0xFF == ord('q'):
+            break
+    src_video.release()
+    cv2.destroyAllWindows()
+
+def get_token(working_area: Path) -&gt; str:
+    &quot;&quot;&quot;Looking for token.&quot;&quot;&quot;
+    for pic in Path(working_area).glob(&quot;*.png&quot;):
+        cur_pic = Image.open(str(pic.absolute()))
+        text = pytesseract.image_to_string(cur_pic, lang='eng')
+        
+        if &quot;code&quot; in text:
+            text = text.replace(&quot;\n&quot;, &quot;&quot;)
+            res = PATTERN.findall(text)[0]
+            return f&quot;{res}&quot;
+
+    return &quot;&quot;
+
+@click.command(
+    context_settings={&quot;help_option_names&quot;: [&quot;-h&quot;, &quot;--help&quot;]},
+    help=&quot;Extract token from pictures.&quot;,
+)
+@click.argument(
+    &quot;movie_path&quot;,
+    type=click.Path(exists=True, file_okay=True, dir_okay=False),
+    metavar=&quot;MOVIE_PATH&quot;,
+)
+@click.option(
+    &quot;--rate&quot;, 
+    default=100, 
+    help=&quot;Rate of picture to extract text.&quot;,
+    show_default=True
+)
+@click.option(
+    &quot;--working_area&quot;,
+    type=click.Path(exists=False, file_okay=False, dir_okay=True),
+    default=&quot;image_frames&quot;, 
+    help=&quot;Temporary folder.&quot;,
+    show_default=True
+)
+def find_token(movie_path: str, rate: int, working_area: str):
+    working_area = Path(working_area)
+
+    vid = files(Path(movie_path), working_area)
+    process(vid, rate, working_area)
+    print(&quot;[+] Token for %s =&gt; '%s'&quot;, movie_path, get_token(working_area))
+
+if __name__ == &quot;__main__&quot;:
+    find_token()  # pylint: disable=E1120
+</code></pre>
+<h2 id="utilisation"><a class="header" href="#utilisation">Utilisation</a></h2>
+<pre><code class="language-bash">&gt; ./script.py --rate 10 ./movie.mp4
+Token for ./movie.mp4 =&gt; 'XXXX'
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="rust"><a class="header" href="#rust">Rust</a></h1>
+<h2 id="setup-rust-"><a class="header" href="#setup-rust-">Setup rust 💻</a></h2>
+<ol>
+<li>Install the <a href="https://www.rust-lang.org/tools/install">Rust toolchain</a>.</li>
+<li>(recommended) Install the <a href="https://rust-analyzer.github.io/manual.html">rust-analyzer</a> extension for your code editor.</li>
+<li>(optional) Install a native debugger. If you are using VS Code, <a href="https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb">CodeLLDB</a> is a good option.</li>
+</ol>
+<h2 id="use-vs-code-to-debug-your-code"><a class="header" href="#use-vs-code-to-debug-your-code">Use VS Code to debug your code</a></h2>
+<ol>
+<li>Install <a href="https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer">rust-analyzer</a> and <a href="https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb">CodeLLDB</a>.</li>
+<li>Set breakpoints in your code.</li>
+<li>Click <em>Debug</em> next to the unit test or the <em>main</em> function.</li>
+<li>The debugger will halt your program at the specific line and allow you to inspect the local stack.</li>
+</ol>
+<h2 id="useful-tools"><a class="header" href="#useful-tools">Useful Tools</a></h2>
+<ul>
+<li><a href="https://github.com/rust-lang/rust-clippy">clippy</a>: The official Rust linter.</li>
+<li><a href="https://github.com/rust-lang/rustfmt">rustfmt</a>: The official Rust code formatter. </li>
+</ul>
+<h2 id="useful-crates"><a class="header" href="#useful-crates">Useful crates</a></h2>
+<ul>
+<li>
+<p><a href="https://crates.io/crates/itertools">itertools</a>: Extends iterators with extra methods and adaptors. Frequently useful for aoc puzzles.</p>
+</li>
+<li>
+<p><a href="https://crates.io/crates/regex">regex</a>: Official regular expressions implementation for Rust.;</p>
+</li>
+<li>
+<p><a href="https://lib.rs/crates/chrono">chrono</a>: The most comprehensive and full-featured datetime library, but more complex because of it.</p>
+</li>
+<li>
+<p><a href="https://lib.rs/crates/serde">serde</a>: De facto standard serialization library. Use in conjunction with sub-crates like serde_json for the specific format that you are using. </p>
+</li>
+<li>
+<p><a href="https://lib.rs/crates/anyhow">anyhow</a>: Provides a boxed error type that can hold any error, and helpers for generating an application-level stack trace.</p>
+</li>
+<li>
+<p><a href="https://lib.rs/crates/thiserror">thiserror</a>: Helps with generating boilerplate for enum-style error types. </p>
+</li>
+</ul>
+<h2 id="crates"><a class="header" href="#crates">Crates</a></h2>
+<p>A curated list of popular crates can be found on <a href="https://blessed.rs/crates">blessred.rs</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="snippets-1"><a class="header" href="#snippets-1">Snippets</a></h1>
+<p>Some useful snippet code from AOC (Advent Of Code)</p>
+<style>
+.badge_module {
+  background-color: #ffc107;
+  color: black;
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 5px;
+}
+.badge_theme {
+  background-color: #3a87ad;
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 5px;
+}
+</style>
+<table>
+    <thead>
+        <tr>
+            <th>Folder</th>
+            <th>Tags</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- ITEM --> 
+        <tr>
+            <td rowspan="2">Example</td>
+            <td>
+                <span class="badge_module">Module 1</span>
+            </td>
+            <td rowspan="2">BlaBlaBla.</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="badge_theme">Theme</span>
+            </td>
+        </tr>
+    </tbody>
+</table><div style="break-before: page; page-break-before: always;"></div><h1 id="exemple-of-error-management"><a class="header" href="#exemple-of-error-management">Exemple of error management</a></h1>
+<p>Good reference: <a href="https://mmapped.blog/posts/12-rust-error-handling.html">Designing error types in Rust</a></p>
+<h2 id="tcp-echo-project"><a class="header" href="#tcp-echo-project">TCP Echo project</a></h2>
+<pre><code>Project
+    ├── Cargo.toml
+    ├── index.html
+    └── src
+        ├── error.rs
+        ├── lib.rs
+        └── main.rs
+</code></pre>
+<ul>
+<li>Cargo.toml</li>
+</ul>
+<pre><code class="language-toml">[package]
+name = &quot;tcp_echo&quot;
+version = &quot;0.1.0&quot;
+edition = &quot;2021&quot;
+
+[dependencies]
+</code></pre>
+<ul>
+<li>index.html</li>
+</ul>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;Rust&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ul>
+<li>error.rs</li>
+</ul>
+<pre><code class="language-rs">#[derive(Debug)]
+pub enum AppError {
+    Io(std::io::Error),
+    Utf8(std::string::FromUtf8Error),
+    General(String),
+}
+
+impl std::fmt::Display for AppError {
+    fn fmt(&amp;self, f: &amp;mut std::fmt::Formatter&lt;'_&gt;) -&gt; std::fmt::Result {
+        match self {
+            AppError::Io(e) =&gt; write!(f, &quot;IO error: {}&quot;, e),
+            AppError::Utf8(e) =&gt; write!(f, &quot;UTF-8 error: {}&quot;, e),
+            AppError::General(s) =&gt; write!(f, &quot;General error: {}&quot;, s),
+        }
+    }
+}
+
+impl From&lt;std::io::Error&gt; for AppError {
+    fn from(e: std::io::Error) -&gt; Self {
+        Self::Io(e)
+    }
+}
+impl From&lt;std::string::FromUtf8Error&gt; for AppError {
+    fn from(e: std::string::FromUtf8Error) -&gt; Self {
+        Self::Utf8(e)
+    }
+}
+
+pub type AppResult&lt;T&gt; = Result&lt;T, AppError&gt;;
+
+</code></pre>
+<ul>
+<li>lib.rs</li>
+</ul>
+<pre><code class="language-rs">pub mod error;
+</code></pre>
+<ul>
+<li>main.rs</li>
+</ul>
+<pre><code class="language-rs">use std::io::BufReader;
+use std::io::prelude::*;
+use std::net::TcpListener;
+use std::net::TcpStream;
+
+use tcp_echo::error::AppResult;
+
+fn main() {
+    match start_server(&quot;127.0.0.1:8080&quot;) {
+        Ok(_) =&gt; println!(&quot;Server ending&quot;),
+        Err(_) =&gt; println!(&quot;Server failed&quot;),
+    }
+}
+
+fn start_server(url: &amp;str) -&gt; AppResult&lt;()&gt; {
+    let listener = TcpListener::bind(url)?;
+    println!(&quot;Listening on port 8080&quot;);
+
+    for stream in listener.incoming() {
+        let stream = stream?;
+        println!(&quot;Connection established!&quot;);
+        handle_connection(stream);
+    }
+    Ok(())
+}
+
+fn handle_connection(mut stream: TcpStream) {
+    let buf_reader = BufReader::new(&amp;mut stream);
+    let http_request: Vec&lt;_&gt; = buf_reader
+        .lines()
+        .map(|result| result.unwrap())
+        .take_while(|line| !line.is_empty())
+        .collect();
+    println!(&quot;Request: {:#?}&quot;, http_request);
+}
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="mermaid.min.js"></script>
+        <script type="text/javascript" src="mermaid-init.js"></script>
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+    </body>
+</html>
