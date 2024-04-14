@@ -61,6 +61,19 @@ Some useful snippet code for CTF
         </tr>
         <!-- ITEM --> 
         <tr>
+            <td rowspan="2">TcpChallenges</td>
+            <td>
+                <span class="badge_module">Socket</span>
+            </td>
+            <td rowspan="2">Challenge code with game server..</td>
+        </tr>
+        <tr>
+            <td>
+                <span class="badge_theme">Regular Expression</span>
+            </td>
+        </tr>
+        <!-- ITEM --> 
+        <tr>
             <td>FullClickSnippet</td>
             <td>
                 <span class="badge_module">Click</span>
