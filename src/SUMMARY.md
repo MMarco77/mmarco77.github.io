@@ -30,6 +30,10 @@
   - [linux](tools/linux/index.md)
     - [bash](tools/linux/bash/index.md)
 
+- [Forensics](forensics/index.md)
+  - [volatility3](forensics/volatility3/index.md)
+
+
 - [Technics](technics/README.md)
   - [Natural Referencing](technics/natural-referencing/index.md)
   - [Web Scrapping](technics/web-scrapping/index.md)
