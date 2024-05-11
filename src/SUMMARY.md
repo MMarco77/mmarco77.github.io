@@ -37,11 +37,16 @@
 - [Technics](technics/README.md)
   - [Natural Referencing](technics/natural-referencing/index.md)
   - [Web Scrapping](technics/web-scrapping/index.md)
+  - [Wireshark](technics/wireshark/index.md)
+  - [nmap](technics/nmap/index.md)
 
+- [OSINT](OSINT/index.md)
 
 - [Pentest](pentest/index.md)
   - [Useful Commands](pentest/useful-commands/index.md)
     - [ssh](pentest/useful-commands/ssh/index.md)
+  - [Netasploit](pentest/Metasploit/index.md)
+  - [PwdCracking](pentest/PwdCracking/index.md)
   - [Mobile](pentest/Mobile/index.md)
     - [red_fox_sec_training](pentest/Mobile/red_fox_sec_training/index.md)
       - [Exploiting Android WebView Vulnerabilities](pentest/Mobile/red_fox_sec_training/web_view/index.md)
