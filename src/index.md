@@ -55,7 +55,7 @@ Set of knowledge organized by theme.
   text-align: center;
   border-radius: 5px;
 }
-.badge_wriptup {
+.badge_wrietup {
   background-color: brown;
   color: black;
   padding: 4px 8px;
@@ -152,7 +152,7 @@ Set of knowledge organized by theme.
             <td><a ref="https://nolliv22.com">Write Up et blog (Nolliv22)</a></td>
             <td>
                 <span class="badge_ctf">CTF</span>
-                <span class="badge_wriptup">Write Up</span>
+                <span class="badge_wrietup">Write Up</span>
             </td>
             <td>Write Up CTF.</td>
         </tr>
@@ -161,7 +161,7 @@ Set of knowledge organized by theme.
             <td><a ref="https://ir0nstone.gitbook.io">Write Up et blog (ir0nstone)</a></td>
             <td>
                 <span class="badge_ctf">CTF</span>
-                <span class="badge_wriptup">Write Up</span>
+                <span class="badge_wrietup">Write Up</span>
             </td>
             <td>Write Up CTF.</td>
         </tr>
@@ -174,5 +174,16 @@ Set of knowledge organized by theme.
             </td>
             <td>Site tuto de Burp Suite</
         </tr>
+        <!-- ITEM --> 
+        <tr>
+            <td><a ref="https://github.com/devploit/awesome-ctf-resources">Awesome CTF Resources</a></td>
+            <td>
+                <span class="badge_training">Training</span>
+                <span class="badge_ctf">CTF</span>
+                <span class="badge_wrietup">Write Up</span>
+            </td>
+            <td>Github resources for CTF training.</td>
+        </tr>
+
     </tbody>
 </table>
