@@ -1,5 +1,9 @@
 # Dev.
 
+## Training
+
+
+
 ## Language
 
 | Name | Purpose | Imperative | Object-oriented | Functional | Procedural | Generic | Reflective | Other paradigms | Standardized |

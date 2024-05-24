@@ -5,6 +5,11 @@ Set of knowledge organized by theme.
 ## Current personnal training
 
 <style>
+td span {
+    margin-top:10px; 
+    padding-left:10px; 
+    display:inline-block;
+}
 .badge_training {
   background-color: pink;
   color: black;
@@ -184,6 +189,28 @@ Set of knowledge organized by theme.
             </td>
             <td>Github resources for CTF training.</td>
         </tr>
-
+        <!-- ITEM --> 
+        <tr>
+            <td><a ref="https://docs.xanhacks.xyz/">CTF Docs</a></td>
+            <td>
+                <span class="badge_training">Training</span>
+                <span class="badge_ctf">CTF</span>
+                <span class="badge_wrietup">Write Up</span>
+            </td>
+            <td>On this documentation website, you will find resources (cheatsheets, methodology, CTF write ups, ...) on the following topics : Android, Crypto, Malware, OSINT, pentest, Pwn, Reverse engineering, web...</td>
+        </tr>
+        <!-- ITEM --> 
+        <tr>
+            <td><a ref="https://github.com/HackademINT">404CTF Write up</a></td>
+            <td>
+                <span class="badge_training">training</span>
+                <span class="badge_programmatic">programmatic</span>
+                <span class="badge_pentest">pentest</span>
+                <span class="badge_ctf">ctf</span>
+                <span class="badge_mobile">mobile</span>
+                <span class="badge_wrietup">wrietup</span>
+            </td>
+            <td>Codes sources des challenges de l'édition 20XX du 404 CTF </td>
+        </tr>
     </tbody>
 </table>
