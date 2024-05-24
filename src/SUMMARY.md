@@ -43,6 +43,8 @@
 - [OSINT](OSINT/index.md)
 
 - [Pentest](pentest/index.md)
+  - [BinaryExploitation](pentest/BinaryExploitation/index.md)
+    - [Linux](pentest/BinaryExploitation/Linux/index.md)
   - [Useful Commands](pentest/useful-commands/index.md)
     - [ssh](pentest/useful-commands/ssh/index.md)
   - [Netasploit](pentest/Metasploit/index.md)
@@ -81,3 +83,5 @@
   - [Rust](dev/rust/index.md)
     - [snippets](dev/rust/snippets/index.md)
       - [Error handling](dev/rust/snippets/error/index.md)
+  - [Android](dev/Android/index.md)
+    - [Minimal Project](dev/Android/MinimalProject/index.md)
