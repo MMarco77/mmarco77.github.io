@@ -36,6 +36,12 @@ $ frida -U -f com.android.chrome
 $ frida -U -f com.android.chrome --no-pause
 ```
 
+- Short usefull command
+
+```shell
+$ frida -U -l ./<script>.js -p `adb shell pidof -s <PACKAGE_NAME>`
+```
+
 ## Frida Scripting
 
 - Python bindings are provided with Frida
