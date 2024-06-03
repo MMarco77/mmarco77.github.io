@@ -21,6 +21,8 @@
       - [Tutorials](tools/android/frida/tutorials/index.md)
         - [hacktricks](tools/android/frida/tutorials/hacktricks/index.md)
         - [Owasp](tools/android/frida/tutorials/owasp/index.md)
+        - [BeetleBug](tools/android/frida/tutorials/BeetleBug/index.md)
+    - [R2Frida](tools/android/r2frida/index.md)
     - [Gnirehtet](tools/android/Gnirehtet/index.md)
   - [Docker](tools/docker/index.md)
     - [Dockerfile](tools/docker/dockerfile/index.md)
@@ -29,6 +31,7 @@
       - [Examples](tools/graphviz/examples/index.md)
   - [linux](tools/linux/index.md)
     - [bash](tools/linux/bash/index.md)
+    - [zsh](tools/linux/zsh/index.md)
 
 - [Forensics](forensics/index.md)
   - [volatility3](forensics/volatility3/index.md)

