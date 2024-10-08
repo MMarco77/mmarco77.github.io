@@ -426,6 +426,10 @@
             <td>adb logcat -f <code>&lt;filename&gt;</code></td>
             <td>Dumps to specified file</td>
         </tr>
+        <tr>
+            <td>adb logcat -v color <code>"com.rust_sample.org:I"</code> <code>"*:S"</code></td>
+            <td>Filter logcat for package name com.rust_sample.org only in <STRONG>INFO</STRONG></td>
+        </tr>
     </tbody>
 </table>
 
