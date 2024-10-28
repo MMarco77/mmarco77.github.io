@@ -8,6 +8,50 @@ It is `NOT` intended for piracy and other non-legal uses. It could be used for l
 
 [Official Apktool Website][apktool-url]{target=\_blank}
 
+## APKTool
+
+- Decoding code
+
+```shell
+$ apktool d foo.jar
+# decodes foo.jar to foo.jar.out folder
+
+$ apktool decode foo.jar
+# decodes foo.jar to foo.jar.out folder
+
+$ apktool d bar.apk
+# decodes bar.apk to bar folder
+
+$ apktool decode bar.apk
+# decodes bar.apk to bar folder
+
+$ apktool d bar.apk -o baz
+# decodes bar.apk to baz folder
+```
+
+- Building
+
+```shell
+$ apktool b foo.jar.out
+# builds foo.jar.out folder into foo.jar.out/dist/foo.jar
+
+$ apktool build foo.jar.out
+# builds foo.jar.out folder into foo.jar.out/dist/foo.jar
+
+$ apktool b bar
+# builds bar folder into bar/dist/bar.apk
+
+$ apktool b .
+# builds current directory into ./dist
+
+$ apktool b bar -o new_bar.apk
+# builds bar folder into new_bar.apk
+
+$ apktool b bar.apk
+# WRONG: brut.androlib.AndrolibException: brut.directory.PathNotExist: apktool.yml
+# Must use folder, not apk/jar file
+```
+
 ## How to Sign APK After Compile
 
 In order to install modified APK on Android device, you need to sign it with a certificate. Android APK won't be signed by default. You need to sign it manually.

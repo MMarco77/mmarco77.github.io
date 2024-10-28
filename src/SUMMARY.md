@@ -9,6 +9,7 @@
   - [Android](tools/android/index.md)
     - [ADB](tools/android/adb/index.md)
     - [APKTool](tools/android/apktool/index.md)
+    - [Dex2Jar](tools/android/dex2jar/index.md)
     - [DevTools Flutter](tools/android/devtools_flutter/index.md)
     - [emulator](tools/android/emulator/index.md)
       - [AVDManager](tools/android/emulator/AVDManager/index.md)
@@ -36,6 +37,8 @@
 
 - [Forensics](forensics/index.md)
   - [volatility3](forensics/volatility3/index.md)
+  - [glogg](forensics/glogg/index.md)
+  - [sleuthkit](forensics/sleuthkit/index.md)
 
 
 - [Technics](technics/README.md)
@@ -75,6 +78,8 @@
       - [Android Root Detection Bypass Using Frida](pentest/Mobile/red_fox_sec_training/frida/index.md)
       - [SSL Pinning Bypass For Android Using Frida](pentest/Mobile/red_fox_sec_training/frida_ssl_pinning/index.md)
   - [Lab. Kali Docker](pentest/lab_kali_docker/index.md)
+  - [Wireshark](pentest/Wireshark/index.md)
+  - [python_venv](pentest/python_venv/index.md)
 
 - [dev](dev/index.md)
   - [Python](dev/python/index.md)
@@ -84,9 +89,13 @@
       - [MovieToken](dev/python/snippets/MovieToken/index.md)
       - [TCP Challenges](dev/python/snippets/TcpChallenges/index.md)
       - [Flask / Gunicorn](dev/python/snippets/FlaskGunicorn/index.md)
+      - [Server Chall. with Pwntool](dev/python/snippets/ServerChallenge_pwntool/index.md)
+      - [Solve Equation](dev/python/snippets/SolveEquation/index.md)
   - [Rust](dev/rust/index.md)
     - [snippets](dev/rust/snippets/index.md)
       - [Error handling](dev/rust/snippets/error/index.md)
     - [Optimization](dev/rust/optimization/index.md)
   - [Android](dev/Android/index.md)
     - [Minimal Project](dev/Android/MinimalProject/index.md)
+  - IA
+    - [Ollama_vscode](dev/IA/Ollama_vsCode/index.md)
