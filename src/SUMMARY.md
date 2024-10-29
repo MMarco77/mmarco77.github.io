@@ -97,5 +97,5 @@
     - [Optimization](dev/rust/optimization/index.md)
   - [Android](dev/Android/index.md)
     - [Minimal Project](dev/Android/MinimalProject/index.md)
-  - IA
+  - [IA](dev/IA/index.md)
     - [Ollama_vscode](dev/IA/Ollama_vsCode/index.md)
