@@ -212,5 +212,18 @@ td span {
             </td>
             <td>Codes sources des challenges de l'édition 20XX du 404 CTF </td>
         </tr>
+         <!-- ITEM --> 
+        <tr>
+            <td><a ref="https://exploitation.tymyrddin.dev/">Smithing (all about hacking)</a></td>
+            <td>
+                <span class="badge_training">training</span>
+                <span class="badge_programmatic">programmatic</span>
+                <span class="badge_pentest">pentest</span>
+                <span class="badge_ctf">ctf (rootme)</span>
+                <span class="badge_mobile">mobile</span>
+                <span class="badge_wrietup">wrietup</span>
+            </td>
+            <td>While exploitation and privilege escalation is not the end goal, it is a key element of the attack life cycle and a major determinant in the success of a penetration test.</td>
+        </tr>
     </tbody>
 </table>

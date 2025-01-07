@@ -57,6 +57,7 @@
   - [Netasploit](pentest/Metasploit/index.md)
   - [PwdCracking](pentest/PwdCracking/index.md)
   - [GDB](pentest/gdb/index.md)
+  - [Burp Suite](pentest/BurpSuite/index.md)
   - [pwntools](pentest/pwntools/index.md)
     - [Cheat Sheet](pentest/pwntools/cheat_sheet/index.md)
     - [Assembly](pentest/pwntools/assembly/index.md)
