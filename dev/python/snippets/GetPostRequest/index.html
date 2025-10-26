@@ -1,0 +1,479 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js ayu">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Get/Post Request</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../../../favicon.svg">
+        <link rel="shortcut icon" href="../../../../favicon.png">
+        <link rel="stylesheet" href="../../../../css/variables.css">
+        <link rel="stylesheet" href="../../../../css/general.css">
+        <link rel="stylesheet" href="../../../../css/chrome.css">
+        <link rel="stylesheet" href="../../../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../../highlight.css">
+        <link rel="stylesheet" href="../../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "ayu";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../../../../index.html">knowledge-based </a></li><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">Knowledges</li><li class="chapter-item "><a href="../../../../tools/index.html"><strong aria-hidden="true">1.</strong> Tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../tools/android/index.html"><strong aria-hidden="true">1.1.</strong> Android</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../tools/android/adb/index.html"><strong aria-hidden="true">1.1.1.</strong> ADB</a></li><li class="chapter-item "><a href="../../../../tools/android/apktool/index.html"><strong aria-hidden="true">1.1.2.</strong> APKTool</a></li><li class="chapter-item "><a href="../../../../tools/android/dex2jar/index.html"><strong aria-hidden="true">1.1.3.</strong> Dex2Jar</a></li><li class="chapter-item "><a href="../../../../tools/android/devtools_flutter/index.html"><strong aria-hidden="true">1.1.4.</strong> DevTools Flutter</a></li><li class="chapter-item "><a href="../../../../tools/android/emulator/index.html"><strong aria-hidden="true">1.1.5.</strong> emulator</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../tools/android/emulator/AVDManager/index.html"><strong aria-hidden="true">1.1.5.1.</strong> AVDManager</a></li></ol></li><li class="chapter-item "><a href="../../../../tools/android/Drozer/index.html"><strong aria-hidden="true">1.1.6.</strong> Drozer</a></li><li class="chapter-item "><a href="../../../../tools/android/frida/index.html"><strong aria-hidden="true">1.1.7.</strong> Frida</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../tools/android/frida/setup/index.html"><strong aria-hidden="true">1.1.7.1.</strong> Setup</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../tools/android/frida/setup/NotRooted/index.html"><strong aria-hidden="true">1.1.7.1.1.</strong> Setup on not rooted device(s)</a></li><li class="chapter-item "><a href="../../../../tools/android/frida/setup/emulator/index.html"><strong aria-hidden="true">1.1.7.1.2.</strong> Setup on emulator</a></li><li class="chapter-item "><a href="../../../../tools/android/frida/setup/AndroidDocker/index.html"><strong aria-hidden="true">1.1.7.1.3.</strong> Setup in Android docker</a></li></ol></li><li class="chapter-item "><a href="../../../../tools/android/frida/snippets/index.html"><strong aria-hidden="true">1.1.7.2.</strong> Snippets</a></li><li class="chapter-item "><a href="../../../../tools/android/frida/tutorials/index.html"><strong aria-hidden="true">1.1.7.3.</strong> Tutorials</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../tools/android/frida/tutorials/hacktricks/index.html"><strong aria-hidden="true">1.1.7.3.1.</strong> hacktricks</a></li><li class="chapter-item "><a href="../../../../tools/android/frida/tutorials/owasp/index.html"><strong aria-hidden="true">1.1.7.3.2.</strong> Owasp</a></li><li class="chapter-item "><a href="../../../../tools/android/frida/tutorials/BeetleBug/index.html"><strong aria-hidden="true">1.1.7.3.3.</strong> BeetleBug</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../../tools/android/r2frida/index.html"><strong aria-hidden="true">1.1.8.</strong> R2Frida</a></li><li class="chapter-item "><a href="../../../../tools/android/Gnirehtet/index.html"><strong aria-hidden="true">1.1.9.</strong> Gnirehtet</a></li></ol></li><li class="chapter-item "><a href="../../../../tools/docker/index.html"><strong aria-hidden="true">1.2.</strong> Docker</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../tools/docker/dockerfile/index.html"><strong aria-hidden="true">1.2.1.</strong> Dockerfile</a></li></ol></li><li class="chapter-item "><a href="../../../../tools/git/index.html"><strong aria-hidden="true">1.3.</strong> Git</a></li><li class="chapter-item "><a href="../../../../tools/graphviz/index.html"><strong aria-hidden="true">1.4.</strong> GraphViz</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../tools/graphviz/examples/index.html"><strong aria-hidden="true">1.4.1.</strong> Examples</a></li></ol></li><li class="chapter-item "><a href="../../../../tools/linux/index.html"><strong aria-hidden="true">1.5.</strong> linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../tools/linux/bash/index.html"><strong aria-hidden="true">1.5.1.</strong> bash</a></li><li class="chapter-item "><a href="../../../../tools/linux/zsh/index.html"><strong aria-hidden="true">1.5.2.</strong> zsh</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../../forensics/index.html"><strong aria-hidden="true">2.</strong> Forensics</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../forensics/volatility3/index.html"><strong aria-hidden="true">2.1.</strong> volatility3</a></li><li class="chapter-item "><a href="../../../../forensics/glogg/index.html"><strong aria-hidden="true">2.2.</strong> glogg</a></li><li class="chapter-item "><a href="../../../../forensics/sleuthkit/index.html"><strong aria-hidden="true">2.3.</strong> sleuthkit</a></li></ol></li><li class="chapter-item "><a href="../../../../technics/index.html"><strong aria-hidden="true">3.</strong> Technics</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../technics/natural-referencing/index.html"><strong aria-hidden="true">3.1.</strong> Natural Referencing</a></li><li class="chapter-item "><a href="../../../../technics/web-scrapping/index.html"><strong aria-hidden="true">3.2.</strong> Web Scrapping</a></li><li class="chapter-item "><a href="../../../../technics/wireshark/index.html"><strong aria-hidden="true">3.3.</strong> Wireshark</a></li><li class="chapter-item "><a href="../../../../technics/nmap/index.html"><strong aria-hidden="true">3.4.</strong> nmap</a></li></ol></li><li class="chapter-item "><a href="../../../../OSINT/index.html"><strong aria-hidden="true">4.</strong> OSINT</a></li><li class="chapter-item "><a href="../../../../pentest/index.html"><strong aria-hidden="true">5.</strong> Pentest</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../pentest/BinaryExploitation/index.html"><strong aria-hidden="true">5.1.</strong> BinaryExploitation</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../pentest/BinaryExploitation/Linux/index.html"><strong aria-hidden="true">5.1.1.</strong> Linux</a></li></ol></li><li class="chapter-item "><a href="../../../../pentest/useful-commands/index.html"><strong aria-hidden="true">5.2.</strong> Useful Commands</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../pentest/useful-commands/ssh/index.html"><strong aria-hidden="true">5.2.1.</strong> ssh</a></li></ol></li><li class="chapter-item "><a href="../../../../pentest/Metasploit/index.html"><strong aria-hidden="true">5.3.</strong> Netasploit</a></li><li class="chapter-item "><a href="../../../../pentest/PwdCracking/index.html"><strong aria-hidden="true">5.4.</strong> PwdCracking</a></li><li class="chapter-item "><a href="../../../../pentest/gdb/index.html"><strong aria-hidden="true">5.5.</strong> GDB</a></li><li class="chapter-item "><a href="../../../../pentest/BurpSuite/index.html"><strong aria-hidden="true">5.6.</strong> Burp Suite</a></li><li class="chapter-item "><a href="../../../../pentest/pwntools/index.html"><strong aria-hidden="true">5.7.</strong> pwntools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../pentest/pwntools/cheat_sheet/index.html"><strong aria-hidden="true">5.7.1.</strong> Cheat Sheet</a></li><li class="chapter-item "><a href="../../../../pentest/pwntools/assembly/index.html"><strong aria-hidden="true">5.7.2.</strong> Assembly</a></li><li class="chapter-item "><a href="../../../../pentest/pwntools/ROP/index.html"><strong aria-hidden="true">5.7.3.</strong> ROP</a></li><li class="chapter-item "><a href="../../../../pentest/pwntools/debugging/index.html"><strong aria-hidden="true">5.7.4.</strong> Pwntools Debugging</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../pentest/pwntools/debugging/scripts/index.html"><strong aria-hidden="true">5.7.4.1.</strong> Useful scripts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../pentest/pwntools/debugging/scripts/interactive_debugging/index.html"><strong aria-hidden="true">5.7.4.1.1.</strong> Interactive debugging</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><a href="../../../../pentest/Mobile/index.html"><strong aria-hidden="true">5.8.</strong> Mobile</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../pentest/Mobile/red_fox_sec_training/index.html"><strong aria-hidden="true">5.8.1.</strong> red_fox_sec_training</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../pentest/Mobile/red_fox_sec_training/web_view/index.html"><strong aria-hidden="true">5.8.1.1.</strong> Exploiting Android WebView Vulnerabilities</a></li><li class="chapter-item "><a href="../../../../pentest/Mobile/red_fox_sec_training/broad_cast_receivers/index.html"><strong aria-hidden="true">5.8.1.2.</strong> Exploiting Broadcast Receivers</a></li><li class="chapter-item "><a href="../../../../pentest/Mobile/red_fox_sec_training/content_providers/index.html"><strong aria-hidden="true">5.8.1.3.</strong> Exploiting Content Providers</a></li><li class="chapter-item "><a href="../../../../pentest/Mobile/red_fox_sec_training/drozer/index.html"><strong aria-hidden="true">5.8.1.4.</strong> Android Pentesting with Drozer</a></li><li class="chapter-item "><a href="../../../../pentest/Mobile/red_fox_sec_training/tapjacking/index.html"><strong aria-hidden="true">5.8.1.5.</strong> Android Tapjacking Vulnerability</a></li><li class="chapter-item "><a href="../../../../pentest/Mobile/red_fox_sec_training/crypto/index.html"><strong aria-hidden="true">5.8.1.6.</strong> Broken Cryptography in Android Applications</a></li><li class="chapter-item "><a href="../../../../pentest/Mobile/red_fox_sec_training/pentest_method/index.html"><strong aria-hidden="true">5.8.1.7.</strong> Android Pentesting Methodology (Pt. 1)</a></li><li class="chapter-item "><a href="../../../../pentest/Mobile/red_fox_sec_training/pentest_method/index.html"><strong aria-hidden="true">5.8.1.8.</strong> Android Pentesting Methodology (Pt. 2)</a></li><li class="chapter-item "><a href="../../../../pentest/Mobile/red_fox_sec_training/pentest_method/index.html"><strong aria-hidden="true">5.8.1.9.</strong> Android Pentesting Methodology (Pt. 3)</a></li><li class="chapter-item "><a href="../../../../pentest/Mobile/red_fox_sec_training/frida/index.html"><strong aria-hidden="true">5.8.1.10.</strong> Android Root Detection Bypass Using Frida</a></li><li class="chapter-item "><a href="../../../../pentest/Mobile/red_fox_sec_training/frida_ssl_pinning/index.html"><strong aria-hidden="true">5.8.1.11.</strong> SSL Pinning Bypass For Android Using Frida</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../../pentest/lab_kali_docker/index.html"><strong aria-hidden="true">5.9.</strong> Lab. Kali Docker</a></li><li class="chapter-item "><a href="../../../../pentest/Wireshark/index.html"><strong aria-hidden="true">5.10.</strong> Wireshark</a></li><li class="chapter-item "><a href="../../../../pentest/python_venv/index.html"><strong aria-hidden="true">5.11.</strong> python_venv</a></li></ol></li><li class="chapter-item expanded "><a href="../../../../dev/index.html"><strong aria-hidden="true">6.</strong> dev</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../../dev/python/index.html"><strong aria-hidden="true">6.1.</strong> Python</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../../dev/python/snippets/index.html"><strong aria-hidden="true">6.1.1.</strong> snippets</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../dev/python/snippets/FullClickSnippet/index.html"><strong aria-hidden="true">6.1.1.1.</strong> Full Click Snippets</a></li><li class="chapter-item expanded "><a href="../../../../dev/python/snippets/GetPostRequest/index.html" class="active"><strong aria-hidden="true">6.1.1.2.</strong> Get/Post Request</a></li><li class="chapter-item "><a href="../../../../dev/python/snippets/MovieToken/index.html"><strong aria-hidden="true">6.1.1.3.</strong> MovieToken</a></li><li class="chapter-item "><a href="../../../../dev/python/snippets/TcpChallenges/index.html"><strong aria-hidden="true">6.1.1.4.</strong> TCP Challenges</a></li><li class="chapter-item "><a href="../../../../dev/python/snippets/FlaskGunicorn/index.html"><strong aria-hidden="true">6.1.1.5.</strong> Flask / Gunicorn</a></li><li class="chapter-item "><a href="../../../../dev/python/snippets/ServerChallenge_pwntool/index.html"><strong aria-hidden="true">6.1.1.6.</strong> Server Chall. with Pwntool</a></li><li class="chapter-item "><a href="../../../../dev/python/snippets/SolveEquation/index.html"><strong aria-hidden="true">6.1.1.7.</strong> Solve Equation</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../../dev/rust/index.html"><strong aria-hidden="true">6.2.</strong> Rust</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../dev/rust/snippets/index.html"><strong aria-hidden="true">6.2.1.</strong> snippets</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../dev/rust/snippets/error/index.html"><strong aria-hidden="true">6.2.1.1.</strong> Error handling</a></li></ol></li><li class="chapter-item "><a href="../../../../dev/rust/optimization/index.html"><strong aria-hidden="true">6.2.2.</strong> Optimization</a></li></ol></li><li class="chapter-item "><a href="../../../../dev/Android/index.html"><strong aria-hidden="true">6.3.</strong> Android</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../dev/Android/MinimalProject/index.html"><strong aria-hidden="true">6.3.1.</strong> Minimal Project</a></li></ol></li><li class="chapter-item "><a href="../../../../dev/IA/index.html"><strong aria-hidden="true">6.4.</strong> IA</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../dev/IA/Ollama_vsCode/index.html"><strong aria-hidden="true">6.4.1.</strong> Ollama_vscode</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu (default)</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../../../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="get-and-post"><a class="header" href="#get-and-post">Get and Post</a></h1>
+<p>Un petit programme pour faire des requetes <code>GET</code> et <code>POST</code> en python.
+Ce script est la solution au CTF <code>DGHACK 2023</code> pour le chall de dev <code>Feed This Dragon</code></p>
+<pre><code class="language-python">#! /usr/bin/env python
+
+import sys
+from typing import Callable, List, Dict
+from uuid import uuid1
+from functools import partial
+from dataclasses import dataclass
+from pydantic import BaseModel
+import requests
+
+console_handler = logging.StreamHandler()
+console_handler.setLevel(logging.INFO)
+file_handler = logging.FileHandler(&quot;log.txt&quot;)
+file_handler.setLevel(logging.DEBUG)
+logger = logging.getLogger()
+logger.setLevel(logging.DEBUG)
+logger.addHandler(console_handler)
+logger.addHandler(file_handler)
+
+
+URL = &quot;http://feedthisdragon4.chall.malicecyber.com/api/v1&quot;
+
+TRAP: List[str] = [&quot;bomb&quot;]
+FOOD: List[str] = [&quot;veggy&quot;, &quot;candy&quot;, &quot;burger&quot;, &quot;food&quot;]
+BOOS: List[str] = [&quot;lilboo&quot;, &quot;midboo&quot;, &quot;bigboo&quot;]
+LIFE: List[str] = [&quot;life&quot;]
+FOX: List[str] = [&quot;fox&quot;]
+MONEY: List[str] = [&quot;coin&quot;, &quot;gem&quot;]
+SECRET: List[str] = [&quot;secret&quot;, &quot;nyan&quot;]
+
+
+@dataclass
+class NextPost:
+    &quot;&quot;&quot;Next item to click.&quot;&quot;&quot;
+
+    item: str = &quot;&quot;
+    shop: str = &quot;&quot;
+
+
+class Achievement(BaseModel):
+    &quot;&quot;&quot;Achievements form.&quot;&quot;&quot;
+
+    acquired: bool
+    color: str
+    description: str
+    name: str
+    slug: str
+    uuid: str
+
+
+class Item(BaseModel):
+    &quot;&quot;&quot;Items data.&quot;&quot;&quot;
+
+    type: str
+    uuid: str
+    x: int
+    y: int
+
+
+class Upgrade(BaseModel):
+    &quot;&quot;&quot;Upgrade data.&quot;&quot;&quot;
+
+    cost: int
+    description: str
+    level: int
+    name: str
+    slug: str
+    uuid: str
+
+
+class GameResponse(BaseModel):
+    &quot;&quot;&quot;Game response&quot;&quot;&quot;
+
+    achievements: List[Achievement]
+    bag: int
+    coin: int
+    health: int
+    hunger: int
+    hunger_actual: int
+    hunger_needed: int
+    items: List[Item]
+    level: int
+    max_health: int
+    upgrades: List[Upgrade]
+    uuid: str
+
+
+def format_header(*, uuid: str, update: str, itemUuid: str = &quot;&quot;, shopUuid: str = &quot;&quot;):
+    &quot;&quot;&quot;Format post header.&quot;&quot;&quot;
+    header = {
+        # &quot;Content-Type&quot;: &quot;application/json; charset=utf-8&quot;,
+        &quot;Cookie&quot;: f&quot;uuid={uuid}&quot;,
+        &quot;Authorization&quot;: &quot;mynotsosecrettoken&quot;,
+        &quot;Session&quot;: uuid,
+        &quot;Update&quot;: update,
+        &quot;ItemUuid&quot;: itemUuid,
+        &quot;ShopUuid&quot;: shopUuid,
+    }
+    return header
+
+
+def extract_items(game_map: GameResponse) -&gt; Dict[str, List[str]]:
+    &quot;&quot;&quot;Allow to extract items information.&quot;&quot;&quot;
+    available_items = {}
+    for item in game_map.items:
+        key = item.type
+        available_items.setdefault(key, []).append(f&quot;[{item.x},{item.y}]&quot;)
+    return available_items
+
+
+def get_strategy(game_map: GameResponse) -&gt; List[Callable[[GameResponse], NextPost]]:
+    &quot;&quot;&quot;Apply correct strategies.&quot;&quot;&quot;
+    strategies: List[Callable[[GameResponse], NextPost]] = []
+
+    if not game_map.items:
+        return strategies
+
+    # Map status
+    not_achieved = [i.slug for i in game_map.achievements if not i.acquired]
+
+    # [STRATEGY] Achievement Saw
+    # saw =&gt; Why are those items so far from the screen
+    if &quot;saw&quot; in not_achieved:
+        strategies.append(find_item_coordinate)
+
+    # [STRATEGY] Achievement 'Secret'
+    if &quot;secret&quot; in not_achieved:
+        strategies.append(partial(find_item, SECRET))
+
+    # [STRATEGY] Achievement hurt
+    if &quot;hurt&quot; in not_achieved:
+        strategies.append(partial(find_item, TRAP))
+    else:
+        # [STRATEGY] Kill Boos
+        strategies.append(partial(find_item, BOOS))
+
+    # [STRATEGY] Health
+    if game_map.health &lt;= 2:
+        if game_map.coin == 0:
+            strategies.append(partial(find_item, MONEY))
+        else:
+            strategies.append(partial(find_item, LIFE))
+            strategies.append(partial(upgrades, &quot;Hard&quot;))
+
+    # [STRATEGY] Achievement Fatter
+    if &quot;fatter&quot; in not_achieved or &quot;bigger&quot; in not_achieved:
+        strategies.append(partial(find_item, FOOD))
+        strategies.append(partial(upgrades, &quot;Feed&quot;))
+
+    # [STRATEGY] Achievement money
+    if &quot;gold&quot; in not_achieved:
+        strategies.append(partial(find_item, MONEY))
+        strategies.append(partial(upgrades, &quot;Greed&quot;))
+        if game_map.bag &lt; 10000:
+            strategies.append(partial(upgrades, &quot;Bag&quot;))
+
+    logger.debug(&quot;strategies =&gt;&quot;)
+    for idx, strategy in enumerate(strategies):
+        logger.debug(f&quot;\t- [{idx}] {strategy}&quot;)
+
+    return strategies
+
+
+def find_item_coordinate(game_map: GameResponse) -&gt; List[NextPost]:
+    &quot;&quot;&quot;Strategy find item.&quot;&quot;&quot;
+    next_list: List[NextPost] = []
+    for item in game_map.items:
+        if item.x &gt; 100 or item.y &gt; 100:
+            return [NextPost(item=item.uuid)]
+    return next_list
+
+
+def find_item(ref_label: List[str], game_map: GameResponse) -&gt; List[NextPost]:
+    &quot;&quot;&quot;Strategy find item.&quot;&quot;&quot;
+    next_list: List[NextPost] = []
+    for item in game_map.items:
+        if item.type in ref_label:
+            next_list.append(NextPost(item=item.uuid))
+
+    if not next_list:
+        logger.debug(f&quot;\tNothing like {ref_label}.&quot;)
+    return next_list
+
+
+def upgrades(ref_label: str, game_map: GameResponse) -&gt; List[NextPost]:
+    &quot;&quot;&quot;Strategy Upgrade.&quot;&quot;&quot;
+    for item in game_map.upgrades:
+        if item.name == ref_label:
+            return [NextPost(shop=item.uuid)]
+        logger.debug(&quot;\tNothing like %s&quot;, ref_label)
+    return []
+
+
+def get_map_info(cur_game: GameResponse):
+    &quot;&quot;&quot;Display map info.&quot;&quot;&quot;
+    logger.info(&quot;\n&quot;)
+    logger.info(&quot;-&quot; * 20)
+    logger.info(f&quot;Level: {cur_game.level}&quot;)
+    logger.info(f&quot;Health: {cur_game.health}&quot;)
+    logger.info(f&quot;Hunger: {cur_game.hunger}&quot;)
+    logger.info(f&quot;Hunger actual: {cur_game.hunger_actual}&quot;)
+    logger.info(f&quot;Hunger needed: {cur_game.hunger_needed}&quot;)
+    logger.info(f&quot;bag =&gt; {cur_game.bag}&quot;)
+    logger.info(f&quot;coin =&gt; {cur_game.coin}&quot;)
+
+    available_items = extract_items(game_map=cur_game)
+    formatted = &quot;| &quot;.join(
+        [f&quot;{k} ({len(v)}): {','.join(v)}&quot; for k, v in available_items.items()]
+    )
+    logger.debug(f&quot;Items: {formatted}&quot;)
+
+    # logger.debug(f&quot;Upgrades: {cur_game.upgrades}&quot;)
+
+    achievements: List[str] = [
+        f&quot;{achievement.slug}&quot;
+        for achievement in cur_game.achievements
+        if not achievement.acquired
+    ]
+    logger.info(f&quot;Achievements: {'| '.join(achievements)}&quot;)
+    return len(achievements) == 0
+
+
+def get_request(*, uuid: str, update: str) -&gt; List[NextPost]:
+    &quot;&quot;&quot;Get request to send.&quot;&quot;&quot;
+    # Send POST request with JSON data using the json parameter
+    response = requests.get(URL, headers=format_header(uuid=uuid, update=update))
+
+    if response.status_code != 200:
+        logger.error(&quot;Error invalid request&quot;)
+
+    # Print the response
+    cur_game = None
+    try:
+        cur_game = GameResponse.model_validate(response.json())
+        logger.debug(response.json())
+    except:
+        logger.error(&quot;!!!!!!!!!!!!!! Crash !!!!!!!!!!!!!!!&quot;)
+        logger.error(response.json())
+        sys.exit(1)
+
+    # Display map
+    done = get_map_info(cur_game)
+    if done:
+        logger.info(&quot;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; DONE &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&quot;)
+        return []
+
+    # Next pos list
+    next_list: List[NextPost] = []
+
+    # done if dead
+    if cur_game.health &lt;= 0:
+        logger.error(&quot;!!! You dead !!!&quot;)
+        return sys.exit(1)
+
+    strategies = get_strategy(cur_game)
+    for idx, fct in enumerate(strategies):
+        logger.debug(f&quot;=&gt; Apply {fct}&quot;)
+        if next_pos := fct(cur_game):
+            logger.debug(f&quot;\tSuccess {idx}&quot;)
+            next_list += next_pos
+        else:
+            logger.debug(f&quot;\tFailed {idx}&quot;)
+
+    return next_list
+
+
+def post_request(*, uuid: str, itemUuid: str, shopUuid: str):
+    &quot;&quot;&quot;Post request.&quot;&quot;&quot;
+    # Send POST request with JSON data using the json parameter
+    response = requests.post(
+        URL,
+        headers=format_header(
+            uuid=uuid, update=&quot;true&quot;, itemUuid=itemUuid, shopUuid=shopUuid
+        ),
+    )
+    logger.debug(f&quot;Post Answer =&gt; {response.json()}&quot;)
+
+
+if __name__ == &quot;__main__&quot;:
+    NEW_GAME_UUID = str(uuid1())
+
+    # Init party
+    logger.info(&quot;[Initialize new gameStart new game]&quot;)
+    _ = get_request(uuid=NEW_GAME_UUID, update=&quot;false&quot;)
+
+    logger.info(&quot;[Start challenge]&quot;)
+    while True:
+        next_post_list = get_request(uuid=NEW_GAME_UUID, update=&quot;true&quot;)
+        if not next_post_list:
+            continue
+
+        # _ = input(&quot;Post request\n&quot;)
+
+        logger.debug(f&quot;Post Items =&gt; {next_post_list}&quot;)
+        for pos in next_post_list:
+            post_request(uuid=NEW_GAME_UUID, itemUuid=pos.item, shopUuid=pos.shop)
+
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../../../dev/python/snippets/FullClickSnippet/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../../../dev/python/snippets/MovieToken/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../../../dev/python/snippets/FullClickSnippet/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../../../dev/python/snippets/MovieToken/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../../../../mermaid.min.js"></script>
+        <script type="text/javascript" src="../../../../mermaid-init.js"></script>
+    </body>
+</html>

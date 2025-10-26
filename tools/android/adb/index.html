@@ -1,0 +1,808 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js ayu">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>ADB</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../../favicon.svg">
+        <link rel="shortcut icon" href="../../../favicon.png">
+        <link rel="stylesheet" href="../../../css/variables.css">
+        <link rel="stylesheet" href="../../../css/general.css">
+        <link rel="stylesheet" href="../../../css/chrome.css">
+        <link rel="stylesheet" href="../../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../highlight.css">
+        <link rel="stylesheet" href="../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "ayu";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../../../index.html">knowledge-based </a></li><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">Knowledges</li><li class="chapter-item expanded "><a href="../../../tools/index.html"><strong aria-hidden="true">1.</strong> Tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../tools/android/index.html"><strong aria-hidden="true">1.1.</strong> Android</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../tools/android/adb/index.html" class="active"><strong aria-hidden="true">1.1.1.</strong> ADB</a></li><li class="chapter-item "><a href="../../../tools/android/apktool/index.html"><strong aria-hidden="true">1.1.2.</strong> APKTool</a></li><li class="chapter-item "><a href="../../../tools/android/dex2jar/index.html"><strong aria-hidden="true">1.1.3.</strong> Dex2Jar</a></li><li class="chapter-item "><a href="../../../tools/android/devtools_flutter/index.html"><strong aria-hidden="true">1.1.4.</strong> DevTools Flutter</a></li><li class="chapter-item "><a href="../../../tools/android/emulator/index.html"><strong aria-hidden="true">1.1.5.</strong> emulator</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../tools/android/emulator/AVDManager/index.html"><strong aria-hidden="true">1.1.5.1.</strong> AVDManager</a></li></ol></li><li class="chapter-item "><a href="../../../tools/android/Drozer/index.html"><strong aria-hidden="true">1.1.6.</strong> Drozer</a></li><li class="chapter-item "><a href="../../../tools/android/frida/index.html"><strong aria-hidden="true">1.1.7.</strong> Frida</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../tools/android/frida/setup/index.html"><strong aria-hidden="true">1.1.7.1.</strong> Setup</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../tools/android/frida/setup/NotRooted/index.html"><strong aria-hidden="true">1.1.7.1.1.</strong> Setup on not rooted device(s)</a></li><li class="chapter-item "><a href="../../../tools/android/frida/setup/emulator/index.html"><strong aria-hidden="true">1.1.7.1.2.</strong> Setup on emulator</a></li><li class="chapter-item "><a href="../../../tools/android/frida/setup/AndroidDocker/index.html"><strong aria-hidden="true">1.1.7.1.3.</strong> Setup in Android docker</a></li></ol></li><li class="chapter-item "><a href="../../../tools/android/frida/snippets/index.html"><strong aria-hidden="true">1.1.7.2.</strong> Snippets</a></li><li class="chapter-item "><a href="../../../tools/android/frida/tutorials/index.html"><strong aria-hidden="true">1.1.7.3.</strong> Tutorials</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../tools/android/frida/tutorials/hacktricks/index.html"><strong aria-hidden="true">1.1.7.3.1.</strong> hacktricks</a></li><li class="chapter-item "><a href="../../../tools/android/frida/tutorials/owasp/index.html"><strong aria-hidden="true">1.1.7.3.2.</strong> Owasp</a></li><li class="chapter-item "><a href="../../../tools/android/frida/tutorials/BeetleBug/index.html"><strong aria-hidden="true">1.1.7.3.3.</strong> BeetleBug</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../tools/android/r2frida/index.html"><strong aria-hidden="true">1.1.8.</strong> R2Frida</a></li><li class="chapter-item "><a href="../../../tools/android/Gnirehtet/index.html"><strong aria-hidden="true">1.1.9.</strong> Gnirehtet</a></li></ol></li><li class="chapter-item "><a href="../../../tools/docker/index.html"><strong aria-hidden="true">1.2.</strong> Docker</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../tools/docker/dockerfile/index.html"><strong aria-hidden="true">1.2.1.</strong> Dockerfile</a></li></ol></li><li class="chapter-item "><a href="../../../tools/git/index.html"><strong aria-hidden="true">1.3.</strong> Git</a></li><li class="chapter-item "><a href="../../../tools/graphviz/index.html"><strong aria-hidden="true">1.4.</strong> GraphViz</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../tools/graphviz/examples/index.html"><strong aria-hidden="true">1.4.1.</strong> Examples</a></li></ol></li><li class="chapter-item "><a href="../../../tools/linux/index.html"><strong aria-hidden="true">1.5.</strong> linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../tools/linux/bash/index.html"><strong aria-hidden="true">1.5.1.</strong> bash</a></li><li class="chapter-item "><a href="../../../tools/linux/zsh/index.html"><strong aria-hidden="true">1.5.2.</strong> zsh</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../forensics/index.html"><strong aria-hidden="true">2.</strong> Forensics</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../forensics/volatility3/index.html"><strong aria-hidden="true">2.1.</strong> volatility3</a></li><li class="chapter-item "><a href="../../../forensics/glogg/index.html"><strong aria-hidden="true">2.2.</strong> glogg</a></li><li class="chapter-item "><a href="../../../forensics/sleuthkit/index.html"><strong aria-hidden="true">2.3.</strong> sleuthkit</a></li></ol></li><li class="chapter-item "><a href="../../../technics/index.html"><strong aria-hidden="true">3.</strong> Technics</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../technics/natural-referencing/index.html"><strong aria-hidden="true">3.1.</strong> Natural Referencing</a></li><li class="chapter-item "><a href="../../../technics/web-scrapping/index.html"><strong aria-hidden="true">3.2.</strong> Web Scrapping</a></li><li class="chapter-item "><a href="../../../technics/wireshark/index.html"><strong aria-hidden="true">3.3.</strong> Wireshark</a></li><li class="chapter-item "><a href="../../../technics/nmap/index.html"><strong aria-hidden="true">3.4.</strong> nmap</a></li></ol></li><li class="chapter-item "><a href="../../../OSINT/index.html"><strong aria-hidden="true">4.</strong> OSINT</a></li><li class="chapter-item "><a href="../../../pentest/index.html"><strong aria-hidden="true">5.</strong> Pentest</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../pentest/BinaryExploitation/index.html"><strong aria-hidden="true">5.1.</strong> BinaryExploitation</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../pentest/BinaryExploitation/Linux/index.html"><strong aria-hidden="true">5.1.1.</strong> Linux</a></li></ol></li><li class="chapter-item "><a href="../../../pentest/useful-commands/index.html"><strong aria-hidden="true">5.2.</strong> Useful Commands</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../pentest/useful-commands/ssh/index.html"><strong aria-hidden="true">5.2.1.</strong> ssh</a></li></ol></li><li class="chapter-item "><a href="../../../pentest/Metasploit/index.html"><strong aria-hidden="true">5.3.</strong> Netasploit</a></li><li class="chapter-item "><a href="../../../pentest/PwdCracking/index.html"><strong aria-hidden="true">5.4.</strong> PwdCracking</a></li><li class="chapter-item "><a href="../../../pentest/gdb/index.html"><strong aria-hidden="true">5.5.</strong> GDB</a></li><li class="chapter-item "><a href="../../../pentest/BurpSuite/index.html"><strong aria-hidden="true">5.6.</strong> Burp Suite</a></li><li class="chapter-item "><a href="../../../pentest/pwntools/index.html"><strong aria-hidden="true">5.7.</strong> pwntools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../pentest/pwntools/cheat_sheet/index.html"><strong aria-hidden="true">5.7.1.</strong> Cheat Sheet</a></li><li class="chapter-item "><a href="../../../pentest/pwntools/assembly/index.html"><strong aria-hidden="true">5.7.2.</strong> Assembly</a></li><li class="chapter-item "><a href="../../../pentest/pwntools/ROP/index.html"><strong aria-hidden="true">5.7.3.</strong> ROP</a></li><li class="chapter-item "><a href="../../../pentest/pwntools/debugging/index.html"><strong aria-hidden="true">5.7.4.</strong> Pwntools Debugging</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../pentest/pwntools/debugging/scripts/index.html"><strong aria-hidden="true">5.7.4.1.</strong> Useful scripts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../pentest/pwntools/debugging/scripts/interactive_debugging/index.html"><strong aria-hidden="true">5.7.4.1.1.</strong> Interactive debugging</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><a href="../../../pentest/Mobile/index.html"><strong aria-hidden="true">5.8.</strong> Mobile</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../pentest/Mobile/red_fox_sec_training/index.html"><strong aria-hidden="true">5.8.1.</strong> red_fox_sec_training</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../pentest/Mobile/red_fox_sec_training/web_view/index.html"><strong aria-hidden="true">5.8.1.1.</strong> Exploiting Android WebView Vulnerabilities</a></li><li class="chapter-item "><a href="../../../pentest/Mobile/red_fox_sec_training/broad_cast_receivers/index.html"><strong aria-hidden="true">5.8.1.2.</strong> Exploiting Broadcast Receivers</a></li><li class="chapter-item "><a href="../../../pentest/Mobile/red_fox_sec_training/content_providers/index.html"><strong aria-hidden="true">5.8.1.3.</strong> Exploiting Content Providers</a></li><li class="chapter-item "><a href="../../../pentest/Mobile/red_fox_sec_training/drozer/index.html"><strong aria-hidden="true">5.8.1.4.</strong> Android Pentesting with Drozer</a></li><li class="chapter-item "><a href="../../../pentest/Mobile/red_fox_sec_training/tapjacking/index.html"><strong aria-hidden="true">5.8.1.5.</strong> Android Tapjacking Vulnerability</a></li><li class="chapter-item "><a href="../../../pentest/Mobile/red_fox_sec_training/crypto/index.html"><strong aria-hidden="true">5.8.1.6.</strong> Broken Cryptography in Android Applications</a></li><li class="chapter-item "><a href="../../../pentest/Mobile/red_fox_sec_training/pentest_method/index.html"><strong aria-hidden="true">5.8.1.7.</strong> Android Pentesting Methodology (Pt. 1)</a></li><li class="chapter-item "><a href="../../../pentest/Mobile/red_fox_sec_training/pentest_method/index.html"><strong aria-hidden="true">5.8.1.8.</strong> Android Pentesting Methodology (Pt. 2)</a></li><li class="chapter-item "><a href="../../../pentest/Mobile/red_fox_sec_training/pentest_method/index.html"><strong aria-hidden="true">5.8.1.9.</strong> Android Pentesting Methodology (Pt. 3)</a></li><li class="chapter-item "><a href="../../../pentest/Mobile/red_fox_sec_training/frida/index.html"><strong aria-hidden="true">5.8.1.10.</strong> Android Root Detection Bypass Using Frida</a></li><li class="chapter-item "><a href="../../../pentest/Mobile/red_fox_sec_training/frida_ssl_pinning/index.html"><strong aria-hidden="true">5.8.1.11.</strong> SSL Pinning Bypass For Android Using Frida</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../pentest/lab_kali_docker/index.html"><strong aria-hidden="true">5.9.</strong> Lab. Kali Docker</a></li><li class="chapter-item "><a href="../../../pentest/Wireshark/index.html"><strong aria-hidden="true">5.10.</strong> Wireshark</a></li><li class="chapter-item "><a href="../../../pentest/python_venv/index.html"><strong aria-hidden="true">5.11.</strong> python_venv</a></li></ol></li><li class="chapter-item "><a href="../../../dev/index.html"><strong aria-hidden="true">6.</strong> dev</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../dev/python/index.html"><strong aria-hidden="true">6.1.</strong> Python</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../dev/python/snippets/index.html"><strong aria-hidden="true">6.1.1.</strong> snippets</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../dev/python/snippets/FullClickSnippet/index.html"><strong aria-hidden="true">6.1.1.1.</strong> Full Click Snippets</a></li><li class="chapter-item "><a href="../../../dev/python/snippets/GetPostRequest/index.html"><strong aria-hidden="true">6.1.1.2.</strong> Get/Post Request</a></li><li class="chapter-item "><a href="../../../dev/python/snippets/MovieToken/index.html"><strong aria-hidden="true">6.1.1.3.</strong> MovieToken</a></li><li class="chapter-item "><a href="../../../dev/python/snippets/TcpChallenges/index.html"><strong aria-hidden="true">6.1.1.4.</strong> TCP Challenges</a></li><li class="chapter-item "><a href="../../../dev/python/snippets/FlaskGunicorn/index.html"><strong aria-hidden="true">6.1.1.5.</strong> Flask / Gunicorn</a></li><li class="chapter-item "><a href="../../../dev/python/snippets/ServerChallenge_pwntool/index.html"><strong aria-hidden="true">6.1.1.6.</strong> Server Chall. with Pwntool</a></li><li class="chapter-item "><a href="../../../dev/python/snippets/SolveEquation/index.html"><strong aria-hidden="true">6.1.1.7.</strong> Solve Equation</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../dev/rust/index.html"><strong aria-hidden="true">6.2.</strong> Rust</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../dev/rust/snippets/index.html"><strong aria-hidden="true">6.2.1.</strong> snippets</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../dev/rust/snippets/error/index.html"><strong aria-hidden="true">6.2.1.1.</strong> Error handling</a></li></ol></li><li class="chapter-item "><a href="../../../dev/rust/optimization/index.html"><strong aria-hidden="true">6.2.2.</strong> Optimization</a></li></ol></li><li class="chapter-item "><a href="../../../dev/Android/index.html"><strong aria-hidden="true">6.3.</strong> Android</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../dev/Android/MinimalProject/index.html"><strong aria-hidden="true">6.3.1.</strong> Minimal Project</a></li></ol></li><li class="chapter-item "><a href="../../../dev/IA/index.html"><strong aria-hidden="true">6.4.</strong> IA</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../dev/IA/Ollama_vsCode/index.html"><strong aria-hidden="true">6.4.1.</strong> Ollama_vscode</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu (default)</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="android-debug-bridge-adb"><a class="header" href="#android-debug-bridge-adb">Android Debug Bridge (<code>adb</code>)</a></h1>
+<ul>
+<li><a href="https://www.automatetheplanet.com/adb-cheat-sheet/">Android ADB Cheat Sheet¶</a></li>
+<li><a href="https://3os.org/android/adb-cheat-sheet/#push-a-file-to-download-folder-of-the-android-device">adb (Android Debug Bridge) cheatsheet</a></li>
+</ul>
+<h1 id="package-installation"><a class="header" href="#package-installation">Package Installation</a></h1>
+<ul>
+<li><a href="#basic">Basic Command</a></li>
+<li><a href="#activities">Some Activities</a></li>
+<li><a href="#install">Package Installation</a></li>
+<li><a href="#path">Path</a></li>
+<li><a href="#file_operations">File Operations</a></li>
+<li><a href="#phone">Phone Info</a></li>
+<li><a href="#package_info">Package Info</a></li>
+<li><a href="#device_related_commands">Device Related Commands</a></li>
+<li><a href="#intents">Intents</a></li>
+<li><a href="#log">Log</a></li>
+<li><a href="#permissions">Permissions</a></li>
+<li><a href="#getprop">System Informations</a></li>
+<li><a href="#proxy">Proxy</a></li>
+<li><a href="#input">Input &amp; Actions</a></li>
+<li><a href="#activities">Start activities</a></li>
+<li><a href="#shellprocess">Shell process management</a></li>
+<li><a href="#dozemode_standby">Optimize for Doze and App Standby</a></li>
+<li><a href="#service">Service</a></li>
+</ul>
+<h1 id="basic-command"><a class="header" href="#basic-command"><a name="basic"></a>Basic Command</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>adb devices</td>
+            <td>Lists connected devices</td>
+        </tr>
+        <tr>
+            <td>adb connect 192.168.2.1</td>
+            <td>Connects to adb device over network</td>
+        </tr>
+        <tr>
+            <td>adb root</td>
+            <td>Restarts adbd with root permissions</td>
+        </tr>
+        <tr>
+            <td>adb start-server</td>
+            <td>Starts the adb server</td>
+        </tr>
+        <tr>
+            <td>adb kill-server</td>
+            <td>Kills the adb server</td>
+        </tr>
+        <tr>
+            <td>adb reboot</td>
+            <td>Reboots the device</td>
+        </tr>
+        <tr>
+            <td>adb shell</td>
+            <td>Starts the backround terminal</td>
+        </tr>
+        <tr>
+            <td>adb devices -l</td>
+            <td>List of devices by product/model</td>
+        </tr>
+        <tr>
+            <td>adb -s <code>&lt;deviceName&gt; &lt;command&gt;</code></td>
+            <td>Redirect command to specific device</td>
+        </tr>
+        <tr>
+            <td>adb –d <code>&lt;command&gt;</code></td>
+            <td>Directs command to only attached USB device</td>
+        </tr>
+        <tr>
+            <td>adb –e <code>&lt;command&gt;</code></td>
+            <td>Directs command to only attached emulator</td>
+        </tr>
+    </tbody>
+</table>
+<h1 id="package-installation-1"><a class="header" href="#package-installation-1"><a name="install"></a>Package Installation</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>adb shell install</strong> <code>&lt;apk&gt;</code></td>
+            <td>Install app</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell install <code>&lt;path&gt;</code></strong></td>
+            <td>Install app from phone path</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell install -r <code>&lt;path&gt;</code></strong></td>
+            <td>Install app from phone path</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell uninstall <code>&lt;name&gt;</code></strong></td>
+            <td>Remove the app</td>
+        </tr>
+    </tbody>
+</table>
+<h1 id="path"><a class="header" href="#path"><a name="path"></a>Path</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>adb shell <code>ls</code></strong></td>
+            <td>List directory contents</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>ls -s</code></strong></td>
+            <td>Print size of each file</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>ls -R</code></strong></td>
+            <td>List subdirectories recursively</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell pm path <code>&lt;package name&gt;</code></strong></td>
+            <td><strong>Get full path of a package</strong></td>
+        </tr>
+        <tr>
+            <td><strong>adb shell pm list packages -f</strong></td>
+            <td><strong>Lists all the packages and full paths</strong></td>
+        </tr>
+        <tr>
+            <td><strong>adb shell pm list packages | sed 's/.*://g'</strong></td>
+            <td><strong>Get all available packages</strong></td>
+        </tr>
+    </tbody>
+</table>
+<h1 id="file-operations"><a class="header" href="#file-operations"><a name="file_operations"></a>File Operations</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>adb push <code>&lt;local&gt; &lt;remote&gt;</code></strong></td>
+            <td><strong>Copy file/dir to device</strong></td>
+        </tr>
+        <tr>
+            <td><strong>adb pull <code>&lt;remote&gt; &lt;local&gt;</code></strong></td>
+            <td><strong>Copy file/dir from device</strong></td>
+        </tr>
+        <tr>
+            <td>run-as <code>&lt;package&gt;</code> cat <code>&lt;file&gt;</code></td>
+            <td>Access the private package files</td>
+        </tr>
+    </tbody>
+</table>
+<h1 id="phone-info"><a class="header" href="#phone-info"><a name="phone"></a>Phone Info</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>adb get-statе</td>
+            <td>Print device state</td>
+        </tr>
+        <tr>
+            <td>adb get-serialno</td>
+            <td>Get the serial number</td>
+        </tr>
+        <tr>
+            <td>adb shell dumpsys iphonesybinfo</td>
+            <td>Get the IMEI</td>
+        </tr>
+        <tr>
+            <td>adb shell netstat</td>
+            <td>List TCP connectivity</td>
+        </tr>
+        <tr>
+            <td>adb shell pwd</td>
+            <td>Print current working directory</td>
+        </tr>
+        <tr>
+            <td>adb shell dumpsys battery</td>
+            <td>Battery status</td>
+        </tr>
+        <tr>
+            <td>adb shell pm list features</td>
+            <td>List phone features</td>
+        </tr>
+        <tr>
+            <td>adb shell service list</td>
+            <td>List all services</td>
+        </tr>
+        <tr>
+            <td>adb shell dumpsys activity <code>&lt;package&gt;/&lt;activity&gt;</code></td>
+            <td>Activity info</td>
+        </tr>
+        <tr>
+            <td>adb shell ps</td>
+            <td>Print process status</td>
+        </tr>
+        <tr>
+            <td>adb shell wm size</td>
+            <td>Displays the current screen resolution</td>
+        </tr>
+    </tbody>
+</table>
+<h1 id="package-info"><a class="header" href="#package-info"><a name="package_info"></a>Package Info</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>adb shell list packages</td>
+            <td>Lists package names</td>
+        </tr>
+        <tr>
+            <td>adb shell list packages -r</td>
+            <td>Lists package name + path to apks</td>
+        </tr>
+        <tr>
+            <td>adb shell list packages -3</td>
+            <td>Lists third party package names</td>
+        </tr>
+        <tr>
+            <td>adb shell list packages -s</td>
+            <td>Lists only system packages</td>
+        </tr>
+        <tr>
+            <td>adb shell list packages -u</td>
+            <td>Lists package names + uninstalled</td>
+        </tr>
+        <tr>
+            <td>adb shell dumpsys package packages</td>
+            <td>Lists info on all apps</td>
+        </tr>
+        <tr>
+            <td>adb shell dump <code>&lt;name&gt;</code></td>
+            <td>Lists info on one package</td>
+        </tr>
+        <tr>
+            <td>adb shell path <code>&lt;package&gt;</code></td>
+            <td>Path to the apk file</td>
+        </tr>
+    </tbody>
+</table>
+<h1 id="device-related-commands"><a class="header" href="#device-related-commands"><a name="device_related_commands"></a>Device Related Commands</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>adb reboot-recovery</td>
+            <td>Reboot device into recovery mode</td>
+        </tr>
+        <tr>
+            <td>adb reboot fastboot</td>
+            <td>Reboot device into recovery mode</td>
+        </tr>
+        <tr>
+            <td>adb shell screencap -p "/path/to/screenshot.png"</td>
+            <td>Capture screenshot</td>
+        </tr>
+        <tr>
+            <td>adb shell screenrecord "/path/to/record.mp4"</td>
+            <td>Record device screen</td>
+        </tr>
+        <tr>
+            <td>adb backup -apk -all -f backup.ab</td>
+            <td>Backup settings and apps</td>
+        </tr>
+        <tr>
+            <td>adb backup -apk -shared -all -f backup.ab</td>
+            <td>Backup settings, apps and shared storage</td>
+        </tr>
+        <tr>
+            <td>adb backup -apk -nosystem -all -f backup.ab</td>
+            <td>Backup only non-system apps</td>
+        </tr>
+        <tr>
+            <td>adb restore backup.ab</td>
+            <td>Restore a previous backup</td>
+        </tr>
+        <tr>
+            <td>-------</td>
+            <td>-----------</td>
+        </tr>
+        <tr>
+            <td>adb shell am start -a android.intent.action.VIEW -d URL</td>
+            <td>Opens URL</td>
+        </tr>
+        <tr>
+            <td>adb shell am start -t image/* -a android.intent.action.VIEW</td>
+            <td>Opens gallery</td>
+        </tr>
+        <tr>
+            <td>adb shell monkey -p app.package.name -v 1</td>
+            <td>Starts the specified package</td>
+        </tr>
+    </tbody>
+</table>
+<h1 id="intents"><a class="header" href="#intents"><a name="intents"></a>Intents</a></h1>
+<p><a href="https://developer.android.com/studio/command-line/shell.html#am">am Command</a></p>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>am start -a android.intent.action.VIEW -d https://github.com</td>
+            <td>URI</td>
+        </tr>
+        <tr>
+            <td>am start -a "android.intent.action.SEND" --es "android.intent.extra.TEXT" "Hello World" -t "text/plain"</td>
+            <td>Mime Type and Extra string</td>
+        </tr>
+        <tr>
+            <td>am start -n "your.application.packagename/path.to.the.Activity"</td>
+            <td>Activity</td>
+        </tr>
+        <tr>
+            <td>am start -n "your.application.packagename/path.to.the.Activity" - e "key" "data"</td>
+            <td>Activity with extras</td>
+        </tr>
+        <tr>
+            <td>am startservice -n "com.example.application/.BackgroundService"</td>
+            <td>Service</td>
+        </tr>
+        <tr>
+            <td>am broadcast -a "android.intent.action.PACKAGE_FIRST_LAUNCH" -d "com.example.application"</td>
+            <td>Broadcast with Action</td>
+        </tr>
+        <tr>
+            <td>
+            am broadcast -a com.google.android.c2dm.intent.RECEIVE 
+                         -n <code>&lt;YOUR_PACKAGE_NAME&gt;/&lt;YOUR_RECEIVER_NAME&gt;</code> 
+                         -e "<code>&lt;EXTRA_KEY_1&gt;</code>" "<code>&lt;EXTRA_VALUE_1&gt;</code>"
+                         -e "<code>&lt;EXTRA_KEY_2&gt;</code>" "<code>&lt;EXTRA_VALUE_1&gt;</code>"
+            </td>
+            <td>Notification (1)</td>
+        </tr>
+    </tbody>
+</table>
+<p>(1) <a href="http://stackoverflow.com/questions/27800369/simulating-android-gcm">stackoverflow</a></p>
+<h1 id="log"><a class="header" href="#log"><a name="log"></a>Log</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>adb logcat <code>[options] [filter] [filter]</code></strong></td>
+            <td><strong>View device log</strong></td>
+        </tr>
+        <tr>
+            <td>adb bugreport</td>
+            <td>Print bug reports</td>
+        </tr>
+        <tr>
+            <td>adb logcat</td>
+            <td>Starts printing log messages to stdout</td>
+        </tr>
+        <tr>
+            <td>adb logcat -g</td>
+            <td>Displays current log buffer sizes</td>
+        </tr>
+        <tr>
+            <td>adb logcat -G <code>&lt;size&gt;</code></td>
+            <td>Sets the buffer size (K or M)</td>
+        </tr>
+        <tr>
+            <td>adb logcat -c</td>
+            <td>Clears the log buffers</td>
+        </tr>
+        <tr>
+            <td>adb logcat *:V</td>
+            <td>Enables ALL log messages (verbose)</td>
+        </tr>
+        <tr>
+            <td>adb logcat -f <code>&lt;filename&gt;</code></td>
+            <td>Dumps to specified file</td>
+        </tr>
+        <tr>
+            <td>adb logcat -v color <code>"com.rust_sample.org:I"</code> <code>"*:S"</code></td>
+            <td>Filter logcat for package name com.rust_sample.org only in <STRONG>INFO</STRONG></td>
+        </tr>
+    </tbody>
+</table>
+<h3 id="example"><a class="header" href="#example">Example</a></h3>
+<ul>
+<li></li>
+</ul>
+<pre><code class="language-shell">$ adb logcat -G 16M
+$ adb logcat *:V &gt; output.log
+</code></pre>
+<ul>
+<li>Logcat for specific package name</li>
+</ul>
+<pre><code class="language-shell">$ adb logcat -c &amp;&amp; adb logcat --pid=$(adb shell pidof -s fr.dghack2023.android_mirrors)
+</code></pre>
+<h1 id="permissions"><a class="header" href="#permissions"><a name="permissions"></a>Permissions</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>adb shell permissions groups</td>
+            <td>List permission groups definitions</td>
+        </tr>
+        <tr>
+            <td>adb shell list permissions -g -r</td>
+            <td>List permissions details</td>
+        </tr>
+    </tbody>
+</table>
+<h1 id="system-informations"><a class="header" href="#system-informations"><a name="getprop"></a>System Informations</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>adb shell getprop <code>ro.build.version.release</code></strong></td>
+            <td>Get Build Version of Release Mode</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell getprop <code>ro.product.cpu.abi</code></strong></td>
+            <td>Get current ABI</td>
+        </tr>
+        <!-- <tr>
+            <td><strong>adb shell getprop <code></code></strong></td>
+            <td></td>
+        </tr> -->
+    </tbody>
+</table>
+<h1 id="proxy"><a class="header" href="#proxy"><a name="proxy"></a>Proxy</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>adb shell settings put global http_proxy <code>&lt;address&gt;:&lt;port&gt;</code></td>
+            <td>Set network proxy</td>
+        </tr>
+        <tr>
+            <td>adb shell settings put global http_proxy :0
+</td>
+            <td>Disable network proxy</td>
+        </tr>
+    </tbody>
+</table>
+<h1 id="input--actions"><a class="header" href="#input--actions"><a name="input"></a>Input &amp; Actions</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>adb shell input text S3cr37 && adb shell input keyevent 66</td>
+            <td>Input text 'S3cr37' then press [ENTER]</td>
+        </tr>        
+        <tr>
+            <td>adb shell input swipe 540 1600 540 100 150</td>
+            <td>Swipe up (SCREEN not been closed)</td>
+        </tr>        
+        <tr>
+            <td>adb shell input tap X Y</td>
+            <td>Click on screen at coordinate [X, Y]</td>
+        </tr>   
+        </tbody>
+</table>     
+<h1 id="start-activities"><a class="header" href="#start-activities"><a name="activities"></a>Start activities</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>adb shell am start -n com.package.name/com.package.name.ActivityName</td>
+            <td>Throught package name (Manifest) </td>
+        </tr>
+        <tr>
+            <td>am start -a com.example.ACTION_NAME -n com.package.name/com.package.name.ActivityName </td>
+            <td>Intent-filter</td>
+        </tr>
+        <tr>
+            <td>adb shell monkey -p your.app.package.name 1</td>
+            <td>Androiderson tips</td>
+        </tr>
+    </tbody>
+</table>
+<h1 id="shell-process-management"><a class="header" href="#shell-process-management"><a name="shellprocess"></a>Shell process management</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>adb shell pidof <code>-s fr.dghack2023.android_mirrors</code></strong></td>
+            <td>Get PID of application name (running)</td>
+        </tr>
+    </tbody>
+</table>
+<h1 id="optimize-for-doze-and-app-standby"><a class="header" href="#optimize-for-doze-and-app-standby"><a name="dozemode_standby"></a><a href="https://developer.android.com/training/monitoring-device-state/doze-standby">Optimize for Doze and App Standby</a></a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>adb shell <code>dumpsys </code></strong></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys battery | grep powered</code></strong></td>
+            <td>Battery powered state</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys battery unplug</code></strong></td>
+            <td>Unplug battery</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys battery reset</code></strong></td>
+            <td>Reset battery</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys deviceidle</code></strong></td>
+            <td>Dump Doze mode info</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys deviceidle enable</code></strong></td>
+            <td>Enable Doze mode (may be required on Android Emulator)</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys deviceidle get light</code></strong></td>
+            <td>Get status of Light Doze mode</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys deviceidle get deep</code></strong></td>
+            <td>Get status of Deep Doze mode</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys deviceidle step light</code></strong></td>
+            <td>Enter Light Doze mode (should be called several times to pass all phases)</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys deviceidle step deep</code></strong></td>
+            <td>Enter Deep Doze mode (should be called several times to pass all phases)</td>
+        </tr>
+    </tbody>
+</table>
+<p>================================================================</p>
+<ul>
+<li><a href="#service">Service</a></li>
+</ul>
+<h1 id="service"><a class="header" href="#service"><a name="service"></a>Service</a></h1>
+<table>
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>adb shell <code>dumpsys activity service</code></strong></td>
+            <td>Allow to list running services</td>
+        </tr>
+        <tr>
+            <td><strong>adb shell <code>dumpsys activity</code> com.service.function</strong></td>
+            <td>Allow to know the services *com.service.function* status.</td>
+        </tr>
+    </tbody>
+</table>
+<p>============================================================</p>
+<h3 id="get-screen-state-and-locked-state-to-be-verified"><a class="header" href="#get-screen-state-and-locked-state-to-be-verified">Get Screen state and locked state (To be verified)</a></h3>
+<blockquote>
+<p>adb shell service call trust 7</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../../tools/android/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../../tools/android/apktool/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../../tools/android/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../../tools/android/apktool/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../../../mermaid.min.js"></script>
+        <script type="text/javascript" src="../../../mermaid-init.js"></script>
+    </body>
+</html>

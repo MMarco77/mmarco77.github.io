@@ -1,0 +1,393 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js ayu">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>BeetleBug</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../../../../favicon.svg">
+        <link rel="shortcut icon" href="../../../../../favicon.png">
+        <link rel="stylesheet" href="../../../../../css/variables.css">
+        <link rel="stylesheet" href="../../../../../css/general.css">
+        <link rel="stylesheet" href="../../../../../css/chrome.css">
+        <link rel="stylesheet" href="../../../../../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../../../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../../../../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../../../../highlight.css">
+        <link rel="stylesheet" href="../../../../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../../../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../../../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "ayu";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../../../../../index.html">knowledge-based </a></li><li class="spacer"></li><li class="chapter-item affix "><li class="part-title">Knowledges</li><li class="chapter-item expanded "><a href="../../../../../tools/index.html"><strong aria-hidden="true">1.</strong> Tools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../../../../tools/android/index.html"><strong aria-hidden="true">1.1.</strong> Android</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../tools/android/adb/index.html"><strong aria-hidden="true">1.1.1.</strong> ADB</a></li><li class="chapter-item "><a href="../../../../../tools/android/apktool/index.html"><strong aria-hidden="true">1.1.2.</strong> APKTool</a></li><li class="chapter-item "><a href="../../../../../tools/android/dex2jar/index.html"><strong aria-hidden="true">1.1.3.</strong> Dex2Jar</a></li><li class="chapter-item "><a href="../../../../../tools/android/devtools_flutter/index.html"><strong aria-hidden="true">1.1.4.</strong> DevTools Flutter</a></li><li class="chapter-item "><a href="../../../../../tools/android/emulator/index.html"><strong aria-hidden="true">1.1.5.</strong> emulator</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../tools/android/emulator/AVDManager/index.html"><strong aria-hidden="true">1.1.5.1.</strong> AVDManager</a></li></ol></li><li class="chapter-item "><a href="../../../../../tools/android/Drozer/index.html"><strong aria-hidden="true">1.1.6.</strong> Drozer</a></li><li class="chapter-item expanded "><a href="../../../../../tools/android/frida/index.html"><strong aria-hidden="true">1.1.7.</strong> Frida</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../tools/android/frida/setup/index.html"><strong aria-hidden="true">1.1.7.1.</strong> Setup</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../tools/android/frida/setup/NotRooted/index.html"><strong aria-hidden="true">1.1.7.1.1.</strong> Setup on not rooted device(s)</a></li><li class="chapter-item "><a href="../../../../../tools/android/frida/setup/emulator/index.html"><strong aria-hidden="true">1.1.7.1.2.</strong> Setup on emulator</a></li><li class="chapter-item "><a href="../../../../../tools/android/frida/setup/AndroidDocker/index.html"><strong aria-hidden="true">1.1.7.1.3.</strong> Setup in Android docker</a></li></ol></li><li class="chapter-item "><a href="../../../../../tools/android/frida/snippets/index.html"><strong aria-hidden="true">1.1.7.2.</strong> Snippets</a></li><li class="chapter-item expanded "><a href="../../../../../tools/android/frida/tutorials/index.html"><strong aria-hidden="true">1.1.7.3.</strong> Tutorials</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../tools/android/frida/tutorials/hacktricks/index.html"><strong aria-hidden="true">1.1.7.3.1.</strong> hacktricks</a></li><li class="chapter-item "><a href="../../../../../tools/android/frida/tutorials/owasp/index.html"><strong aria-hidden="true">1.1.7.3.2.</strong> Owasp</a></li><li class="chapter-item expanded "><a href="../../../../../tools/android/frida/tutorials/BeetleBug/index.html" class="active"><strong aria-hidden="true">1.1.7.3.3.</strong> BeetleBug</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../../../tools/android/r2frida/index.html"><strong aria-hidden="true">1.1.8.</strong> R2Frida</a></li><li class="chapter-item "><a href="../../../../../tools/android/Gnirehtet/index.html"><strong aria-hidden="true">1.1.9.</strong> Gnirehtet</a></li></ol></li><li class="chapter-item "><a href="../../../../../tools/docker/index.html"><strong aria-hidden="true">1.2.</strong> Docker</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../tools/docker/dockerfile/index.html"><strong aria-hidden="true">1.2.1.</strong> Dockerfile</a></li></ol></li><li class="chapter-item "><a href="../../../../../tools/git/index.html"><strong aria-hidden="true">1.3.</strong> Git</a></li><li class="chapter-item "><a href="../../../../../tools/graphviz/index.html"><strong aria-hidden="true">1.4.</strong> GraphViz</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../tools/graphviz/examples/index.html"><strong aria-hidden="true">1.4.1.</strong> Examples</a></li></ol></li><li class="chapter-item "><a href="../../../../../tools/linux/index.html"><strong aria-hidden="true">1.5.</strong> linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../tools/linux/bash/index.html"><strong aria-hidden="true">1.5.1.</strong> bash</a></li><li class="chapter-item "><a href="../../../../../tools/linux/zsh/index.html"><strong aria-hidden="true">1.5.2.</strong> zsh</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../../../forensics/index.html"><strong aria-hidden="true">2.</strong> Forensics</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../forensics/volatility3/index.html"><strong aria-hidden="true">2.1.</strong> volatility3</a></li><li class="chapter-item "><a href="../../../../../forensics/glogg/index.html"><strong aria-hidden="true">2.2.</strong> glogg</a></li><li class="chapter-item "><a href="../../../../../forensics/sleuthkit/index.html"><strong aria-hidden="true">2.3.</strong> sleuthkit</a></li></ol></li><li class="chapter-item "><a href="../../../../../technics/index.html"><strong aria-hidden="true">3.</strong> Technics</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../technics/natural-referencing/index.html"><strong aria-hidden="true">3.1.</strong> Natural Referencing</a></li><li class="chapter-item "><a href="../../../../../technics/web-scrapping/index.html"><strong aria-hidden="true">3.2.</strong> Web Scrapping</a></li><li class="chapter-item "><a href="../../../../../technics/wireshark/index.html"><strong aria-hidden="true">3.3.</strong> Wireshark</a></li><li class="chapter-item "><a href="../../../../../technics/nmap/index.html"><strong aria-hidden="true">3.4.</strong> nmap</a></li></ol></li><li class="chapter-item "><a href="../../../../../OSINT/index.html"><strong aria-hidden="true">4.</strong> OSINT</a></li><li class="chapter-item "><a href="../../../../../pentest/index.html"><strong aria-hidden="true">5.</strong> Pentest</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../pentest/BinaryExploitation/index.html"><strong aria-hidden="true">5.1.</strong> BinaryExploitation</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../pentest/BinaryExploitation/Linux/index.html"><strong aria-hidden="true">5.1.1.</strong> Linux</a></li></ol></li><li class="chapter-item "><a href="../../../../../pentest/useful-commands/index.html"><strong aria-hidden="true">5.2.</strong> Useful Commands</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../pentest/useful-commands/ssh/index.html"><strong aria-hidden="true">5.2.1.</strong> ssh</a></li></ol></li><li class="chapter-item "><a href="../../../../../pentest/Metasploit/index.html"><strong aria-hidden="true">5.3.</strong> Netasploit</a></li><li class="chapter-item "><a href="../../../../../pentest/PwdCracking/index.html"><strong aria-hidden="true">5.4.</strong> PwdCracking</a></li><li class="chapter-item "><a href="../../../../../pentest/gdb/index.html"><strong aria-hidden="true">5.5.</strong> GDB</a></li><li class="chapter-item "><a href="../../../../../pentest/BurpSuite/index.html"><strong aria-hidden="true">5.6.</strong> Burp Suite</a></li><li class="chapter-item "><a href="../../../../../pentest/pwntools/index.html"><strong aria-hidden="true">5.7.</strong> pwntools</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../pentest/pwntools/cheat_sheet/index.html"><strong aria-hidden="true">5.7.1.</strong> Cheat Sheet</a></li><li class="chapter-item "><a href="../../../../../pentest/pwntools/assembly/index.html"><strong aria-hidden="true">5.7.2.</strong> Assembly</a></li><li class="chapter-item "><a href="../../../../../pentest/pwntools/ROP/index.html"><strong aria-hidden="true">5.7.3.</strong> ROP</a></li><li class="chapter-item "><a href="../../../../../pentest/pwntools/debugging/index.html"><strong aria-hidden="true">5.7.4.</strong> Pwntools Debugging</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../pentest/pwntools/debugging/scripts/index.html"><strong aria-hidden="true">5.7.4.1.</strong> Useful scripts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../pentest/pwntools/debugging/scripts/interactive_debugging/index.html"><strong aria-hidden="true">5.7.4.1.1.</strong> Interactive debugging</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><a href="../../../../../pentest/Mobile/index.html"><strong aria-hidden="true">5.8.</strong> Mobile</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../pentest/Mobile/red_fox_sec_training/index.html"><strong aria-hidden="true">5.8.1.</strong> red_fox_sec_training</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../pentest/Mobile/red_fox_sec_training/web_view/index.html"><strong aria-hidden="true">5.8.1.1.</strong> Exploiting Android WebView Vulnerabilities</a></li><li class="chapter-item "><a href="../../../../../pentest/Mobile/red_fox_sec_training/broad_cast_receivers/index.html"><strong aria-hidden="true">5.8.1.2.</strong> Exploiting Broadcast Receivers</a></li><li class="chapter-item "><a href="../../../../../pentest/Mobile/red_fox_sec_training/content_providers/index.html"><strong aria-hidden="true">5.8.1.3.</strong> Exploiting Content Providers</a></li><li class="chapter-item "><a href="../../../../../pentest/Mobile/red_fox_sec_training/drozer/index.html"><strong aria-hidden="true">5.8.1.4.</strong> Android Pentesting with Drozer</a></li><li class="chapter-item "><a href="../../../../../pentest/Mobile/red_fox_sec_training/tapjacking/index.html"><strong aria-hidden="true">5.8.1.5.</strong> Android Tapjacking Vulnerability</a></li><li class="chapter-item "><a href="../../../../../pentest/Mobile/red_fox_sec_training/crypto/index.html"><strong aria-hidden="true">5.8.1.6.</strong> Broken Cryptography in Android Applications</a></li><li class="chapter-item "><a href="../../../../../pentest/Mobile/red_fox_sec_training/pentest_method/index.html"><strong aria-hidden="true">5.8.1.7.</strong> Android Pentesting Methodology (Pt. 1)</a></li><li class="chapter-item "><a href="../../../../../pentest/Mobile/red_fox_sec_training/pentest_method/index.html"><strong aria-hidden="true">5.8.1.8.</strong> Android Pentesting Methodology (Pt. 2)</a></li><li class="chapter-item "><a href="../../../../../pentest/Mobile/red_fox_sec_training/pentest_method/index.html"><strong aria-hidden="true">5.8.1.9.</strong> Android Pentesting Methodology (Pt. 3)</a></li><li class="chapter-item "><a href="../../../../../pentest/Mobile/red_fox_sec_training/frida/index.html"><strong aria-hidden="true">5.8.1.10.</strong> Android Root Detection Bypass Using Frida</a></li><li class="chapter-item "><a href="../../../../../pentest/Mobile/red_fox_sec_training/frida_ssl_pinning/index.html"><strong aria-hidden="true">5.8.1.11.</strong> SSL Pinning Bypass For Android Using Frida</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../../../pentest/lab_kali_docker/index.html"><strong aria-hidden="true">5.9.</strong> Lab. Kali Docker</a></li><li class="chapter-item "><a href="../../../../../pentest/Wireshark/index.html"><strong aria-hidden="true">5.10.</strong> Wireshark</a></li><li class="chapter-item "><a href="../../../../../pentest/python_venv/index.html"><strong aria-hidden="true">5.11.</strong> python_venv</a></li></ol></li><li class="chapter-item "><a href="../../../../../dev/index.html"><strong aria-hidden="true">6.</strong> dev</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../dev/python/index.html"><strong aria-hidden="true">6.1.</strong> Python</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../dev/python/snippets/index.html"><strong aria-hidden="true">6.1.1.</strong> snippets</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../dev/python/snippets/FullClickSnippet/index.html"><strong aria-hidden="true">6.1.1.1.</strong> Full Click Snippets</a></li><li class="chapter-item "><a href="../../../../../dev/python/snippets/GetPostRequest/index.html"><strong aria-hidden="true">6.1.1.2.</strong> Get/Post Request</a></li><li class="chapter-item "><a href="../../../../../dev/python/snippets/MovieToken/index.html"><strong aria-hidden="true">6.1.1.3.</strong> MovieToken</a></li><li class="chapter-item "><a href="../../../../../dev/python/snippets/TcpChallenges/index.html"><strong aria-hidden="true">6.1.1.4.</strong> TCP Challenges</a></li><li class="chapter-item "><a href="../../../../../dev/python/snippets/FlaskGunicorn/index.html"><strong aria-hidden="true">6.1.1.5.</strong> Flask / Gunicorn</a></li><li class="chapter-item "><a href="../../../../../dev/python/snippets/ServerChallenge_pwntool/index.html"><strong aria-hidden="true">6.1.1.6.</strong> Server Chall. with Pwntool</a></li><li class="chapter-item "><a href="../../../../../dev/python/snippets/SolveEquation/index.html"><strong aria-hidden="true">6.1.1.7.</strong> Solve Equation</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../../../../dev/rust/index.html"><strong aria-hidden="true">6.2.</strong> Rust</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../dev/rust/snippets/index.html"><strong aria-hidden="true">6.2.1.</strong> snippets</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../dev/rust/snippets/error/index.html"><strong aria-hidden="true">6.2.1.1.</strong> Error handling</a></li></ol></li><li class="chapter-item "><a href="../../../../../dev/rust/optimization/index.html"><strong aria-hidden="true">6.2.2.</strong> Optimization</a></li></ol></li><li class="chapter-item "><a href="../../../../../dev/Android/index.html"><strong aria-hidden="true">6.3.</strong> Android</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../dev/Android/MinimalProject/index.html"><strong aria-hidden="true">6.3.1.</strong> Minimal Project</a></li></ol></li><li class="chapter-item "><a href="../../../../../dev/IA/index.html"><strong aria-hidden="true">6.4.</strong> IA</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../../../../dev/IA/Ollama_vsCode/index.html"><strong aria-hidden="true">6.4.1.</strong> Ollama_vscode</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu (default)</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../../../../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <pre><code>▛▀▖      ▐  ▜    ▛▀▖      
+▙▄▘▞▀▖▞▀▖▜▀ ▐ ▞▀▖▙▄▘▌ ▌▞▀▌
+▌ ▌▛▀ ▛▀ ▐ ▖▐ ▛▀ ▌ ▌▌ ▌▚▄▌
+▀▀ ▝▀▘▝▀▘ ▀  ▘▝▀▘▀▀ ▝▀▘▗▄▘
+</code></pre>
+<p>Training APK. Contains multilevel training.</p>
+<h1 id="hardcoded-secrets"><a class="header" href="#hardcoded-secrets">Hardcoded Secrets</a></h1>
+<h2 id="flag-1---hardcoding-sensitive-data"><a class="header" href="#flag-1---hardcoding-sensitive-data">Flag 1 - Hardcoding Sensitive Data</a></h2>
+<p>Goal: To unlock secret folder =&gt; Find strings</p>
+<p>Use <a href="src/tools/android/ApkLab/index.html">ApkLab</a> to open apk files. Activate options:</p>
+<ol>
+<li>decompile Java</li>
+<li>Find &quot;Enter PIN&quot; =&gt; res/layout/activity_embedded_secret_strings.xml
+<ol>
+<li>Ref a resource &quot;editTextSecretPin&quot;. looking for <code>findViewById(*editTextSecretPin*) =&gt; </code>java_src/app/beetlebug/ctf/EmbeddedSecretStrings.java`</li>
+</ol>
+</li>
+</ol>
+<pre><code class="language-java">embeddedSecretStrings.pin = (EditText) embeddedSecretStrings.findViewById(C0670R.C0673id.editTextSecretPin);
+String s1 = EmbeddedSecretStrings.this.pin.getText().toString();
+if (s1.equals(EmbeddedSecretStrings.this.getString(C0670R.string.V98bFQrpGkDJ))) {
+    SharedPreferences.Editor editor = EmbeddedSecretStrings.this.sharedPreferences.edit();
+    editor.putFloat(&quot;ctf_score_secret_string&quot;, 6.25f);
+</code></pre>
+<p>Looking for <code>string.V98bFQrpGkDJ</code> into resource file <code>string.xml</code> =&gt; <code>res/values/strings.xml</code></p>
+<pre><code class="language-xml">  &lt;string name=&quot;V98bFQrpGkDJ&quot;&gt;7432580&lt;/string&gt;
+</code></pre>
+<h2 id="flag-2---hardcoding-secrets"><a class="header" href="#flag-2---hardcoding-secrets">Flag 2 - Hardcoding Secrets</a></h2>
+<p>Looking for <code>Enter Promo mode</code>
+=&gt; res/layout/activity_embedded_secret_source_code.xml</p>
+<pre><code class="language-java">...
+public String beetle_bug_shop_promo_code = &quot;beetle1759&quot;;
+...
+ EmbeddedSecretSourceCode embeddedSecretSourceCode = EmbeddedSecretSourceCode.this;
+                embeddedSecretSourceCode.m_price = (TextView) embeddedSecretSourceCode.findViewById(C0670R.C0673id.textViewPrice);
+                if (EmbeddedSecretSourceCode.this.m_promo.getText().toString().equals(EmbeddedSecretSourceCode.this.beetle_bug_shop_promo_code)) {
+</code></pre>
+<h1 id="data-storage"><a class="header" href="#data-storage">Data Storage</a></h1>
+<h2 id="flag-3---shared-preferences"><a class="header" href="#flag-3---shared-preferences">Flag 3 - Shared Preferences</a></h2>
+<pre><code class="language-shell">$ adb shell
+$# cd /data/data/app.beetlebug/shared_prefs/
+$# ls -liash
+$# ls
+flag_scores.xml       # Current Flag value
+preferences.xml       # 
+shared_pref_flag.xml
+user_info.xml
+walkthrough.xml
+$# cat preferences.xml
+&lt;?xml version='1.0' encoding='utf-8' standalone='yes' ?&gt;
+&lt;map&gt;
+    &lt;string name=&quot;5_sqlite&quot;&gt;MHgxMTcyYzA0&lt;/string&gt;
+    &lt;string name=&quot;11_firebase&quot;&gt;MHgzMzY1QTEw&lt;/string&gt;
+    &lt;string name=&quot;13_xss&quot;&gt;MHg2NnI5MjE0&lt;/string&gt;
+    &lt;string name=&quot;4_ext_store&quot;&gt;MHgzOTgyYyU0&lt;/string&gt;
+    &lt;string name=&quot;8_service&quot;&gt;MHgyMjIxMDNB&lt;/string&gt;
+    &lt;string name=&quot;7_content&quot;&gt;MHg3MzM0MjFN&lt;/string&gt;
+    &lt;string name=&quot;9_log&quot;&gt;MHg1NTU0MWQz&lt;/string&gt;
+    &lt;string name=&quot;16_patch&quot;&gt;MHgzM2U5JGU=&lt;/string&gt;
+    &lt;string name=&quot;10_sqli&quot;&gt;MHg5MTMzNFox&lt;/string&gt;
+    &lt;string name=&quot;15_fingerprint&quot;&gt;MHg0M0oxMjMm&lt;/string&gt;
+    &lt;string name=&quot;6_activity&quot;&gt;MHgzMzRmMjIx&lt;/string&gt;
+    &lt;string name=&quot;3_pref&quot;&gt;MHgxNDQyYzA0&lt;/string&gt;
+    &lt;string name=&quot;12_url&quot;&gt;MHgzM2YzMzQx&lt;/string&gt;
+    &lt;string name=&quot;14_clip&quot;&gt;MHgxMTMyYzQh&lt;/string&gt;
+&lt;/map&gt;
+$# cat shared_pref_flag.xml
+&lt;?xml version='1.0' encoding='utf-8' standalone='yes' ?&gt;
+&lt;map&gt;
+    &lt;string name=&quot;password&quot;&gt;    &amp;lt;string name=&amp;quot;flag&amp;quot;&amp;gt;0x32f6641&amp;lt;/string&amp;gt;&amp;#10;    &lt;/string&gt;
+    &lt;string name=&quot;flag 3&quot;&gt;0x1442c04&lt;/string&gt;
+    &lt;string name=&quot;username&quot;&gt;test&lt;/string&gt;
+&lt;/map&gt;
+$# # cat user_info.xml
+&lt;?xml version='1.0' encoding='utf-8' standalone='yes' ?&gt;
+&lt;map&gt;
+    &lt;boolean name=&quot;is_logged_in&quot; value=&quot;true&quot; /&gt;
+    &lt;string name=&quot;flag&quot;&gt;0x32f6641&lt;/string&gt;
+    &lt;string name=&quot;user_token&quot;&gt;ca9eada3-d132-46d3-8c43-333f3890f6eb&lt;/string&gt;
+    &lt;string name=&quot;user&quot;&gt;test&lt;/string&gt;
+&lt;/map&gt;
+</code></pre>
+<p>Pour shared_pref</p>
+<p><code>&amp;lt;string name=&amp;quot;flag&amp;quot;&amp;gt;0x32f6641&amp;lt;/string&amp;gt;&amp;#10;</code> =&gt; <code>&lt;string name=&quot;flag&quot;&gt;0x32f6641&lt;/string&gt;</code></p>
+<p>But we had to find &quot;Enter Flags'</p>
+<ol>
+<li>Find activity for <code>Shared PReferences</code> =&gt; <code>res/layout/activity_insecure_storage_sharedpref.xml</code></li>
+<li>Rechercher <code>setContentView(C0670R.layout.activity_insecure_storage_sharedpref);</code> =&gt; <code>java_src/app/beetlebug/ctf/InsecureStorageSharedPref.java</code></li>
+</ol>
+<p>There are a code <code>String pref_result = this.preferences.getString(&quot;3_pref&quot;, &quot;&quot;);</code> =&gt; Ref. dans <code>preferences.xml</code></p>
+<pre><code class="language-xml">&lt;string name=&quot;3_pref&quot;&gt;MHgxNDQyYzA0&lt;/string&gt;
+</code></pre>
+<pre><code class="language-python">from base64 import b64decode;print(b64decode(&quot;MHgxNDQyYzA0&quot;).decode('utf8'))
+</code></pre>
+<p>=&gt; <code>0x1442c04</code></p>
+<h2 id="flag-4---external-storage"><a class="header" href="#flag-4---external-storage">Flag 4 - External Storage</a></h2>
+<p>When register new user, a new file will be create:</p>
+<blockquote>
+<p>/storage/emulated/0/Documents</p>
+</blockquote>
+<pre><code class="language-shell">$ cat /storage/emulated/0/Documents/user.txt
+Pass: 1234
+Email: johndoe@antispam.com
+flag : 0x3982c%4
+</code></pre>
+<p>Flag string reference <code>4_ext_store</code></p>
+<pre><code class="language-xml">&lt;string name=&quot;4_ext_store&quot;&gt;MHgzOTgyYyU0&lt;/string&gt;
+</code></pre>
+<pre><code class="language-python">from base64 import b64decode;print(b64decode(&quot;MHgzOTgyYyU0&quot;).decode('utf8'))
+</code></pre>
+<p><code>0x3982c%4</code></p>
+<h2 id="flag-5---sqlite-database"><a class="header" href="#flag-5---sqlite-database">Flag 5 - Sqlite Database</a></h2>
+<p>Looking for database</p>
+<blockquote>
+<p>/data/data/app.beetlebug/databases </p>
+</blockquote>
+<p><code>user.db</code> =&gt; <code>1	qwer1234!@#$SDFSDF	0x1172c04</code></p>
+<p>Flag =&gt; <code>0x1172c04</code>.</p>
+<h1 id="webviews"><a class="header" href="#webviews">WebViews</a></h1>
+<h2 id="flag-6---load-arbitrary-url"><a class="header" href="#flag-6---load-arbitrary-url">Flag 6 - Load Arbitrary URL</a></h2>
+<ul>
+<li>Get info with <code>objection</code></li>
+</ul>
+<pre><code class="language-shell">$ objection app.beetlebug explore
+$ env
+$ android hooking get current_activity
+Activity: app.beetlebug.ctf.WebViewURLActivity
+</code></pre>
+<ul>
+<li>Launch activity with parameters</li>
+</ul>
+<pre><code class="language-shell">$ adb shell am start -n app.beetlebug/.ctf.WebViewURLActivity --es reg_url &quot;file:///android_asset/pwn.html&quot;
+# same as 
+$ adb shell am start -n app.beetlebug/app.beetlebug.ctf.WebViewURLActivity --es reg_url &quot;file:///android_asset/pwn.html&quot;
+</code></pre>
+<p><strong>NOTE</strong></p>
+<p>Classic command:</p>
+<blockquote>
+<p>adb shell am start -n &lt;PACKAGE_NAME/ACTIVITY_CLASS&gt; [EXTRA_DATA]</p>
+</blockquote>
+<p>Here are the available activities:</p>
+<pre><code class="language-text">$ [Objection] android hooking list activities
+app.beetlebug.FlagsOverview
+app.beetlebug.MainActivity
+app.beetlebug.MainActivity$1
+app.beetlebug.Walkthrough
+app.beetlebug.adapter.SlideViewPagerAdapter
+app.beetlebug.adapter.SlideViewPagerAdapter$1
+app.beetlebug.adapter.SlideViewPagerAdapter$2
+app.beetlebug.ctf.BinaryPatchActivity
+app.beetlebug.ctf.WebViewURLActivity
+app.beetlebug.ctf.WebViewXSSActivity
+app.beetlebug.handlers.VulnerableContentProvider
+app.beetlebug.handlers.VulnerableContentProvider$DatabaseHelper
+app.beetlebug.home.AndroidComponentsHome
+app.beetlebug.home.BiometricFragmentHome
+app.beetlebug.home.DatabaseFragmentHome
+app.beetlebug.home.InsecureStorageFragmentHome
+app.beetlebug.home.SecretsFragmentHome
+app.beetlebug.home.SensitiveDataFragmentHome
+app.beetlebug.home.WebViewFragmentHome
+app.beetlebug.home.WebViewFragmentHome$1
+app.beetlebug.home.WebViewFragmentHome$2
+app.beetlebug.home.WebViewFragmentHome$3
+app.beetlebug.user.PlayerStats
+app.beetlebug.user.UserSignUp
+</code></pre>
+<p>The app name is <code>app.beetlebug</code>, the rest is the activities name:</p>
+<pre><code class="language-text">.FlagsOverview
+.MainActivity
+.MainActivity$1
+.Walkthrough
+.adapter.SlideViewPagerAdapter
+.adapter.SlideViewPagerAdapter$1
+.adapter.SlideViewPagerAdapter$2
+.ctf.BinaryPatchActivity
+.ctf.WebViewURLActivity
+.ctf.WebViewXSSActivity
+.handlers.VulnerableContentProvider
+.handlers.VulnerableContentProvider$DatabaseHelper
+.home.AndroidComponentsHome
+.home.BiometricFragmentHome
+.home.DatabaseFragmentHome
+.home.InsecureStorageFragmentHome
+.home.SecretsFragmentHome
+.home.SensitiveDataFragmentHome
+.home.WebViewFragmentHome
+.home.WebViewFragmentHome$1
+.home.WebViewFragmentHome$2
+.home.WebViewFragmentHome$3
+.user.PlayerStats
+.user.UserSignUp
+</code></pre>
+<p><strong>NOTE</strong> <code>adb shell am start -n app.beetlebug/app.beetlebug.ctf.WebViewURLActivity --es reg_url &quot;file:///android_asset/pwn.html&quot;</code> cannot be display. Into decompiled APK, <code>assets/pwn.html</code>, there are <code>assets/pwn.png</code></p>
+<p>=&gt; <code>adb shell am start -n app.beetlebug/app.beetlebug.ctf.WebViewURLActivity --es reg_url &quot;file:///android_asset/pwn.png</code></p>
+<p>=&gt; <code>0x33f3341</code></p>
+<h2 id="flag-7---javascript-code-injection-xss"><a class="header" href="#flag-7---javascript-code-injection-xss">Flag 7 - JavaScript Code Injection (XSS)</a></h2>
+<p>Write into payload the classic</p>
+<pre><code class="language-js">&lt;script&gt;alert(&quot;Hello Worlds&quot;)&lt;/script&gt;
+</code></pre>
+<p>The flag appears behind the send <code>0x66r9214</code></p>
+<h2 id="flag-8---sql-injection"><a class="header" href="#flag-8---sql-injection">Flag 8 - SQL Injection</a></h2>
+<p>Try to execute SqlInjection.</p>
+<p>The request is something like, to check user:</p>
+<pre><code class="language-sql">SELECT * FROM users WHERE username='&lt;NAME&gt;'; 
+</code></pre>
+<p>If we try the following name <code>' or 1=1; -- </code>:</p>
+<pre><code class="language-sql">SELECT * FROM users WHERE username='' or 1=1; -- '; 
+</code></pre>
+<p>=&gt;</p>
+<pre><code class="language-text">User: (admin) pass: (passwd123) Credit Card: (1234567812345678)
+User: (beetle-bug) pass: (flg) Credit Card: (0x91334Z1)
+</code></pre>
+<p>Flag =&gt; <code>0x91334Z1</code></p>
+<h2 id="flag-9---firebase-database-misconfiguration"><a class="header" href="#flag-9---firebase-database-misconfiguration">Flag 9 - Firebase Database Misconfiguration</a></h2>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../../../../tools/android/frida/tutorials/owasp/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../../../../../tools/android/r2frida/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../../../../tools/android/frida/tutorials/owasp/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../../../../../tools/android/r2frida/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../../../../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../../../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../../../../../mermaid.min.js"></script>
+        <script type="text/javascript" src="../../../../../mermaid-init.js"></script>
+    </body>
+</html>
