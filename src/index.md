@@ -191,6 +191,24 @@ td span {
         </tr>
         <!-- ITEM --> 
         <tr>
+            <td><a ref="https://pwn.college/">pwn.college</a></td>
+            <td>
+                <span class="badge_training">Training</span>
+                <span class="badge_ctf">CTF</span>
+            </td>
+            <td>pwn.college is an education platform for students.</td>
+        </tr>
+        <!-- ITEM --> 
+        <tr>
+            <td><a ref="https://cryptohack.org/">Crypto CTF</a></td>
+            <td>
+                <span class="badge_training">Training</span>
+                <span class="badge_ctf">CTF</span>
+            </td>
+            <td>A free, fun platform for learning modern cryptography.</td>
+        </tr>
+        <!-- ITEM --> 
+        <tr>
             <td><a ref="https://docs.xanhacks.xyz/">CTF Docs</a></td>
             <td>
                 <span class="badge_training">Training</span>
