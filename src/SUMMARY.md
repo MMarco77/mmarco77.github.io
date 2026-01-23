@@ -34,6 +34,7 @@
   - [linux](tools/linux/index.md)
     - [bash](tools/linux/bash/index.md)
     - [zsh](tools/linux/zsh/index.md)
+    - [crypto](tools/linux/crypto/index.md)
 
 - [Forensics](forensics/index.md)
   - [volatility3](forensics/volatility3/index.md)
