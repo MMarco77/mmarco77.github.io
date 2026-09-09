@@ -32,6 +32,7 @@
   - [GraphViz](tools/graphviz/index.md)
       - [Examples](tools/graphviz/examples/index.md)
   - [linux](tools/linux/index.md)
+    - [admin](tools/linux/admin/index.md)
     - [bash](tools/linux/bash/index.md)
     - [zsh](tools/linux/zsh/index.md)
     - [crypto](tools/linux/crypto/index.md)
