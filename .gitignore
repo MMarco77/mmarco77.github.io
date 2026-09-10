@@ -1,0 +1,14 @@
+book
+venv
+__pycache__
+*.pyc
+src/it/attacks/network/dns/img
+.python-version
+src/tools/graphviz/examples/src.dot
+.obsidian
+.bg-shell/manifest.json
+.gsd/gsd.db
+.gsd/gsd.db-shm
+.gsd/gsd.db-wal
+.gsd/notifications.jsonl
+.gsd/runtime/write-gate-state.json
