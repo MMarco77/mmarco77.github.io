@@ -24,6 +24,7 @@
         - [hacktricks](tools/android/frida/tutorials/hacktricks/index.md)
         - [Owasp](tools/android/frida/tutorials/owasp/index.md)
         - [BeetleBug](tools/android/frida/tutorials/BeetleBug/index.md)
+      - [Mastery](tools/android/frida/mastery/index.md)
     - [R2Frida](tools/android/r2frida/index.md)
     - [Gnirehtet](tools/android/Gnirehtet/index.md)
   - [Docker](tools/docker/index.md)
@@ -50,6 +51,8 @@
   - [nmap](technics/nmap/index.md)
 
 - [OSINT](OSINT/index.md)
+  - [Framework](OSINT/framework/index.md)
+
 
 - [Pentest](pentest/index.md)
   - [BinaryExploitation](pentest/BinaryExploitation/index.md)
